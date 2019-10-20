@@ -3,18 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7A10B25E235C79B1004FF3B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B25D235C79B1004FF3B0 /* AppDelegate.swift */; };
 		7A10B260235C79B1004FF3B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B25F235C79B1004FF3B0 /* SceneDelegate.swift */; };
-		7A10B262235C79B1004FF3B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B261235C79B1004FF3B0 /* ViewController.swift */; };
+		7A10B262235C79B1004FF3B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B261235C79B1004FF3B0 /* HomeViewController.swift */; };
 		7A10B265235C79B1004FF3B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A10B263235C79B1004FF3B0 /* Main.storyboard */; };
 		7A10B267235C79B4004FF3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A10B266235C79B4004FF3B0 /* Assets.xcassets */; };
 		7A10B26A235C79B4004FF3B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A10B268235C79B4004FF3B0 /* LaunchScreen.storyboard */; };
 		7A10B275235C79B4004FF3B0 /* CrossReduxSOATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B274235C79B4004FF3B0 /* CrossReduxSOATests.swift */; };
 		7A10B280235C79B4004FF3B0 /* CrossReduxSOAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B27F235C79B4004FF3B0 /* CrossReduxSOAUITests.swift */; };
+		7A10B28E235C7AB3004FF3B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B28D235C7AB3004FF3B0 /* HomeView.swift */; };
+		7A36B1A6235C83110020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1A5235C83110020B75F /* RxSwift */; };
+		7A36B1AA235C83110020B75F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1A9235C83110020B75F /* RxCocoa */; };
+		7A36B1AE235C85280020B75F /* SharedHomeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A36B1AD235C85280020B75F /* SharedHomeContent.swift */; };
+		7A36B1B3235C86AB0020B75F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1B2235C86AB0020B75F /* RxBlocking */; };
+		7A36B1B5235C86AB0020B75F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1B4235C86AB0020B75F /* RxTest */; };
+		7A36B1B7235C86B00020B75F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1B6235C86B00020B75F /* RxBlocking */; };
+		7A36B1B9235C86B00020B75F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1B8235C86B00020B75F /* RxTest */; };
+		7A36B1BB235C86B60020B75F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BA235C86B60020B75F /* RxCocoa */; };
+		7A36B1BD235C86B60020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BC235C86B60020B75F /* RxSwift */; };
+		7A36B1BF235C86BB0020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BE235C86BB0020B75F /* RxSwift */; };
+		7AE6C52C235C89BD009B2D78 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6C52B235C89BD009B2D78 /* String.swift */; };
+		7AE6C530235C8BB5009B2D78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AE6C532235C8BB5009B2D78 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +51,7 @@
 		7A10B25A235C79B1004FF3B0 /* CrossReduxSOA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossReduxSOA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A10B25D235C79B1004FF3B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A10B25F235C79B1004FF3B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7A10B261235C79B1004FF3B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A10B261235C79B1004FF3B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7A10B264235C79B1004FF3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A10B266235C79B4004FF3B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A10B269235C79B4004FF3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +62,11 @@
 		7A10B27B235C79B4004FF3B0 /* CrossReduxSOAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossReduxSOAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A10B27F235C79B4004FF3B0 /* CrossReduxSOAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossReduxSOAUITests.swift; sourceTree = "<group>"; };
 		7A10B281235C79B4004FF3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A10B28D235C7AB3004FF3B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7A36B1AD235C85280020B75F /* SharedHomeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHomeContent.swift; sourceTree = "<group>"; };
+		7AE6C52B235C89BD009B2D78 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7AE6C531235C8BB5009B2D78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7AE6C533235C8BBE009B2D78 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A36B1AA235C83110020B75F /* RxCocoa in Frameworks */,
+				7A36B1A6235C83110020B75F /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A36B1BF235C86BB0020B75F /* RxSwift in Frameworks */,
+				7A36B1B5235C86AB0020B75F /* RxTest in Frameworks */,
+				7A36B1B3235C86AB0020B75F /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A36B1BB235C86B60020B75F /* RxCocoa in Frameworks */,
+				7A36B1B9235C86B00020B75F /* RxTest in Frameworks */,
+				7A36B1BD235C86B60020B75F /* RxSwift in Frameworks */,
+				7A36B1B7235C86B00020B75F /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,7 @@
 				7A10B273235C79B4004FF3B0 /* CrossReduxSOATests */,
 				7A10B27E235C79B4004FF3B0 /* CrossReduxSOAUITests */,
 				7A10B25B235C79B1004FF3B0 /* Products */,
+				7A36B1B1235C86AB0020B75F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +127,9 @@
 		7A10B25C235C79B1004FF3B0 /* CrossReduxSOA */ = {
 			isa = PBXGroup;
 			children = (
-				7A10B25D235C79B1004FF3B0 /* AppDelegate.swift */,
-				7A10B25F235C79B1004FF3B0 /* SceneDelegate.swift */,
-				7A10B261235C79B1004FF3B0 /* ViewController.swift */,
-				7A10B263235C79B1004FF3B0 /* Main.storyboard */,
-				7A10B266235C79B4004FF3B0 /* Assets.xcassets */,
-				7A10B268235C79B4004FF3B0 /* LaunchScreen.storyboard */,
+				7AE6C52A235C89AF009B2D78 /* Extensions */,
+				7A36B1AF235C85510020B75F /* UI */,
+				7AE6C52F235C8B4F009B2D78 /* Supporting Files */,
 				7A10B26B235C79B4004FF3B0 /* Info.plist */,
 			);
 			path = CrossReduxSOA;
@@ -128,6 +153,68 @@
 			path = CrossReduxSOAUITests;
 			sourceTree = "<group>";
 		};
+		7A10B28F235C7EBB004FF3B0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7A10B261235C79B1004FF3B0 /* HomeViewController.swift */,
+				7A10B263235C79B1004FF3B0 /* Main.storyboard */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		7A10B290235C7EC2004FF3B0 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				7A10B28D235C7AB3004FF3B0 /* HomeView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		7A36B1AF235C85510020B75F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7A10B268235C79B4004FF3B0 /* LaunchScreen.storyboard */,
+				7A36B1B0235C85550020B75F /* Shared */,
+				7A10B290235C7EC2004FF3B0 /* SwiftUI */,
+				7A10B28F235C7EBB004FF3B0 /* UIKit */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7A36B1B0235C85550020B75F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7A36B1AD235C85280020B75F /* SharedHomeContent.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7A36B1B1235C86AB0020B75F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AE6C52A235C89AF009B2D78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AE6C52B235C89BD009B2D78 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7AE6C52F235C8B4F009B2D78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A10B25D235C79B1004FF3B0 /* AppDelegate.swift */,
+				7A10B25F235C79B1004FF3B0 /* SceneDelegate.swift */,
+				7AE6C532235C8BB5009B2D78 /* Localizable.strings */,
+				7A10B266235C79B4004FF3B0 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +231,10 @@
 			dependencies = (
 			);
 			name = CrossReduxSOA;
+			packageProductDependencies = (
+				7A36B1A5235C83110020B75F /* RxSwift */,
+				7A36B1A9235C83110020B75F /* RxCocoa */,
+			);
 			productName = CrossReduxSOA;
 			productReference = 7A10B25A235C79B1004FF3B0 /* CrossReduxSOA.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +253,11 @@
 				7A10B272235C79B4004FF3B0 /* PBXTargetDependency */,
 			);
 			name = CrossReduxSOATests;
+			packageProductDependencies = (
+				7A36B1B2235C86AB0020B75F /* RxBlocking */,
+				7A36B1B4235C86AB0020B75F /* RxTest */,
+				7A36B1BE235C86BB0020B75F /* RxSwift */,
+			);
 			productName = CrossReduxSOATests;
 			productReference = 7A10B270235C79B4004FF3B0 /* CrossReduxSOATests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -180,6 +276,12 @@
 				7A10B27D235C79B4004FF3B0 /* PBXTargetDependency */,
 			);
 			name = CrossReduxSOAUITests;
+			packageProductDependencies = (
+				7A36B1B6235C86B00020B75F /* RxBlocking */,
+				7A36B1B8235C86B00020B75F /* RxTest */,
+				7A36B1BA235C86B60020B75F /* RxCocoa */,
+				7A36B1BC235C86B60020B75F /* RxSwift */,
+			);
 			productName = CrossReduxSOAUITests;
 			productReference = 7A10B27B235C79B4004FF3B0 /* CrossReduxSOAUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -214,8 +316,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ro,
 			);
 			mainGroup = 7A10B251235C79B1004FF3B0;
+			packageReferences = (
+				7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 7A10B25B235C79B1004FF3B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A10B26A235C79B4004FF3B0 /* LaunchScreen.storyboard in Resources */,
+				7AE6C530235C8BB5009B2D78 /* Localizable.strings in Resources */,
 				7A10B267235C79B4004FF3B0 /* Assets.xcassets in Resources */,
 				7A10B265235C79B1004FF3B0 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +366,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A10B262235C79B1004FF3B0 /* ViewController.swift in Sources */,
+				7AE6C52C235C89BD009B2D78 /* String.swift in Sources */,
+				7A10B262235C79B1004FF3B0 /* HomeViewController.swift in Sources */,
 				7A10B25E235C79B1004FF3B0 /* AppDelegate.swift in Sources */,
+				7A36B1AE235C85280020B75F /* SharedHomeContent.swift in Sources */,
+				7A10B28E235C7AB3004FF3B0 /* HomeView.swift in Sources */,
 				7A10B260235C79B1004FF3B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +423,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		7AE6C532235C8BB5009B2D78 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AE6C531235C8BB5009B2D78 /* en */,
+				7AE6C533235C8BBE009B2D78 /* ro */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -320,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -380,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -437,9 +558,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
 				INFOPLIST_FILE = CrossReduxSOA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+					"-weak_framework",
+					Combine,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ro.iliemarius.CrossReduxSOA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -455,9 +583,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
 				INFOPLIST_FILE = CrossReduxSOA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+					"-weak_framework",
+					Combine,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ro.iliemarius.CrossReduxSOA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -479,6 +614,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					XCTest,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ro.iliemarius.CrossReduxSOATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +641,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ro.iliemarius.CrossReduxSOATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -522,6 +665,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ro.iliemarius.CrossReduxSOAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -541,6 +688,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					XCTest,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ro.iliemarius.CrossReduxSOAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -590,6 +741,65 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A36B1A5235C83110020B75F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		7A36B1A9235C83110020B75F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7A36B1B2235C86AB0020B75F /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		7A36B1B4235C86AB0020B75F /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		7A36B1B6235C86B00020B75F /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		7A36B1B8235C86B00020B75F /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		7A36B1BA235C86B60020B75F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7A36B1BC235C86B60020B75F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		7A36B1BE235C86BB0020B75F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A10B252235C79B1004FF3B0 /* Project object */;
 }
