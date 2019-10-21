@@ -9,6 +9,6 @@
 import Foundation
 import Redux
 
-protocol BaseTodoStore: ReduceStore {
+public protocol BaseTodoStore: ReduceStore {
     
 }

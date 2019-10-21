@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:CrossReduxSOA.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Common/Common.xcodeproj">
    </FileRef>
    <FileRef
@@ -9,8 +21,5 @@
    </FileRef>
    <FileRef
       location = "group:ApiModule/ApiModule.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "container:CrossReduxSOA.xcodeproj">
    </FileRef>
 </Workspace>

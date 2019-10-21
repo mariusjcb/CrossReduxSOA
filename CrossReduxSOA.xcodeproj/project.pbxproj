@@ -26,13 +26,6 @@
 		7A36B1BB235C86B60020B75F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BA235C86B60020B75F /* RxCocoa */; };
 		7A36B1BD235C86B60020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BC235C86B60020B75F /* RxSwift */; };
 		7A36B1BF235C86BB0020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BE235C86BB0020B75F /* RxSwift */; };
-		7A453248235D425600FEAAD0 /* TodoStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453247235D425600FEAAD0 /* TodoStoreProvider.swift */; };
-		7A45324A235D426E00FEAAD0 /* TodoRxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453249235D426E00FEAAD0 /* TodoRxStore.swift */; };
-		7A45324C235D428300FEAAD0 /* TodoCombineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45324B235D428300FEAAD0 /* TodoCombineStore.swift */; };
-		7A453250235D42AC00FEAAD0 /* TodoStoreArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45324F235D42AC00FEAAD0 /* TodoStoreArchiver.swift */; };
-		7A453259235D433C00FEAAD0 /* TodoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453258235D433C00FEAAD0 /* TodoReducer.swift */; };
-		7A45325C235D435E00FEAAD0 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45325B235D435E00FEAAD0 /* TodoItem.swift */; };
-		7ACEB60C235D47E700DEA88E /* BaseTodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB60B235D47E700DEA88E /* BaseTodoStore.swift */; };
 		7AE6C530235C8BB5009B2D78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AE6C532235C8BB5009B2D78 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -72,13 +65,6 @@
 		7A2DC0F5235D53AC007444E7 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2DC0F7235D53AC007444E7 /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A36B1AD235C85280020B75F /* SharedHomeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHomeContent.swift; sourceTree = "<group>"; };
-		7A453247235D425600FEAAD0 /* TodoStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStoreProvider.swift; sourceTree = "<group>"; };
-		7A453249235D426E00FEAAD0 /* TodoRxStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRxStore.swift; sourceTree = "<group>"; };
-		7A45324B235D428300FEAAD0 /* TodoCombineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCombineStore.swift; sourceTree = "<group>"; };
-		7A45324F235D42AC00FEAAD0 /* TodoStoreArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStoreArchiver.swift; sourceTree = "<group>"; };
-		7A453258235D433C00FEAAD0 /* TodoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoReducer.swift; sourceTree = "<group>"; };
-		7A45325B235D435E00FEAAD0 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		7ACEB60B235D47E700DEA88E /* BaseTodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTodoStore.swift; sourceTree = "<group>"; };
 		7AE6C531235C8BB5009B2D78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7AE6C533235C8BBE009B2D78 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,9 +127,6 @@
 		7A10B25C235C79B1004FF3B0 /* CrossReduxSOA */ = {
 			isa = PBXGroup;
 			children = (
-				7A45325A235D435300FEAAD0 /* Models */,
-				7A453257235D432F00FEAAD0 /* Reducers */,
-				7A453245235D420F00FEAAD0 /* Stores */,
 				7A36B1AF235C85510020B75F /* UI */,
 				7AE6C52F235C8B4F009B2D78 /* Supporting Files */,
 				7A10B26B235C79B4004FF3B0 /* Info.plist */,
@@ -212,58 +195,6 @@
 				7A2DC0F7235D53AC007444E7 /* Redux.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7A453245235D420F00FEAAD0 /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-				7A453246235D424A00FEAAD0 /* TodoStore */,
-			);
-			path = Stores;
-			sourceTree = "<group>";
-		};
-		7A453246235D424A00FEAAD0 /* TodoStore */ = {
-			isa = PBXGroup;
-			children = (
-				7ACEB60D235D481F00DEA88E /* Provider */,
-				7A45324E235D42A200FEAAD0 /* Archiver */,
-				7ACEB60B235D47E700DEA88E /* BaseTodoStore.swift */,
-				7A453249235D426E00FEAAD0 /* TodoRxStore.swift */,
-				7A45324B235D428300FEAAD0 /* TodoCombineStore.swift */,
-			);
-			path = TodoStore;
-			sourceTree = "<group>";
-		};
-		7A45324E235D42A200FEAAD0 /* Archiver */ = {
-			isa = PBXGroup;
-			children = (
-				7A45324F235D42AC00FEAAD0 /* TodoStoreArchiver.swift */,
-			);
-			path = Archiver;
-			sourceTree = "<group>";
-		};
-		7A453257235D432F00FEAAD0 /* Reducers */ = {
-			isa = PBXGroup;
-			children = (
-				7A453258235D433C00FEAAD0 /* TodoReducer.swift */,
-			);
-			path = Reducers;
-			sourceTree = "<group>";
-		};
-		7A45325A235D435300FEAAD0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7A45325B235D435E00FEAAD0 /* TodoItem.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7ACEB60D235D481F00DEA88E /* Provider */ = {
-			isa = PBXGroup;
-			children = (
-				7A453247235D425600FEAAD0 /* TodoStoreProvider.swift */,
-			);
-			path = Provider;
 			sourceTree = "<group>";
 		};
 		7AE6C52F235C8B4F009B2D78 /* Supporting Files */ = {
@@ -428,18 +359,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A45324A235D426E00FEAAD0 /* TodoRxStore.swift in Sources */,
 				7A10B262235C79B1004FF3B0 /* HomeViewController.swift in Sources */,
-				7ACEB60C235D47E700DEA88E /* BaseTodoStore.swift in Sources */,
-				7A45324C235D428300FEAAD0 /* TodoCombineStore.swift in Sources */,
-				7A453248235D425600FEAAD0 /* TodoStoreProvider.swift in Sources */,
 				7A10B25E235C79B1004FF3B0 /* AppDelegate.swift in Sources */,
 				7A36B1AE235C85280020B75F /* SharedHomeContent.swift in Sources */,
-				7A453259235D433C00FEAAD0 /* TodoReducer.swift in Sources */,
-				7A453250235D42AC00FEAAD0 /* TodoStoreArchiver.swift in Sources */,
 				7A10B28E235C7AB3004FF3B0 /* HomeView.swift in Sources */,
 				7A10B260235C79B1004FF3B0 /* SceneDelegate.swift in Sources */,
-				7A45325C235D435E00FEAAD0 /* TodoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				ENABLE_BITCODE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = CrossReduxSOA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -651,6 +576,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				ENABLE_BITCODE = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = CrossReduxSOA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;

@@ -8,21 +8,24 @@
 
 import Foundation
 import Redux
+import CrossReduxSOA_Models
 
-enum TodoAction {
+public enum TodoAction {
     case addTodo(String)
     case complete(IndexSet)
     case delete(IndexSet)
     case deleteItem(TodoItem)
 }
 
-class TodoReducer: Reducer {
-    typealias ActionType = TodoAction
-    typealias ItemType = TodoItem
-    typealias StateType = [ItemType]
-    typealias ErrorType = Error
+public class TodoReducer: Reducer {
+    public typealias ActionType = TodoAction
+    public typealias ItemType = TodoItem
+    public typealias StateType = [ItemType]
+    public typealias ErrorType = Error
     
-    func reduce(_ oldState: TodoReducer.StateType, action: TodoReducer.ActionType,
+    public required init() { }
+    
+    public func reduce(_ oldState: TodoReducer.StateType, action: TodoReducer.ActionType,
                 completion: ((StateType?, ErrorType?)->())?) {
         var newState = oldState
         

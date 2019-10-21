@@ -11,9 +11,7 @@ import Foundation
 public class MulticastDelegate<T> {
     let delegates = NSHashTable<AnyObject>.weakObjects()
     
-    public init() {
-        
-    }
+    public init() { }
     
     public func add(_ delegate: T) {
         delegates.add(delegate as AnyObject)
