@@ -16,8 +16,13 @@
 		7A10B275235C79B4004FF3B0 /* CrossReduxSOATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B274235C79B4004FF3B0 /* CrossReduxSOATests.swift */; };
 		7A10B280235C79B4004FF3B0 /* CrossReduxSOAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B27F235C79B4004FF3B0 /* CrossReduxSOAUITests.swift */; };
 		7A10B28E235C7AB3004FF3B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B28D235C7AB3004FF3B0 /* HomeView.swift */; };
-		7A36B1A6235C83110020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1A5235C83110020B75F /* RxSwift */; };
-		7A36B1AA235C83110020B75F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1A9235C83110020B75F /* RxCocoa */; };
+		7A297889235DEC6700B9619F /* ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297888235DEC6700B9619F /* ApiModule.framework */; };
+		7A29788B235DEC6700B9619F /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788A235DEC6700B9619F /* Common.framework */; };
+		7A29788D235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788C235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework */; };
+		7A29788F235DEC6700B9619F /* CrossReduxSOA_Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788E235DEC6700B9619F /* CrossReduxSOA_Models.framework */; };
+		7A297891235DEC6700B9619F /* CrossReduxSOA_Reducers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297890235DEC6700B9619F /* CrossReduxSOA_Reducers.framework */; };
+		7A297893235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297892235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework */; };
+		7A297895235DEC6700B9619F /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297894235DEC6700B9619F /* Redux.framework */; };
 		7A36B1AE235C85280020B75F /* SharedHomeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A36B1AD235C85280020B75F /* SharedHomeContent.swift */; };
 		7A36B1B3235C86AB0020B75F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1B2235C86AB0020B75F /* RxBlocking */; };
 		7A36B1B5235C86AB0020B75F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1B4235C86AB0020B75F /* RxTest */; };
@@ -62,6 +67,13 @@
 		7A10B27F235C79B4004FF3B0 /* CrossReduxSOAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossReduxSOAUITests.swift; sourceTree = "<group>"; };
 		7A10B281235C79B4004FF3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A10B28D235C7AB3004FF3B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7A297888235DEC6700B9619F /* ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A29788A235DEC6700B9619F /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A29788C235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A29788E235DEC6700B9619F /* CrossReduxSOA_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A297890235DEC6700B9619F /* CrossReduxSOA_Reducers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Reducers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A297892235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_ReduxStores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A297894235DEC6700B9619F /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2DC0F5235D53AC007444E7 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2DC0F7235D53AC007444E7 /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A36B1AD235C85280020B75F /* SharedHomeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHomeContent.swift; sourceTree = "<group>"; };
@@ -74,8 +86,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A36B1AA235C83110020B75F /* RxCocoa in Frameworks */,
-				7A36B1A6235C83110020B75F /* RxSwift in Frameworks */,
+				7A297889235DEC6700B9619F /* ApiModule.framework in Frameworks */,
+				7A29788B235DEC6700B9619F /* Common.framework in Frameworks */,
+				7A29788D235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework in Frameworks */,
+				7A29788F235DEC6700B9619F /* CrossReduxSOA_Models.framework in Frameworks */,
+				7A297891235DEC6700B9619F /* CrossReduxSOA_Reducers.framework in Frameworks */,
+				7A297893235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework in Frameworks */,
+				7A297895235DEC6700B9619F /* Redux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +208,13 @@
 		7A36B1B1235C86AB0020B75F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A297888235DEC6700B9619F /* ApiModule.framework */,
+				7A29788A235DEC6700B9619F /* Common.framework */,
+				7A29788C235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework */,
+				7A29788E235DEC6700B9619F /* CrossReduxSOA_Models.framework */,
+				7A297890235DEC6700B9619F /* CrossReduxSOA_Reducers.framework */,
+				7A297892235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework */,
+				7A297894235DEC6700B9619F /* Redux.framework */,
 				7A2DC0F5235D53AC007444E7 /* Common.framework */,
 				7A2DC0F7235D53AC007444E7 /* Redux.framework */,
 			);
@@ -225,8 +249,6 @@
 			);
 			name = CrossReduxSOA;
 			packageProductDependencies = (
-				7A36B1A5235C83110020B75F /* RxSwift */,
-				7A36B1A9235C83110020B75F /* RxCocoa */,
 			);
 			productName = CrossReduxSOA;
 			productReference = 7A10B25A235C79B1004FF3B0 /* CrossReduxSOA.app */;
@@ -753,16 +775,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7A36B1A5235C83110020B75F /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		7A36B1A9235C83110020B75F /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
 		7A36B1B2235C86AB0020B75F /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7A36B1A4235C83110020B75F /* XCRemoteSwiftPackageReference "RxSwift" */;

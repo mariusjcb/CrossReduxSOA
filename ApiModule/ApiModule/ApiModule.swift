@@ -9,12 +9,12 @@
 import Foundation
 import Alamofire
 
-public class ApiModule {
+open class ApiModule {
     private let requestAdapter: RequestAdapter
     public let httpClient: Alamofire.SessionManager
     
-    public var encoder: JSONEncoder { return JSONEncoder() }
-    public var decoder: JSONDecoder { return JSONDecoder() }
+    open var encoder: JSONEncoder { return JSONEncoder() }
+    open var decoder: JSONDecoder { return JSONDecoder() }
     
     public init(requestAdapter: RequestAdapter,
                 httpClient: Alamofire.SessionManager? = nil) {

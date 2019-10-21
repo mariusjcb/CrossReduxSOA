@@ -132,6 +132,20 @@
                ReferencedContainer = "container:CrossReduxSOA.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7A566385235DE846002A93CB"
+               BuildableName = "CrossReduxSOA_ApiModule.framework"
+               BlueprintName = "CrossReduxSOA.ApiModule"
+               ReferencedContainer = "container:CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

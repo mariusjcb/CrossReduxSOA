@@ -9,6 +9,9 @@
 import UIKit
 import Redux
 import SwiftUI
+import RxSwift
+import ApiModule
+import CrossReduxSOA_ApiModule
 import CrossReduxSOA_Reducers
 import CrossReduxSOA_ReduxStores
 
@@ -27,11 +30,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ]
     lazy var store = TodoStoreProvider([], reducer: TodoReducer(), outputDelegates: listeners)
 
-
+    let test = TestApi(requestAdapter: RequestAdapter(host: "https://jsonplaceholder.typicode.com/todos/"))
+    let disposeBag: DisposeBag = DisposeBag()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let contentView = HomeView()
         
         store.dispatch(action: .addTodo("1"))
+        test.test().subscribe {
+            print($0)
+        }.disposed(by: disposeBag)
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

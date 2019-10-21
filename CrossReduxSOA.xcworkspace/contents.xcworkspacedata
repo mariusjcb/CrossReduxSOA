@@ -5,6 +5,9 @@
       location = "group:CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
    </FileRef>
    <FileRef
