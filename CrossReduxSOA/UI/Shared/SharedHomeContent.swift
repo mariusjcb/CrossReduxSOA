@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Common
 
 protocol SharedHomeContent {
     func textForSearchingCriteria(_ searchingCriteria: String?) -> String
