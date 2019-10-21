@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A297897235E34B300B9619F /* RxAlamofireDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A297896235E34B300B9619F /* RxAlamofireDataRequest.swift */; };
+		7A29789A235E354400B9619F /* RxAlamofireResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A297899235E354400B9619F /* RxAlamofireResponse.swift */; };
+		7A29789C235E363600B9619F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29789B235E363600B9619F /* ApiError.swift */; };
+		7A29789E235E36A000B9619F /* RxAlamofireSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29789D235E36A000B9619F /* RxAlamofireSessionManager.swift */; };
 		7A566367235DDBB6002A93CB /* DateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */; };
 		7A56636B235DDD92002A93CB /* RequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A56636A235DDD92002A93CB /* RequestAdapter.swift */; };
 		7A56636E235DDDCE002A93CB /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7A56636D235DDDCE002A93CB /* RxAlamofire */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A297896235E34B300B9619F /* RxAlamofireDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAlamofireDataRequest.swift; sourceTree = "<group>"; };
+		7A297899235E354400B9619F /* RxAlamofireResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAlamofireResponse.swift; sourceTree = "<group>"; };
+		7A29789B235E363600B9619F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		7A29789D235E36A000B9619F /* RxAlamofireSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAlamofireSessionManager.swift; sourceTree = "<group>"; };
 		7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecodingStrategy.swift; sourceTree = "<group>"; };
 		7A56636A235DDD92002A93CB /* RequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAdapter.swift; sourceTree = "<group>"; };
 		7A56636F235DDF19002A93CB /* AuthorizationAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAdapterDelegate.swift; sourceTree = "<group>"; };
@@ -70,10 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A297898235E351400B9619F /* ReactiveExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A297896235E34B300B9619F /* RxAlamofireDataRequest.swift */,
+				7A297899235E354400B9619F /* RxAlamofireResponse.swift */,
+				7A29789D235E36A000B9619F /* RxAlamofireSessionManager.swift */,
+			);
+			path = ReactiveExtensions;
+			sourceTree = "<group>";
+		};
 		7A566377235DE4B4002A93CB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				7A566371235DDF8A002A93CB /* SessionManagerBuilder.swift */,
+				7A29789B235E363600B9619F /* ApiError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -140,6 +159,7 @@
 		7ACEB64E235D4ED600DEA88E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7A297898235E351400B9619F /* ReactiveExtensions */,
 				7ACEB64F235D4EE200DEA88E /* DateFormatter.swift */,
 				7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */,
 				7A566375235DE11E002A93CB /* Data.swift */,
@@ -263,13 +283,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A29789E235E36A000B9619F /* RxAlamofireSessionManager.swift in Sources */,
 				7A56636B235DDD92002A93CB /* RequestAdapter.swift in Sources */,
 				7A566376235DE11E002A93CB /* Data.swift in Sources */,
 				7A566370235DDF19002A93CB /* AuthorizationAdapterDelegate.swift in Sources */,
 				7ACEB650235D4EE200DEA88E /* DateFormatter.swift in Sources */,
+				7A297897235E34B300B9619F /* RxAlamofireDataRequest.swift in Sources */,
+				7A29789C235E363600B9619F /* ApiError.swift in Sources */,
 				7A566367235DDBB6002A93CB /* DateDecodingStrategy.swift in Sources */,
 				7A566379235DE516002A93CB /* URLRequestPrintProtocol.swift in Sources */,
 				7A566372235DDF8A002A93CB /* SessionManagerBuilder.swift in Sources */,
+				7A29789A235E354400B9619F /* RxAlamofireResponse.swift in Sources */,
 				7A566374235DE0BF002A93CB /* URLPrintProtocol.swift in Sources */,
 				7ACEB649235D4E1200DEA88E /* ApiModule.swift in Sources */,
 			);

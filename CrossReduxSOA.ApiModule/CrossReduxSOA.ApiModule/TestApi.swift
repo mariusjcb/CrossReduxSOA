@@ -12,7 +12,7 @@ import RxSwift
 import Alamofire
 
 public class TestApi: ApiModule {
-    public func test() -> Observable<DataRequest> {
+    public func test() -> Observable<AlamofireResponse> {
         return httpClient.rx
             .request(.get, "/1")
     }
