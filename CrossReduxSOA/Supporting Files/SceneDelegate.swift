@@ -13,10 +13,22 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    lazy var archiveListeners = [GenericReduxArchiverLogger("archive_logger1")]
+    lazy var listeners: [ReduceStoreOutputDelegate] = [
+        GenericReduxStoreLogger("logger1"),
+        GenericReduxStoreLogger("logger2"),
+        GenericReduxStoreLogger("logger3"),
+        GenericReduxStoreLogger("logger4"),
+        TodoStoreArchiver(outputDelegates: archiveListeners)
+    ]
+    lazy var store = TodoStoreProvider([], reducer: TodoReducer(), outputDelegates: listeners)
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let contentView = HomeView()
+        
+        store.dispatch(action: .addTodo("1"))
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
@@ -44,11 +56,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
+        //store.combine.dispatch(action: .addTodo("ai intrat"))
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
+        //store.combine.dispatch(action: .addTodo("ai iesit"))
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.

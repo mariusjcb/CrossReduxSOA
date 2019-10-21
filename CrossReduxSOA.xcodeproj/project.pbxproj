@@ -26,8 +26,28 @@
 		7A36B1BB235C86B60020B75F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BA235C86B60020B75F /* RxCocoa */; };
 		7A36B1BD235C86B60020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BC235C86B60020B75F /* RxSwift */; };
 		7A36B1BF235C86BB0020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BE235C86BB0020B75F /* RxSwift */; };
+		7A453248235D425600FEAAD0 /* TodoStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453247235D425600FEAAD0 /* TodoStoreProvider.swift */; };
+		7A45324A235D426E00FEAAD0 /* TodoRxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453249235D426E00FEAAD0 /* TodoRxStore.swift */; };
+		7A45324C235D428300FEAAD0 /* TodoCombineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45324B235D428300FEAAD0 /* TodoCombineStore.swift */; };
+		7A453250235D42AC00FEAAD0 /* TodoStoreArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45324F235D42AC00FEAAD0 /* TodoStoreArchiver.swift */; };
+		7A453252235D42C100FEAAD0 /* GenericArchiverLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453251235D42C100FEAAD0 /* GenericArchiverLogger.swift */; };
+		7A453256235D431900FEAAD0 /* GenericReduxStoreLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453255235D431900FEAAD0 /* GenericReduxStoreLogger.swift */; };
+		7A453259235D433C00FEAAD0 /* TodoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453258235D433C00FEAAD0 /* TodoReducer.swift */; };
+		7A45325C235D435E00FEAAD0 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45325B235D435E00FEAAD0 /* TodoItem.swift */; };
+		7A520820235CF22600FE9B2C /* Array+AnyReducible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A52081F235CF22600FE9B2C /* Array+AnyReducible.swift */; };
+		7A520823235CF43A00FE9B2C /* ReducerStoreArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A520822235CF43A00FE9B2C /* ReducerStoreArchiver.swift */; };
+		7A520826235CFF4400FE9B2C /* ReducerStoreArchiverOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A520825235CFF4400FE9B2C /* ReducerStoreArchiverOutputDelegate.swift */; };
+		7ACEB60C235D47E700DEA88E /* BaseTodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB60B235D47E700DEA88E /* BaseTodoStore.swift */; };
 		7AE6C52C235C89BD009B2D78 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6C52B235C89BD009B2D78 /* String.swift */; };
 		7AE6C530235C8BB5009B2D78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AE6C532235C8BB5009B2D78 /* Localizable.strings */; };
+		7AE6C537235C967A009B2D78 /* AnyReducible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6C536235C967A009B2D78 /* AnyReducible.swift */; };
+		7AE6C539235C96A7009B2D78 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6C538235C96A7009B2D78 /* Reducer.swift */; };
+		7AE6C53B235C96C8009B2D78 /* ReduceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6C53A235C96C8009B2D78 /* ReduceStore.swift */; };
+		7AE6C53F235C98FE009B2D78 /* ReduceStoreOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6C53E235C98FE009B2D78 /* ReduceStoreOutputDelegate.swift */; };
+		7AE6C542235C9B90009B2D78 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6C541235C9B90009B2D78 /* MulticastDelegate.swift */; };
+		7AF0D9A4235D14DF009A4B53 /* RxReduceStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0D9A3235D14DF009A4B53 /* RxReduceStoreProvider.swift */; };
+		7AF0D9A7235D1512009A4B53 /* CombineReduceStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0D9A6235D1512009A4B53 /* CombineReduceStoreProvider.swift */; };
+		7AF0D9A9235D15B6009A4B53 /* ReduceStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0D9A8235D15B6009A4B53 /* ReduceStoreProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +84,29 @@
 		7A10B281235C79B4004FF3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A10B28D235C7AB3004FF3B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A36B1AD235C85280020B75F /* SharedHomeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHomeContent.swift; sourceTree = "<group>"; };
+		7A453247235D425600FEAAD0 /* TodoStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStoreProvider.swift; sourceTree = "<group>"; };
+		7A453249235D426E00FEAAD0 /* TodoRxStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRxStore.swift; sourceTree = "<group>"; };
+		7A45324B235D428300FEAAD0 /* TodoCombineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCombineStore.swift; sourceTree = "<group>"; };
+		7A45324F235D42AC00FEAAD0 /* TodoStoreArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStoreArchiver.swift; sourceTree = "<group>"; };
+		7A453251235D42C100FEAAD0 /* GenericArchiverLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GenericArchiverLogger.swift; path = ../StoreArchiver/Helpers/GenericArchiverLogger.swift; sourceTree = "<group>"; };
+		7A453255235D431900FEAAD0 /* GenericReduxStoreLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericReduxStoreLogger.swift; sourceTree = "<group>"; };
+		7A453258235D433C00FEAAD0 /* TodoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoReducer.swift; sourceTree = "<group>"; };
+		7A45325B235D435E00FEAAD0 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		7A52081F235CF22600FE9B2C /* Array+AnyReducible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+AnyReducible.swift"; sourceTree = "<group>"; };
+		7A520822235CF43A00FE9B2C /* ReducerStoreArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerStoreArchiver.swift; sourceTree = "<group>"; };
+		7A520825235CFF4400FE9B2C /* ReducerStoreArchiverOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerStoreArchiverOutputDelegate.swift; sourceTree = "<group>"; };
+		7ACEB60B235D47E700DEA88E /* BaseTodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTodoStore.swift; sourceTree = "<group>"; };
 		7AE6C52B235C89BD009B2D78 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7AE6C531235C8BB5009B2D78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7AE6C533235C8BBE009B2D78 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7AE6C536235C967A009B2D78 /* AnyReducible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReducible.swift; sourceTree = "<group>"; };
+		7AE6C538235C96A7009B2D78 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		7AE6C53A235C96C8009B2D78 /* ReduceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStore.swift; sourceTree = "<group>"; };
+		7AE6C53E235C98FE009B2D78 /* ReduceStoreOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStoreOutputDelegate.swift; sourceTree = "<group>"; };
+		7AE6C541235C9B90009B2D78 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		7AF0D9A3235D14DF009A4B53 /* RxReduceStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxReduceStoreProvider.swift; sourceTree = "<group>"; };
+		7AF0D9A6235D1512009A4B53 /* CombineReduceStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineReduceStoreProvider.swift; sourceTree = "<group>"; };
+		7AF0D9A8235D15B6009A4B53 /* ReduceStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStoreProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +167,12 @@
 		7A10B25C235C79B1004FF3B0 /* CrossReduxSOA */ = {
 			isa = PBXGroup;
 			children = (
+				7AE6C534235C965A009B2D78 /* Redux */,
+				7AE6C540235C9B86009B2D78 /* Helpers */,
+				7A45325A235D435300FEAAD0 /* Models */,
+				7ACEB60E235D48A400DEA88E /* Services */,
+				7A453257235D432F00FEAAD0 /* Reducers */,
+				7A453245235D420F00FEAAD0 /* Stores */,
 				7AE6C52A235C89AF009B2D78 /* Extensions */,
 				7A36B1AF235C85510020B75F /* UI */,
 				7AE6C52F235C8B4F009B2D78 /* Supporting Files */,
@@ -196,6 +242,92 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A453245235D420F00FEAAD0 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				7A453246235D424A00FEAAD0 /* TodoStore */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		7A453246235D424A00FEAAD0 /* TodoStore */ = {
+			isa = PBXGroup;
+			children = (
+				7ACEB60D235D481F00DEA88E /* Provider */,
+				7A45324E235D42A200FEAAD0 /* Archiver */,
+				7ACEB60B235D47E700DEA88E /* BaseTodoStore.swift */,
+				7A453249235D426E00FEAAD0 /* TodoRxStore.swift */,
+				7A45324B235D428300FEAAD0 /* TodoCombineStore.swift */,
+			);
+			path = TodoStore;
+			sourceTree = "<group>";
+		};
+		7A45324E235D42A200FEAAD0 /* Archiver */ = {
+			isa = PBXGroup;
+			children = (
+				7A45324F235D42AC00FEAAD0 /* TodoStoreArchiver.swift */,
+			);
+			path = Archiver;
+			sourceTree = "<group>";
+		};
+		7A453254235D430400FEAAD0 /* GenericLoggers */ = {
+			isa = PBXGroup;
+			children = (
+				7A453251235D42C100FEAAD0 /* GenericArchiverLogger.swift */,
+				7A453255235D431900FEAAD0 /* GenericReduxStoreLogger.swift */,
+			);
+			path = GenericLoggers;
+			sourceTree = "<group>";
+		};
+		7A453257235D432F00FEAAD0 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				7A453258235D433C00FEAAD0 /* TodoReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		7A45325A235D435300FEAAD0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A45325B235D435E00FEAAD0 /* TodoItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A520821235CF22E00FE9B2C /* AnyReducibleProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				7AE6C536235C967A009B2D78 /* AnyReducible.swift */,
+				7A52081F235CF22600FE9B2C /* Array+AnyReducible.swift */,
+			);
+			path = AnyReducibleProtocol;
+			sourceTree = "<group>";
+		};
+		7A520824235CFF0400FE9B2C /* StoreArchiver */ = {
+			isa = PBXGroup;
+			children = (
+				7A520822235CF43A00FE9B2C /* ReducerStoreArchiver.swift */,
+				7A520825235CFF4400FE9B2C /* ReducerStoreArchiverOutputDelegate.swift */,
+			);
+			path = StoreArchiver;
+			sourceTree = "<group>";
+		};
+		7ACEB60D235D481F00DEA88E /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				7A453247235D425600FEAAD0 /* TodoStoreProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		7ACEB60E235D48A400DEA88E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		7AE6C52A235C89AF009B2D78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +345,54 @@
 				7A10B266235C79B4004FF3B0 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7AE6C534235C965A009B2D78 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				7A453254235D430400FEAAD0 /* GenericLoggers */,
+				7A520821235CF22E00FE9B2C /* AnyReducibleProtocol */,
+				7AF8EC89235C9DED000911B0 /* Reducer */,
+				7AF8EC88235C9DE6000911B0 /* Store */,
+				7A520824235CFF0400FE9B2C /* StoreArchiver */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		7AE6C540235C9B86009B2D78 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7AE6C541235C9B90009B2D78 /* MulticastDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7AF0D9A5235D14EC009A4B53 /* StoreProvider */ = {
+			isa = PBXGroup;
+			children = (
+				7AF0D9A3235D14DF009A4B53 /* RxReduceStoreProvider.swift */,
+				7AF0D9A6235D1512009A4B53 /* CombineReduceStoreProvider.swift */,
+				7AF0D9A8235D15B6009A4B53 /* ReduceStoreProvider.swift */,
+			);
+			path = StoreProvider;
+			sourceTree = "<group>";
+		};
+		7AF8EC88235C9DE6000911B0 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				7AF0D9A5235D14EC009A4B53 /* StoreProvider */,
+				7AE6C53A235C96C8009B2D78 /* ReduceStore.swift */,
+				7AE6C53E235C98FE009B2D78 /* ReduceStoreOutputDelegate.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		7AF8EC89235C9DED000911B0 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				7AE6C538235C96A7009B2D78 /* Reducer.swift */,
+			);
+			path = Reducer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,12 +546,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A453252235D42C100FEAAD0 /* GenericArchiverLogger.swift in Sources */,
 				7AE6C52C235C89BD009B2D78 /* String.swift in Sources */,
+				7A45324A235D426E00FEAAD0 /* TodoRxStore.swift in Sources */,
 				7A10B262235C79B1004FF3B0 /* HomeViewController.swift in Sources */,
+				7ACEB60C235D47E700DEA88E /* BaseTodoStore.swift in Sources */,
+				7A520823235CF43A00FE9B2C /* ReducerStoreArchiver.swift in Sources */,
+				7A45324C235D428300FEAAD0 /* TodoCombineStore.swift in Sources */,
+				7AE6C53B235C96C8009B2D78 /* ReduceStore.swift in Sources */,
+				7A453248235D425600FEAAD0 /* TodoStoreProvider.swift in Sources */,
+				7AE6C539235C96A7009B2D78 /* Reducer.swift in Sources */,
+				7AE6C537235C967A009B2D78 /* AnyReducible.swift in Sources */,
 				7A10B25E235C79B1004FF3B0 /* AppDelegate.swift in Sources */,
+				7A520826235CFF4400FE9B2C /* ReducerStoreArchiverOutputDelegate.swift in Sources */,
+				7AF0D9A9235D15B6009A4B53 /* ReduceStoreProvider.swift in Sources */,
 				7A36B1AE235C85280020B75F /* SharedHomeContent.swift in Sources */,
+				7AE6C53F235C98FE009B2D78 /* ReduceStoreOutputDelegate.swift in Sources */,
+				7A453259235D433C00FEAAD0 /* TodoReducer.swift in Sources */,
+				7A453250235D42AC00FEAAD0 /* TodoStoreArchiver.swift in Sources */,
+				7AF0D9A7235D1512009A4B53 /* CombineReduceStoreProvider.swift in Sources */,
 				7A10B28E235C7AB3004FF3B0 /* HomeView.swift in Sources */,
+				7A520820235CF22600FE9B2C /* Array+AnyReducible.swift in Sources */,
+				7AF0D9A4235D14DF009A4B53 /* RxReduceStoreProvider.swift in Sources */,
+				7A453256235D431900FEAAD0 /* GenericReduxStoreLogger.swift in Sources */,
 				7A10B260235C79B1004FF3B0 /* SceneDelegate.swift in Sources */,
+				7A45325C235D435E00FEAAD0 /* TodoItem.swift in Sources */,
+				7AE6C542235C9B90009B2D78 /* MulticastDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +757,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = CrossReduxSOA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -582,6 +783,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = CrossReduxSOA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,6 +798,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ro.iliemarius.CrossReduxSOA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
