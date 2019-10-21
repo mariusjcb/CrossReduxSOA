@@ -34,7 +34,7 @@ let package = Package(
         .target(name: "CrossReduxSOA.ReduxStores", dependencies: ["Common", "Redux", "CrossReduxSOA.Models", "CrossReduxSOA.Reducers"],
                 path: "./CrossReduxSOA/CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores/"),
         .target(name: "CrossReduxSOA.UI", dependencies: ["Common", "Redux", "ApiModule", "CrossReduxSOA.Models", "CrossReduxSOA.ApiModule", "CrossReduxSOA.Reducers", "CrossReduxSOA.ReduxStores"],
-                path: "./CrossReduxSOA/CrossReduxSOA.UI/CrossReduxSOA.UI/),
+                path: "./CrossReduxSOA/CrossReduxSOA.UI/CrossReduxSOA.UI/"),
         
         .target(
             name: "CrossReduxSOA",
