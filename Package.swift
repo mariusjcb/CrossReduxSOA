@@ -27,15 +27,15 @@ let package = Package(
         .target(name: "ApiModule", dependencies: ["Redux", "RxAlamofire"], path: "./ApiModule/ApiModule/"),
         
         /*.target(name: "CrossReduxSOA.Models", dependencies: ["Common", "Redux"],
-                path: "./CrossReduxSOA/CrossReduxSOA.Models/CrossReduxSOA.Models/"),
+                path: "./Example/CrossReduxSOA.Models/CrossReduxSOA.Models/"),
         .target(name: "CrossReduxSOA.ApiModule", dependencies: ["RxAlamofire", "CrossReduxSOA.Models"],
-                path: "./CrossReduxSOA/CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule/"),
+                path: "./Example/CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule/"),
         .target(name: "CrossReduxSOA.Reducers", dependencies: ["Redux", "ApiModule"],
-                path: "./CrossReduxSOA/CrossReduxSOA.Reducers/CrossReduxSOA.Reducers/"),
+                path: "./Example/CrossReduxSOA.Reducers/CrossReduxSOA.Reducers/"),
         .target(name: "CrossReduxSOA.ReduxStores", dependencies: ["Common", "Redux", "CrossReduxSOA.Models", "CrossReduxSOA.Reducers"],
-                path: "./CrossReduxSOA/CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores/"),
+                path: "./Example/CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores/"),
         .target(name: "CrossReduxSOA.UI", dependencies: ["Common", "Redux", "ApiModule", "CrossReduxSOA.Models", "CrossReduxSOA.ApiModule", "CrossReduxSOA.Reducers", "CrossReduxSOA.ReduxStores"],
-                path: "./CrossReduxSOA/CrossReduxSOA.UI/CrossReduxSOA.UI/"),*/
+                path: "./Example/CrossReduxSOA.UI/CrossReduxSOA.UI/"),*/
         
         .target(
             name: "CrossReduxSOA",
