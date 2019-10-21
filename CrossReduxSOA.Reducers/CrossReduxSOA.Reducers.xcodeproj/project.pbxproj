@@ -11,6 +11,8 @@
 		7A2DC14B235D5959007444E7 /* CrossReduxSOA_ReducersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC14A235D5959007444E7 /* CrossReduxSOA_ReducersTests.swift */; };
 		7A2DC14D235D5959007444E7 /* CrossReduxSOA_Reducers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2DC13F235D5959007444E7 /* CrossReduxSOA_Reducers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A2DC157235D595E007444E7 /* TodoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC156235D595E007444E7 /* TodoReducer.swift */; };
+		7A56635E235DD5D2002A93CB /* CrossReduxSOA_Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A56635D235DD5D2002A93CB /* CrossReduxSOA_Models.framework */; };
+		7A566360235DD5D2002A93CB /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A56635F235DD5D2002A93CB /* Redux.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		7A2DC14A235D5959007444E7 /* CrossReduxSOA_ReducersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossReduxSOA_ReducersTests.swift; sourceTree = "<group>"; };
 		7A2DC14C235D5959007444E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A2DC156235D595E007444E7 /* TodoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoReducer.swift; sourceTree = "<group>"; };
+		7A56635D235DD5D2002A93CB /* CrossReduxSOA_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A56635F235DD5D2002A93CB /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A56635E235DD5D2002A93CB /* CrossReduxSOA_Models.framework in Frameworks */,
+				7A566360235DD5D2002A93CB /* Redux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,7 @@
 				7A2DC13E235D5959007444E7 /* CrossReduxSOA.Reducers */,
 				7A2DC149235D5959007444E7 /* CrossReduxSOA.ReducersTests */,
 				7A2DC13D235D5959007444E7 /* Products */,
+				7A56635C235DD5D2002A93CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +102,15 @@
 				7A2DC156235D595E007444E7 /* TodoReducer.swift */,
 			);
 			path = TodoReducer;
+			sourceTree = "<group>";
+		};
+		7A56635C235DD5D2002A93CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A56635D235DD5D2002A93CB /* CrossReduxSOA_Models.framework */,
+				7A56635F235DD5D2002A93CB /* Redux.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A566353235DD590002A93CB /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566352235DD590002A93CB /* Common.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7ACEB665235D4F8A00DEA88E /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB65B235D4F8A00DEA88E /* Redux.framework */; };
 		7ACEB66A235D4F8A00DEA88E /* ReduxModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB669235D4F8A00DEA88E /* ReduxModuleTests.swift */; };
 		7ACEB66C235D4F8A00DEA88E /* Redux.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACEB65E235D4F8A00DEA88E /* Redux.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A56633E235DD496002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A566352235DD590002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB65B235D4F8A00DEA88E /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB65E235D4F8A00DEA88E /* Redux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Redux.h; sourceTree = "<group>"; };
 		7ACEB65F235D4F8A00DEA88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A566353235DD590002A93CB /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A56633D235DD496002A93CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A566352235DD590002A93CB /* Common.framework */,
+				7A56633E235DD496002A93CB /* Common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7ACEB651235D4F8A00DEA88E = {
 			isa = PBXGroup;
 			children = (
 				7ACEB65D235D4F8A00DEA88E /* Redux */,
 				7ACEB668235D4F8A00DEA88E /* ReduxModuleTests */,
 				7ACEB65C235D4F8A00DEA88E /* Products */,
+				7A56633D235DD496002A93CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,6 +386,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
