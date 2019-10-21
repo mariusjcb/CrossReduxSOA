@@ -7,10 +7,22 @@
 //
 
 import XCTest
+import Redux
+import CrossReduxSOA_Reducers
 @testable import CrossReduxSOA_ReduxStores
 
 class CrossReduxSOA_ReduxStoresTests: XCTestCase {
 
+    lazy var archiveListeners = [GenericReduxArchiverLogger("archive_logger1")]
+    lazy var listeners: [ReduceStoreOutputDelegate] = [
+        GenericReduxStoreLogger("logger1"),
+        GenericReduxStoreLogger("logger2"),
+        GenericReduxStoreLogger("logger3"),
+        GenericReduxStoreLogger("logger4"),
+        TodoStoreArchiver(outputDelegates: archiveListeners)
+    ]
+    lazy var store = TodoStoreProvider([], reducer: TodoReducer(), outputDelegates: listeners)
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -20,6 +32,7 @@ class CrossReduxSOA_ReduxStoresTests: XCTestCase {
     }
 
     func testExample() {
+        store.dispatch(action: .addTodo("1"))
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
@@ -27,7 +40,7 @@ class CrossReduxSOA_ReduxStoresTests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+            store.dispatch(action: .addTodo("1"))
         }
     }
 

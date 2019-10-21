@@ -39,6 +39,9 @@
 		7A2DC129235D58A5007444E7 /* BaseTodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTodoStore.swift; sourceTree = "<group>"; };
 		7A2DC12A235D58A5007444E7 /* TodoRxStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRxStore.swift; sourceTree = "<group>"; };
 		7A2DC12B235D58A5007444E7 /* TodoCombineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCombineStore.swift; sourceTree = "<group>"; };
+		7AEB2297235D6E300017F9F0 /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AEB2299235D6E480017F9F0 /* ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AEB229B235D6E600017F9F0 /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				7A2DC10D235D5880007444E7 /* CrossReduxSOA.ReduxStores */,
 				7A2DC118235D5881007444E7 /* CrossReduxSOA.ReduxStoresTests */,
 				7A2DC10C235D5880007444E7 /* Products */,
+				7AEB2296235D6E300017F9F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,16 @@
 				7A2DC12B235D58A5007444E7 /* TodoCombineStore.swift */,
 			);
 			path = TodoStore;
+			sourceTree = "<group>";
+		};
+		7AEB2296235D6E300017F9F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AEB229B235D6E600017F9F0 /* Redux.framework */,
+				7AEB2299235D6E480017F9F0 /* ApiModule.framework */,
+				7AEB2297235D6E300017F9F0 /* Redux.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +404,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = CrossReduxSOA.ReduxStores/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -415,6 +430,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = CrossReduxSOA.ReduxStores/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -437,6 +453,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../";
 				INFOPLIST_FILE = CrossReduxSOA.ReduxStoresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +473,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../";
 				INFOPLIST_FILE = CrossReduxSOA.ReduxStoresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
