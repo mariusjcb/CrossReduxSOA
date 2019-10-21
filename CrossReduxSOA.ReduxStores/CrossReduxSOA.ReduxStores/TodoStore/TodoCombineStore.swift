@@ -12,9 +12,7 @@ import Redux
 import CrossReduxSOA_Reducers
 
 @available(iOS 13.0, *)
-public class TodoCombineStore: BaseTodoStore, ObservableObject {
-    public typealias ReducerType = TodoReducer
-    
+public class TodoCombineStore<ReducerType: TodoReducer>: BaseTodoStore, ObservableObject {
     @Published public var currentState: ReducerType.StateType!
     public var state: ReducerType.StateType { return currentState }
     public var reducer: ReducerType!

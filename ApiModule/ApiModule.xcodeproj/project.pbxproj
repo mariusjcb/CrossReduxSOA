@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A566367235DDBB6002A93CB /* DateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */; };
+		7A56636B235DDD92002A93CB /* RequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A56636A235DDD92002A93CB /* RequestAdapter.swift */; };
+		7A56636E235DDDCE002A93CB /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7A56636D235DDDCE002A93CB /* RxAlamofire */; };
+		7A566370235DDF19002A93CB /* AuthorizationAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A56636F235DDF19002A93CB /* AuthorizationAdapterDelegate.swift */; };
+		7A566372235DDF8A002A93CB /* SessionManagerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566371235DDF8A002A93CB /* SessionManagerBuilder.swift */; };
+		7A566374235DE0BF002A93CB /* URLPrintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566373235DE0BF002A93CB /* URLPrintProtocol.swift */; };
+		7A566376235DE11E002A93CB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566375235DE11E002A93CB /* Data.swift */; };
+		7A566379235DE516002A93CB /* URLRequestPrintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */; };
 		7ACEB62A235D4DA400DEA88E /* ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB620235D4DA400DEA88E /* ApiModule.framework */; };
 		7ACEB62F235D4DA400DEA88E /* ApiModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB62E235D4DA400DEA88E /* ApiModuleTests.swift */; };
 		7ACEB631235D4DA400DEA88E /* ApiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACEB623235D4DA400DEA88E /* ApiModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7ACEB649235D4E1200DEA88E /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB648235D4E1200DEA88E /* BaseApi.swift */; };
-		7ACEB64B235D4E2A00DEA88E /* BaseApiUrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB64A235D4E2A00DEA88E /* BaseApiUrlBuilder.swift */; };
-		7ACEB64D235D4E4400DEA88E /* SessionDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB64C235D4E4400DEA88E /* SessionDataPublisher.swift */; };
+		7ACEB649235D4E1200DEA88E /* ApiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB648235D4E1200DEA88E /* ApiModule.swift */; };
 		7ACEB650235D4EE200DEA88E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB64F235D4EE200DEA88E /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,15 +33,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecodingStrategy.swift; sourceTree = "<group>"; };
+		7A56636A235DDD92002A93CB /* RequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAdapter.swift; sourceTree = "<group>"; };
+		7A56636F235DDF19002A93CB /* AuthorizationAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAdapterDelegate.swift; sourceTree = "<group>"; };
+		7A566371235DDF8A002A93CB /* SessionManagerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerBuilder.swift; sourceTree = "<group>"; };
+		7A566373235DE0BF002A93CB /* URLPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPrintProtocol.swift; sourceTree = "<group>"; };
+		7A566375235DE11E002A93CB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestPrintProtocol.swift; sourceTree = "<group>"; };
 		7ACEB620235D4DA400DEA88E /* ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB623235D4DA400DEA88E /* ApiModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiModule.h; sourceTree = "<group>"; };
 		7ACEB624235D4DA400DEA88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACEB629235D4DA400DEA88E /* ApiModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApiModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB62E235D4DA400DEA88E /* ApiModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModuleTests.swift; sourceTree = "<group>"; };
 		7ACEB630235D4DA400DEA88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7ACEB648235D4E1200DEA88E /* BaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
-		7ACEB64A235D4E2A00DEA88E /* BaseApiUrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiUrlBuilder.swift; sourceTree = "<group>"; };
-		7ACEB64C235D4E4400DEA88E /* SessionDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataPublisher.swift; sourceTree = "<group>"; };
+		7ACEB648235D4E1200DEA88E /* ApiModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModule.swift; sourceTree = "<group>"; };
 		7ACEB64F235D4EE200DEA88E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A56636E235DDDCE002A93CB /* RxAlamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +70,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A566377235DE4B4002A93CB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7A566371235DDF8A002A93CB /* SessionManagerBuilder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7A56637A235DE54B002A93CB /* RequestAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				7A56636A235DDD92002A93CB /* RequestAdapter.swift */,
+				7A56636F235DDF19002A93CB /* AuthorizationAdapterDelegate.swift */,
+			);
+			path = RequestAdapters;
+			sourceTree = "<group>";
+		};
+		7A56637B235DE555002A93CB /* DebugPrintProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				7A566373235DE0BF002A93CB /* URLPrintProtocol.swift */,
+				7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */,
+			);
+			path = DebugPrintProtocols;
+			sourceTree = "<group>";
+		};
 		7ACEB616235D4DA400DEA88E = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +117,11 @@
 		7ACEB622235D4DA400DEA88E /* ApiModule */ = {
 			isa = PBXGroup;
 			children = (
+				7ACEB648235D4E1200DEA88E /* ApiModule.swift */,
+				7A56637A235DE54B002A93CB /* RequestAdapters */,
+				7A56637B235DE555002A93CB /* DebugPrintProtocols */,
 				7ACEB64E235D4ED600DEA88E /* Extensions */,
-				7ACEB647235D4DF200DEA88E /* BaseApi */,
+				7A566377235DE4B4002A93CB /* Helpers */,
 				7ACEB623235D4DA400DEA88E /* ApiModule.h */,
 				7ACEB624235D4DA400DEA88E /* Info.plist */,
 			);
@@ -96,20 +137,12 @@
 			path = ApiModuleTests;
 			sourceTree = "<group>";
 		};
-		7ACEB647235D4DF200DEA88E /* BaseApi */ = {
-			isa = PBXGroup;
-			children = (
-				7ACEB648235D4E1200DEA88E /* BaseApi.swift */,
-				7ACEB64A235D4E2A00DEA88E /* BaseApiUrlBuilder.swift */,
-				7ACEB64C235D4E4400DEA88E /* SessionDataPublisher.swift */,
-			);
-			path = BaseApi;
-			sourceTree = "<group>";
-		};
 		7ACEB64E235D4ED600DEA88E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				7ACEB64F235D4EE200DEA88E /* DateFormatter.swift */,
+				7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */,
+				7A566375235DE11E002A93CB /* Data.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +175,9 @@
 			dependencies = (
 			);
 			name = ApiModule;
+			packageProductDependencies = (
+				7A56636D235DDDCE002A93CB /* RxAlamofire */,
+			);
 			productName = ApiModule;
 			productReference = 7ACEB620235D4DA400DEA88E /* ApiModule.framework */;
 			productType = "com.apple.product-type.framework";
@@ -192,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 7ACEB616235D4DA400DEA88E;
+			packageReferences = (
+				7A56636C235DDDCE002A93CB /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+			);
 			productRefGroup = 7ACEB621235D4DA400DEA88E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,10 +263,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A56636B235DDD92002A93CB /* RequestAdapter.swift in Sources */,
+				7A566376235DE11E002A93CB /* Data.swift in Sources */,
+				7A566370235DDF19002A93CB /* AuthorizationAdapterDelegate.swift in Sources */,
 				7ACEB650235D4EE200DEA88E /* DateFormatter.swift in Sources */,
-				7ACEB64D235D4E4400DEA88E /* SessionDataPublisher.swift in Sources */,
-				7ACEB64B235D4E2A00DEA88E /* BaseApiUrlBuilder.swift in Sources */,
-				7ACEB649235D4E1200DEA88E /* BaseApi.swift in Sources */,
+				7A566367235DDBB6002A93CB /* DateDecodingStrategy.swift in Sources */,
+				7A566379235DE516002A93CB /* URLRequestPrintProtocol.swift in Sources */,
+				7A566372235DDF8A002A93CB /* SessionManagerBuilder.swift in Sources */,
+				7A566374235DE0BF002A93CB /* URLPrintProtocol.swift in Sources */,
+				7ACEB649235D4E1200DEA88E /* ApiModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +536,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A56636C235DDDCE002A93CB /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A56636D235DDDCE002A93CB /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A56636C235DDDCE002A93CB /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7ACEB617235D4DA400DEA88E /* Project object */;
 }

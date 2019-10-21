@@ -11,9 +11,7 @@ import Common
 import Redux
 import CrossReduxSOA_Reducers
 
-public class TodoStoreArchiver: ReducerStoreArchiver {
-    public typealias ReducerType = TodoReducer
-    
+public class TodoStoreArchiver<ReducerType: TodoReducer>: ReducerStoreArchiver {
     public var statesHistory = [ReduxArchiveElement<TodoReducer>]()
     public var outputDelegates = MulticastDelegate<ReducerStoreArchiverOutputDelegate>()
     

@@ -10,12 +10,10 @@ import Foundation
 import Redux
 import CrossReduxSOA_Reducers
 
-public class TodoStoreProvider: ReduceStoreProvider {
-    public typealias ReducerType = TodoReducer
-    
+public class TodoStoreProvider<ReducerType: TodoReducer>: ReduceStoreProvider {
     @available(iOS 13.0, *)
-    lazy public var combine: TodoCombineStore! = nil
-    public var rx: TodoRxStore! = nil
+    lazy public var combine: TodoCombineStore<ReducerType>! = nil
+    public var rx: TodoRxStore<ReducerType>! = nil
     
     required public init() { }
 }

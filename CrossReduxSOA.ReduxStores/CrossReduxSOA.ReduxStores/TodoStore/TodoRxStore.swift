@@ -11,9 +11,7 @@ import Redux
 import Common
 import CrossReduxSOA_Reducers
 
-public class TodoRxStore: BaseTodoStore {
-    public typealias ReducerType = TodoReducer
-    
+public class TodoRxStore<ReducerType: TodoReducer>: BaseTodoStore {
     public var currentState: ReducerType.StateType!
     public var state: ReducerType.StateType { return currentState }
     public var reducer: ReducerType!
