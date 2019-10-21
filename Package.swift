@@ -22,7 +22,7 @@ let package = Package(
         .package(url: "https://github.com/RxSwiftCommunity/RxAlamofire.git", from: "5.0.0")
     ],
     targets: [
-        .target(name: "Common", dependencies: []),
+        .target(name: "Common", dependencies: [], path: "./Common/Common/"),
         .target(name: "Redux", dependencies: ["Common"]),
         .target(name: "ApiModule", dependencies: ["Redux", "RxAlamofire"]),
         .target(name: "CrossReduxSOA.Models", dependencies: ["Common", "Redux"]),
