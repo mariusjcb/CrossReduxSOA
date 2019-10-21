@@ -5,32 +5,29 @@
       location = "container:"
       name = "Example">
       <FileRef
-         location = "group:CrossReduxSOA/CrossReduxSOA.UI/CrossReduxSOA.UI.xcodeproj">
+         location = "group:Example/CrossReduxSOA.UI/CrossReduxSOA.UI.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:CrossReduxSOA/CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores.xcodeproj">
+         location = "group:Example/CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:CrossReduxSOA/CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
+         location = "group:Example/CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:CrossReduxSOA/CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
+         location = "group:Example/CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:CrossReduxSOA/CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
+         location = "group:Example/CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
       </FileRef>
    </Group>
    <FileRef
-      location = "group:Example">
-   </FileRef>
-   <FileRef
-      location = "group:Common/Common.xcodeproj">
+      location = "group:ApiModule/ApiModule.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:/Users/mariusjcb/Documents/Developer/CrossReduxSOA/ReduxModule/Redux.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ApiModule/ApiModule.xcodeproj">
+      location = "group:Common/Common.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:/Users/mariusjcb/Documents/Developer/CrossReduxSOA/CrossReduxSOAPackage.xcodeproj">
