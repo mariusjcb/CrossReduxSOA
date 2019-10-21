@@ -14,7 +14,7 @@ let package = Package(
         .library(name: "CrossReduxSOA.ApiModule", targets: ["CrossReduxSOA.ApiModule"]),
         .library(name: "CrossReduxSOA.Reducers", targets: ["CrossReduxSOA.Reducers"]),
         .library(name: "CrossReduxSOA.ReduxStores", targets: ["CrossReduxSOA.ReduxStores"]),
-        .library(name: "CrossReduxSOA.UI", targets: ["CrossReduxSOA.UI"]),
+        .executable(name: "CrossReduxSOA.UI", targets: ["CrossReduxSOA.UI"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -27,7 +27,7 @@ let package = Package(
         .target(name: "ApiModule", dependencies: ["Redux", "RxAlamofire"], path: "./ApiModule/ApiModule/"),
         .target(name: "CrossReduxSOA.Models", dependencies: ["Common", "Redux"],
                 path: "./CrossReduxSOA/CrossReduxSOA.Models/CrossReduxSOA.Models/"),
-        .target(name: "CrossReduxSOA.ApiModule", dependencies: ["CrossReduxSOA.Models"],
+        .target(name: "CrossReduxSOA.ApiModule", dependencies: ["RxAlamofire", "CrossReduxSOA.Models"],
                 path: "./CrossReduxSOA/CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule/"),
         .target(name: "CrossReduxSOA.Reducers", dependencies: ["Redux", "ApiModule"],
                 path: "./CrossReduxSOA/CrossReduxSOA.Reducers/CrossReduxSOA.Reducers/"),
