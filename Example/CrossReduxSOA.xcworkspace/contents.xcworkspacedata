@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CrossReduxSOA.UI/CrossReduxSOA.UI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
+   </FileRef>
+</Workspace>
