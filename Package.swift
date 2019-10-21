@@ -23,7 +23,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "Common", dependencies: [], path: "./Common/Common/"),
-        .target(name: "Redux", dependencies: ["Common"], path: "./Redux/Redux/"),
+        .target(name: "Redux", dependencies: ["Common"], path: "./ReduxModule/Redux/"),
         .target(name: "ApiModule", dependencies: ["Redux", "RxAlamofire"], path: "./ApiModule/ApiModule/"),
         .target(name: "CrossReduxSOA.Models", dependencies: ["Common", "Redux"],
                 path: "./CrossReduxSOA/CrossReduxSOA.Models/CrossReduxSOA.Models/"),
