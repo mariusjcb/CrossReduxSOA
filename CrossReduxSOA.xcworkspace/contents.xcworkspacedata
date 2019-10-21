@@ -2,19 +2,19 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
+      location = "group:CrossReduxSOA/CrossReduxSOA.UI/CrossReduxSOA.UI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
+      location = "group:CrossReduxSOA/CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
+      location = "group:CrossReduxSOA/CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores.xcodeproj">
+      location = "group:CrossReduxSOA/CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:CrossReduxSOA.xcodeproj">
+      location = "group:CrossReduxSOA/CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Common/Common.xcodeproj">
@@ -24,5 +24,8 @@
    </FileRef>
    <FileRef
       location = "group:ApiModule/ApiModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/mariusjcb/Documents/Developer/CrossReduxSOA/CrossReduxSOAPackage.xcodeproj">
    </FileRef>
 </Workspace>
