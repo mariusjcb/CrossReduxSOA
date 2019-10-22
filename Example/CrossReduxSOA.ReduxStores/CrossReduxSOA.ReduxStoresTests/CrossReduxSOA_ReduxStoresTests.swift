@@ -19,9 +19,9 @@ class CrossReduxSOA_ReduxStoresTests: XCTestCase {
         GenericReduxStoreLogger("logger2"),
         GenericReduxStoreLogger("logger3"),
         GenericReduxStoreLogger("logger4"),
-        TodoStoreArchiver(outputDelegates: archiveListeners)
+        GithubStoreArchiver(outputDelegates: archiveListeners)
     ]
-    lazy var store = TodoStoreProvider([], reducer: TodoReducer(), outputDelegates: listeners)
+    lazy var store = GithubStoreProvider([], reducer: GithubReducer(), outputDelegates: listeners)
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -32,7 +32,7 @@ class CrossReduxSOA_ReduxStoresTests: XCTestCase {
     }
 
     func testExample() {
-        store.dispatch(action: .addTodo("1"))
+        store.dispatch(action: .addGithub("1"))
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
@@ -40,7 +40,7 @@ class CrossReduxSOA_ReduxStoresTests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
-            store.dispatch(action: .addTodo("1"))
+            store.dispatch(action: .addGithub("1"))
         }
     }
 

@@ -13,7 +13,7 @@ import RxBlocking
 
 class CrossReduxSOA_ApiModuleTests: XCTestCase {
 
-    lazy var api = TestApi(requestAdapter: RequestAdapter(host: "https://jsonplaceholder.typicode.com/todos/"))
+    lazy var api = TestApi(requestAdapter: RequestAdapter(host: "https://jsonplaceholder.typicode.com/Githubs/"))
     lazy var test = try api.test()
     
     override func setUp() {

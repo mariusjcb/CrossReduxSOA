@@ -10,16 +10,15 @@ import Foundation
 import Alamofire
 
 open class ApiModule {
-    private let requestAdapter: RequestAdapter
+    private let requestAdapter: ApiRequestAdapter
     public let httpClient: Alamofire.SessionManager
     
-    open var encoder: JSONEncoder { return JSONEncoder() }
-    open var decoder: JSONDecoder { return JSONDecoder() }
+    public var encoder: JSONEncoder { return JSONEncoder() }
+    public var decoder: JSONDecoder { return JSONDecoder() }
     
-    public init(requestAdapter: RequestAdapter,
+    public init(requestAdapter: ApiRequestAdapter,
                 httpClient: Alamofire.SessionManager? = nil) {
-        self.httpClient = httpClient ?? SessionManagerBuilder.makeDefaultSession(with: requestAdapter)
+        self.httpClient = httpClient ?? .makeDefaultSession(with: requestAdapter)
         self.requestAdapter = requestAdapter
     }
-    
 }

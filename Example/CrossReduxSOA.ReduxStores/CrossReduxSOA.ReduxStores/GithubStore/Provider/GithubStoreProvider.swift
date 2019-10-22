@@ -1,5 +1,5 @@
 //
-//  TodoStoreProvider.swift
+//  GithubStoreProvider.swift
 //  CrossReduxSOA
 //
 //  Created by Marius Ilie on 21/10/2019.
@@ -10,10 +10,10 @@ import Foundation
 import Redux
 import CrossReduxSOA_Reducers
 
-public class TodoStoreProvider<ReducerType: TodoReducer>: ReduceStoreProvider {
+public class GithubStoreProvider<ReducerType: GithubReducer>: ReduceStoreProvider {
     @available(iOS 13.0, *)
-    lazy public var combine: TodoCombineStore<ReducerType>! = nil
-    public var rx: TodoRxStore<ReducerType>! = nil
+    lazy public var combine: GithubCombineStore<ReducerType>! = nil
+    public var rx: GithubRxStore<ReducerType>! = nil
     
     required public init() { }
 }

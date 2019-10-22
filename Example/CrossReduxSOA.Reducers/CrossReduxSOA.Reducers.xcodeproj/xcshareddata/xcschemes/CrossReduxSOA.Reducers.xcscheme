@@ -48,6 +48,20 @@
                ReferencedContainer = "container:../ReduxModule/Redux.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7A46603A235E6A0D00EEE552"
+               BuildableName = "CrossReduxSOA_Services.framework"
+               BlueprintName = "CrossReduxSOA.Services"
+               ReferencedContainer = "container:../CrossReduxSOA.Services/CrossReduxSOA.Services.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

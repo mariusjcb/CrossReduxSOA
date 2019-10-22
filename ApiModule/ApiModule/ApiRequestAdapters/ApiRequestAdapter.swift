@@ -10,17 +10,17 @@ import Foundation
 import Alamofire
 import RxAlamofire
 
-public class RequestAdapter: Alamofire.RequestAdapter {
+public class ApiRequestAdapter: Alamofire.RequestAdapter {
     private let host: String
+    private let headerKeys: ApiRequestAdapterHeaderKeys
     
     public var delegate: AuthorizationAdapterDelegate?
     
-    public struct HeaderKeys {
-        public static var auth: String { "Authorization" }
-    }
-    
-    public init(host: String, delegate: AuthorizationAdapterDelegate? = nil) {
+    public init(host: String,
+                headerKeys: ApiRequestAdapterHeaderKeys = ApiRequestAdapterHeaderKeys(),
+                delegate: AuthorizationAdapterDelegate? = nil) {
         self.host = host
+        self.headerKeys = headerKeys
         self.delegate = delegate
     }
     
@@ -32,14 +32,14 @@ public class RequestAdapter: Alamofire.RequestAdapter {
         
         //Add Auth Bearer header if needed
         if let accessToken = delegate?.requestAdapter(self, authorizationTokenFor: urlRequest) {
-            urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: HeaderKeys.auth)
+            urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: headerKeys.auth)
         }
         
         return urlRequest
     }
 }
 
-extension RequestAdapter: Alamofire.RequestRetrier {
+extension ApiRequestAdapter: Alamofire.RequestRetrier {
     public func should(_ manager: Alamofire.SessionManager, retry request: Alamofire.Request, with error: Error, completion: @escaping Alamofire.RequestRetryCompletion) {
         guard let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 else {
             completion(false, 0.0)

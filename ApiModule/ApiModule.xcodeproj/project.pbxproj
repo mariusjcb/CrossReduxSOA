@@ -11,11 +11,14 @@
 		7A29789A235E354400B9619F /* RxAlamofireResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A297899235E354400B9619F /* RxAlamofireResponse.swift */; };
 		7A29789C235E363600B9619F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29789B235E363600B9619F /* ApiError.swift */; };
 		7A29789E235E36A000B9619F /* RxAlamofireSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29789D235E36A000B9619F /* RxAlamofireSessionManager.swift */; };
+		7A46606F235E7AD900EEE552 /* RequestAdapterHeaderKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46606E235E7AD900EEE552 /* RequestAdapterHeaderKeys.swift */; };
+		7A46607A235E7F9A00EEE552 /* CustomApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A466079235E7F9A00EEE552 /* CustomApiError.swift */; };
+		7A46607C235E811600EEE552 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46607B235E811600EEE552 /* ApiEndpoints.swift */; };
 		7A566367235DDBB6002A93CB /* DateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */; };
-		7A56636B235DDD92002A93CB /* RequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A56636A235DDD92002A93CB /* RequestAdapter.swift */; };
+		7A56636B235DDD92002A93CB /* ApiRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A56636A235DDD92002A93CB /* ApiRequestAdapter.swift */; };
 		7A56636E235DDDCE002A93CB /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7A56636D235DDDCE002A93CB /* RxAlamofire */; };
 		7A566370235DDF19002A93CB /* AuthorizationAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A56636F235DDF19002A93CB /* AuthorizationAdapterDelegate.swift */; };
-		7A566372235DDF8A002A93CB /* SessionManagerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566371235DDF8A002A93CB /* SessionManagerBuilder.swift */; };
+		7A566372235DDF8A002A93CB /* AlamofireSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566371235DDF8A002A93CB /* AlamofireSessionManager.swift */; };
 		7A566374235DE0BF002A93CB /* URLPrintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566373235DE0BF002A93CB /* URLPrintProtocol.swift */; };
 		7A566376235DE11E002A93CB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566375235DE11E002A93CB /* Data.swift */; };
 		7A566379235DE516002A93CB /* URLRequestPrintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */; };
@@ -41,10 +44,13 @@
 		7A297899235E354400B9619F /* RxAlamofireResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAlamofireResponse.swift; sourceTree = "<group>"; };
 		7A29789B235E363600B9619F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		7A29789D235E36A000B9619F /* RxAlamofireSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAlamofireSessionManager.swift; sourceTree = "<group>"; };
+		7A46606E235E7AD900EEE552 /* RequestAdapterHeaderKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAdapterHeaderKeys.swift; sourceTree = "<group>"; };
+		7A466079235E7F9A00EEE552 /* CustomApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomApiError.swift; sourceTree = "<group>"; };
+		7A46607B235E811600EEE552 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
 		7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecodingStrategy.swift; sourceTree = "<group>"; };
-		7A56636A235DDD92002A93CB /* RequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAdapter.swift; sourceTree = "<group>"; };
+		7A56636A235DDD92002A93CB /* ApiRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestAdapter.swift; sourceTree = "<group>"; };
 		7A56636F235DDF19002A93CB /* AuthorizationAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAdapterDelegate.swift; sourceTree = "<group>"; };
-		7A566371235DDF8A002A93CB /* SessionManagerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerBuilder.swift; sourceTree = "<group>"; };
+		7A566371235DDF8A002A93CB /* AlamofireSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSessionManager.swift; sourceTree = "<group>"; };
 		7A566373235DE0BF002A93CB /* URLPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPrintProtocol.swift; sourceTree = "<group>"; };
 		7A566375235DE11E002A93CB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestPrintProtocol.swift; sourceTree = "<group>"; };
@@ -91,19 +97,21 @@
 		7A566377235DE4B4002A93CB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7A566371235DDF8A002A93CB /* SessionManagerBuilder.swift */,
 				7A29789B235E363600B9619F /* ApiError.swift */,
+				7A466079235E7F9A00EEE552 /* CustomApiError.swift */,
+				7A46607B235E811600EEE552 /* ApiEndpoints.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		7A56637A235DE54B002A93CB /* RequestAdapters */ = {
+		7A56637A235DE54B002A93CB /* ApiRequestAdapters */ = {
 			isa = PBXGroup;
 			children = (
-				7A56636A235DDD92002A93CB /* RequestAdapter.swift */,
+				7A56636A235DDD92002A93CB /* ApiRequestAdapter.swift */,
+				7A46606E235E7AD900EEE552 /* RequestAdapterHeaderKeys.swift */,
 				7A56636F235DDF19002A93CB /* AuthorizationAdapterDelegate.swift */,
 			);
-			path = RequestAdapters;
+			path = ApiRequestAdapters;
 			sourceTree = "<group>";
 		};
 		7A56637B235DE555002A93CB /* DebugPrintProtocols */ = {
@@ -137,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7ACEB648235D4E1200DEA88E /* ApiModule.swift */,
-				7A56637A235DE54B002A93CB /* RequestAdapters */,
+				7A56637A235DE54B002A93CB /* ApiRequestAdapters */,
 				7A56637B235DE555002A93CB /* DebugPrintProtocols */,
 				7ACEB64E235D4ED600DEA88E /* Extensions */,
 				7A566377235DE4B4002A93CB /* Helpers */,
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				7A297898235E351400B9619F /* ReactiveExtensions */,
+				7A566371235DDF8A002A93CB /* AlamofireSessionManager.swift */,
 				7ACEB64F235D4EE200DEA88E /* DateFormatter.swift */,
 				7A566366235DDBB6002A93CB /* DateDecodingStrategy.swift */,
 				7A566375235DE11E002A93CB /* Data.swift */,
@@ -284,7 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A29789E235E36A000B9619F /* RxAlamofireSessionManager.swift in Sources */,
-				7A56636B235DDD92002A93CB /* RequestAdapter.swift in Sources */,
+				7A56636B235DDD92002A93CB /* ApiRequestAdapter.swift in Sources */,
+				7A46606F235E7AD900EEE552 /* RequestAdapterHeaderKeys.swift in Sources */,
 				7A566376235DE11E002A93CB /* Data.swift in Sources */,
 				7A566370235DDF19002A93CB /* AuthorizationAdapterDelegate.swift in Sources */,
 				7ACEB650235D4EE200DEA88E /* DateFormatter.swift in Sources */,
@@ -292,9 +302,11 @@
 				7A29789C235E363600B9619F /* ApiError.swift in Sources */,
 				7A566367235DDBB6002A93CB /* DateDecodingStrategy.swift in Sources */,
 				7A566379235DE516002A93CB /* URLRequestPrintProtocol.swift in Sources */,
-				7A566372235DDF8A002A93CB /* SessionManagerBuilder.swift in Sources */,
+				7A566372235DDF8A002A93CB /* AlamofireSessionManager.swift in Sources */,
+				7A46607C235E811600EEE552 /* ApiEndpoints.swift in Sources */,
 				7A29789A235E354400B9619F /* RxAlamofireResponse.swift in Sources */,
 				7A566374235DE0BF002A93CB /* URLPrintProtocol.swift in Sources */,
+				7A46607A235E7F9A00EEE552 /* CustomApiError.swift in Sources */,
 				7ACEB649235D4E1200DEA88E /* ApiModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

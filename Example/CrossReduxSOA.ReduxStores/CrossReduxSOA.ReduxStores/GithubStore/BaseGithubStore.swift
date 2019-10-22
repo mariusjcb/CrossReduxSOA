@@ -1,5 +1,5 @@
 //
-//  BaseTodoRxStore.swift
+//  BaseGithubRxStore.swift
 //  CrossReduxSOA
 //
 //  Created by Marius Ilie on 21/10/2019.
@@ -9,6 +9,6 @@
 import Foundation
 import Redux
 
-public protocol BaseTodoStore: ReduceStore {
+public protocol BaseGithubStore: ReduceStore {
     
 }

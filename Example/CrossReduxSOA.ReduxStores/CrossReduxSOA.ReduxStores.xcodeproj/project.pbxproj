@@ -10,11 +10,11 @@
 		7A2DC115235D5881007444E7 /* CrossReduxSOA_ReduxStores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2DC10B235D5880007444E7 /* CrossReduxSOA_ReduxStores.framework */; };
 		7A2DC11A235D5881007444E7 /* CrossReduxSOA_ReduxStoresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC119235D5881007444E7 /* CrossReduxSOA_ReduxStoresTests.swift */; };
 		7A2DC11C235D5881007444E7 /* CrossReduxSOA_ReduxStores.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2DC10E235D5880007444E7 /* CrossReduxSOA_ReduxStores.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A2DC12D235D58EF007444E7 /* TodoStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC125235D58A5007444E7 /* TodoStoreProvider.swift */; };
-		7A2DC12E235D58EF007444E7 /* TodoStoreArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC127235D58A5007444E7 /* TodoStoreArchiver.swift */; };
-		7A2DC12F235D58EF007444E7 /* BaseTodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC129235D58A5007444E7 /* BaseTodoStore.swift */; };
-		7A2DC130235D58EF007444E7 /* TodoRxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC12A235D58A5007444E7 /* TodoRxStore.swift */; };
-		7A2DC131235D58EF007444E7 /* TodoCombineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC12B235D58A5007444E7 /* TodoCombineStore.swift */; };
+		7A2DC12D235D58EF007444E7 /* GithubStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC125235D58A5007444E7 /* GithubStoreProvider.swift */; };
+		7A2DC12E235D58EF007444E7 /* GithubStoreArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC127235D58A5007444E7 /* GithubStoreArchiver.swift */; };
+		7A2DC12F235D58EF007444E7 /* BaseGithubStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC129235D58A5007444E7 /* BaseGithubStore.swift */; };
+		7A2DC130235D58EF007444E7 /* GithubRxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC12A235D58A5007444E7 /* GithubRxStore.swift */; };
+		7A2DC131235D58EF007444E7 /* GithubCombineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC12B235D58A5007444E7 /* GithubCombineStore.swift */; };
 		7A566355235DD5AC002A93CB /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566354235DD5AC002A93CB /* Common.framework */; };
 		7A566357235DD5AC002A93CB /* CrossReduxSOA_Reducers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566356235DD5AC002A93CB /* CrossReduxSOA_Reducers.framework */; };
 		7A566359235DD5AC002A93CB /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566358235DD5AC002A93CB /* Redux.framework */; };
@@ -38,11 +38,11 @@
 		7A2DC114235D5881007444E7 /* CrossReduxSOA.ReduxStoresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossReduxSOA.ReduxStoresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2DC119235D5881007444E7 /* CrossReduxSOA_ReduxStoresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossReduxSOA_ReduxStoresTests.swift; sourceTree = "<group>"; };
 		7A2DC11B235D5881007444E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A2DC125235D58A5007444E7 /* TodoStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStoreProvider.swift; sourceTree = "<group>"; };
-		7A2DC127235D58A5007444E7 /* TodoStoreArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStoreArchiver.swift; sourceTree = "<group>"; };
-		7A2DC129235D58A5007444E7 /* BaseTodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTodoStore.swift; sourceTree = "<group>"; };
-		7A2DC12A235D58A5007444E7 /* TodoRxStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRxStore.swift; sourceTree = "<group>"; };
-		7A2DC12B235D58A5007444E7 /* TodoCombineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCombineStore.swift; sourceTree = "<group>"; };
+		7A2DC125235D58A5007444E7 /* GithubStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubStoreProvider.swift; sourceTree = "<group>"; };
+		7A2DC127235D58A5007444E7 /* GithubStoreArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubStoreArchiver.swift; sourceTree = "<group>"; };
+		7A2DC129235D58A5007444E7 /* BaseGithubStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGithubStore.swift; sourceTree = "<group>"; };
+		7A2DC12A235D58A5007444E7 /* GithubRxStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRxStore.swift; sourceTree = "<group>"; };
+		7A2DC12B235D58A5007444E7 /* GithubCombineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubCombineStore.swift; sourceTree = "<group>"; };
 		7A566354235DD5AC002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A566356235DD5AC002A93CB /* CrossReduxSOA_Reducers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Reducers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A566358235DD5AC002A93CB /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +97,7 @@
 		7A2DC10D235D5880007444E7 /* CrossReduxSOA.ReduxStores */ = {
 			isa = PBXGroup;
 			children = (
-				7A2DC12C235D58A5007444E7 /* TodoStore */,
+				7A2DC12C235D58A5007444E7 /* GithubStore */,
 				7A2DC10E235D5880007444E7 /* CrossReduxSOA_ReduxStores.h */,
 				7A2DC10F235D5880007444E7 /* Info.plist */,
 			);
@@ -116,7 +116,7 @@
 		7A2DC126235D58A5007444E7 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				7A2DC125235D58A5007444E7 /* TodoStoreProvider.swift */,
+				7A2DC125235D58A5007444E7 /* GithubStoreProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -124,21 +124,21 @@
 		7A2DC128235D58A5007444E7 /* Archiver */ = {
 			isa = PBXGroup;
 			children = (
-				7A2DC127235D58A5007444E7 /* TodoStoreArchiver.swift */,
+				7A2DC127235D58A5007444E7 /* GithubStoreArchiver.swift */,
 			);
 			path = Archiver;
 			sourceTree = "<group>";
 		};
-		7A2DC12C235D58A5007444E7 /* TodoStore */ = {
+		7A2DC12C235D58A5007444E7 /* GithubStore */ = {
 			isa = PBXGroup;
 			children = (
 				7A2DC126235D58A5007444E7 /* Provider */,
 				7A2DC128235D58A5007444E7 /* Archiver */,
-				7A2DC129235D58A5007444E7 /* BaseTodoStore.swift */,
-				7A2DC12A235D58A5007444E7 /* TodoRxStore.swift */,
-				7A2DC12B235D58A5007444E7 /* TodoCombineStore.swift */,
+				7A2DC129235D58A5007444E7 /* BaseGithubStore.swift */,
+				7A2DC12A235D58A5007444E7 /* GithubRxStore.swift */,
+				7A2DC12B235D58A5007444E7 /* GithubCombineStore.swift */,
 			);
-			path = TodoStore;
+			path = GithubStore;
 			sourceTree = "<group>";
 		};
 		7AEB2296235D6E300017F9F0 /* Frameworks */ = {
@@ -264,11 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2DC12D235D58EF007444E7 /* TodoStoreProvider.swift in Sources */,
-				7A2DC12E235D58EF007444E7 /* TodoStoreArchiver.swift in Sources */,
-				7A2DC12F235D58EF007444E7 /* BaseTodoStore.swift in Sources */,
-				7A2DC130235D58EF007444E7 /* TodoRxStore.swift in Sources */,
-				7A2DC131235D58EF007444E7 /* TodoCombineStore.swift in Sources */,
+				7A2DC12D235D58EF007444E7 /* GithubStoreProvider.swift in Sources */,
+				7A2DC12E235D58EF007444E7 /* GithubStoreArchiver.swift in Sources */,
+				7A2DC12F235D58EF007444E7 /* BaseGithubStore.swift in Sources */,
+				7A2DC130235D58EF007444E7 /* GithubRxStore.swift in Sources */,
+				7A2DC131235D58EF007444E7 /* GithubCombineStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

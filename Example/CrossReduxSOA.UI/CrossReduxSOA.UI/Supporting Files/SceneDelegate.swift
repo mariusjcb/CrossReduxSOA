@@ -13,6 +13,7 @@ import RxSwift
 import ApiModule
 import CrossReduxSOA_ApiModule
 import CrossReduxSOA_Reducers
+import CrossReduxSOA_Services
 import CrossReduxSOA_ReduxStores
 
 @available(iOS 13.0, *)
@@ -22,24 +23,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     lazy var archiveListeners = [GenericReduxArchiverLogger("archive_logger1")]
     lazy var listeners: [ReduceStoreOutputDelegate] = [
-        GenericReduxStoreLogger("logger1"),
-        GenericReduxStoreLogger("logger2"),
-        GenericReduxStoreLogger("logger3"),
-        GenericReduxStoreLogger("logger4"),
-        TodoStoreArchiver(outputDelegates: archiveListeners)
+        GenericReduxStoreLogger("logger"),
+        GithubStoreArchiver(outputDelegates: archiveListeners)
     ]
-    lazy var store = TodoStoreProvider([], reducer: TodoReducer(), outputDelegates: listeners)
+    
+    lazy var adapter = ApiRequestAdapter(host: "https://api.github.com/")
+    lazy var api = GithubApi(requestAdapter: adapter)
+    lazy var reducer = GithubReducer(githubService: GithubService(api: api))
+    lazy var store = GithubStoreProvider([], reducer: reducer, outputDelegates: listeners)
 
-    let test = TestApi(requestAdapter: RequestAdapter(host: "https://jsonplaceholder.typicode.com/todos/"))
     let disposeBag: DisposeBag = DisposeBag()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let contentView = HomeView()
         
-        store.dispatch(action: .addTodo("1"))
-        test.test().subscribe {
-            print($0)
-        }.disposed(by: disposeBag)
+        store.dispatch(action: .search("tetris"))
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
@@ -67,13 +65,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-        //store.combine.dispatch(action: .addTodo("ai intrat"))
+        //store.combine.dispatch(action: .addGithub("ai intrat"))
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        //store.combine.dispatch(action: .addTodo("ai iesit"))
+        //store.combine.dispatch(action: .addGithub("ai iesit"))
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.

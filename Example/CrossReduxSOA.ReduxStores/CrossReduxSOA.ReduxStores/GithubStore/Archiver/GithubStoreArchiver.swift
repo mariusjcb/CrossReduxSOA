@@ -1,5 +1,5 @@
 //
-//  TodoStoreArchiver.swift
+//  GithubStoreArchiver.swift
 //  CrossReduxSOA
 //
 //  Created by Marius Ilie on 21/10/2019.
@@ -11,8 +11,8 @@ import Common
 import Redux
 import CrossReduxSOA_Reducers
 
-public class TodoStoreArchiver<ReducerType: TodoReducer>: ReducerStoreArchiver {
-    public var statesHistory = [ReduxArchiveElement<TodoReducer>]()
+public class GithubStoreArchiver<ReducerType: GithubReducer>: ReducerStoreArchiver {
+    public var statesHistory = [ReduxArchiveElement<GithubReducer>]()
     public var outputDelegates = MulticastDelegate<ReducerStoreArchiverOutputDelegate>()
     
     required public init(outputDelegates: [ReducerStoreArchiverOutputDelegate] = []) {

@@ -14,7 +14,6 @@ public protocol Reducer: class {
     associatedtype StateType
     associatedtype ErrorType: Error
     
-    init()
     func reduce(_ oldState: StateType, action: ActionType,
                 completion: ((StateType?, ErrorType?)->())?)
 }

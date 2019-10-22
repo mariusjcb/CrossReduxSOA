@@ -1,5 +1,5 @@
 //
-//  TodoRxStore.swift
+//  GithubRxStore.swift
 //  CrossReduxSOA
 //
 //  Created by Marius Ilie on 21/10/2019.
@@ -11,7 +11,7 @@ import Redux
 import Common
 import CrossReduxSOA_Reducers
 
-public class TodoRxStore<ReducerType: TodoReducer>: BaseTodoStore {
+public class GithubRxStore<ReducerType: GithubReducer>: BaseGithubStore {
     public var currentState: ReducerType.StateType!
     public var state: ReducerType.StateType { return currentState }
     public var reducer: ReducerType!

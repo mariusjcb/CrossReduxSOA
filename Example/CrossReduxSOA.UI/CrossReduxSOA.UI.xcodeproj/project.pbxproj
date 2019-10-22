@@ -31,6 +31,7 @@
 		7A36B1BB235C86B60020B75F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BA235C86B60020B75F /* RxCocoa */; };
 		7A36B1BD235C86B60020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BC235C86B60020B75F /* RxSwift */; };
 		7A36B1BF235C86BB0020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BE235C86BB0020B75F /* RxSwift */; };
+		7A46606D235E78C900EEE552 /* CrossReduxSOA_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46606C235E78C900EEE552 /* CrossReduxSOA_Services.framework */; };
 		7AE6C530235C8BB5009B2D78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AE6C532235C8BB5009B2D78 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		7A2DC0F5235D53AC007444E7 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2DC0F7235D53AC007444E7 /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A36B1AD235C85280020B75F /* SharedHomeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHomeContent.swift; sourceTree = "<group>"; };
+		7A46606C235E78C900EEE552 /* CrossReduxSOA_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE6C531235C8BB5009B2D78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7AE6C533235C8BBE009B2D78 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A46606D235E78C900EEE552 /* CrossReduxSOA_Services.framework in Frameworks */,
 				7A297889235DEC6700B9619F /* ApiModule.framework in Frameworks */,
 				7A29788B235DEC6700B9619F /* Common.framework in Frameworks */,
 				7A29788D235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework in Frameworks */,
@@ -208,6 +211,7 @@
 		7A36B1B1235C86AB0020B75F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A46606C235E78C900EEE552 /* CrossReduxSOA_Services.framework */,
 				7A297888235DEC6700B9619F /* ApiModule.framework */,
 				7A29788A235DEC6700B9619F /* Common.framework */,
 				7A29788C235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework */,

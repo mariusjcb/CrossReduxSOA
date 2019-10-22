@@ -9,8 +9,8 @@
 import Foundation
 import Alamofire
 
-class SessionManagerBuilder {
-    class func makeDefaultSession(with adapter: Alamofire.RequestAdapter,
+public extension Alamofire.SessionManager {
+    static func makeDefaultSession(with adapter: Alamofire.RequestAdapter,
                                   cachePolicy: NSURLRequest.CachePolicy = .reloadIgnoringLocalCacheData,
                                   protocolClasses: [AnyClass]? = [],
                                   timeout: TimeInterval = 10.0)
