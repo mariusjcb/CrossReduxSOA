@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A2DC0FE235D5610007444E7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC0FC235D55D1007444E7 /* String.swift */; };
+		7A4E37B0235F7F19006A3A18 /* MulticastDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E37AF235F7F19006A3A18 /* MulticastDelegateTests.swift */; };
 		7ACEB6AA235D513B00DEA88E /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB6A0235D513B00DEA88E /* Common.framework */; };
 		7ACEB6AF235D513B00DEA88E /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB6AE235D513B00DEA88E /* CommonTests.swift */; };
 		7ACEB6B1235D513B00DEA88E /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACEB6A3235D513B00DEA88E /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		7A2DC0FC235D55D1007444E7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7A4E37AF235F7F19006A3A18 /* MulticastDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegateTests.swift; sourceTree = "<group>"; };
 		7ACEB6A0235D513B00DEA88E /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB6A3235D513B00DEA88E /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		7ACEB6A4235D513B00DEA88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				7ACEB6AE235D513B00DEA88E /* CommonTests.swift */,
+				7A4E37AF235F7F19006A3A18 /* MulticastDelegateTests.swift */,
 				7ACEB6B0235D513B00DEA88E /* Info.plist */,
 			);
 			path = CommonTests;
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ACEB6AF235D513B00DEA88E /* CommonTests.swift in Sources */,
+				7A4E37B0235F7F19006A3A18 /* MulticastDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
