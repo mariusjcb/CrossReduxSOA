@@ -7,18 +7,27 @@
 //
 
 import SwiftUI
+import CrossReduxSOA_Reducers
+import CrossReduxSOA_ReduxStores
 
 @available(iOS 13.0, *)
 struct HomeView: View, SharedHomeContent {
-    @State private var searchingCriteria = ""
+    @EnvironmentObject var store: GithubCombineStore<GithubReducer>
     
     var body: some View {
         VStack(alignment: .leading) {
-            TextField(searchTextFieldPlaceholder, text: $searchingCriteria)
-            Text(textForSearchingCriteria(searchingCriteria))
+            TextField(searchTextFieldPlaceholder, text: $store.searchingCriteria)
+            Text(textForSearchingCriteria(store.searchingCriteria))
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
-            Spacer()
+            
+            if store.currentState.count > 0 {
+                List(store.currentState, id: \.id) { item in
+                    Text(item.name)
+                }
+            } else {
+                Spacer()
+            }
         }.padding(.horizontal)
         .padding(.top)
     }

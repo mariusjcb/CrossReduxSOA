@@ -34,7 +34,7 @@ public extension ObservableType where Self.Element == Alamofire.DataRequest {
             }
             
             return .from(optional: response)
-        }.do(onNext: URLRequestPrintProtocol.print, onError: URLRequestPrintProtocol.print)
+        }
     }
     
     func validateResponse<CustomErrorType: CustomApiError>(orPassError errorType: CustomErrorType,
@@ -46,7 +46,7 @@ public extension ObservableType where Self.Element == Alamofire.DataRequest {
             }
             
             return .from(optional: response)
-        }.do(onNext: URLRequestPrintProtocol.print, onError: URLRequestPrintProtocol.print)
+        }
     }
 }
 

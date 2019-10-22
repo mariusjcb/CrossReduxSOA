@@ -9,7 +9,7 @@
 import Foundation
 
 final class URLRequestPrintProtocol: URLProtocol, URLPrintProtocol {
-    override public class func canInit(with request: URLRequest) -> Bool {
+    override class func canInit(with request: URLRequest) -> Bool {
         #if DEBUG 
         print(request)
         #endif

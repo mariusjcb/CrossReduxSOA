@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 import Common
 import Redux
 import CrossReduxSOA_Reducers
@@ -20,9 +21,27 @@ public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, Ob
     @Published public var isWaitingForReducer: Bool = false
     public var outputDelegates = MulticastDelegate<ReduceStoreOutputDelegate>()
     
+    private var cancallables = [AnyCancellable]()
+    let fetchData = PassthroughSubject<String, Never>()
+    @Published public var searchingCriteria: String = "" {
+        didSet {
+            fetchData.send(searchingCriteria)
+        }
+    }
+    
     required public init(_ initialState: ReducerType.StateType,
                   reducer: ReducerType,
                   outputDelegates: [ReduceStoreOutputDelegate] = []) {
         setup(initialState: initialState, reducer: reducer, outputDelegates: outputDelegates)
+        setupFetchData()
+    }
+    
+    private func setupFetchData() {
+        let cancellable = fetchData
+            .throttle(for: 3, scheduler: RunLoop.main, latest: true)
+            .sink(receiveValue: {
+                self.dispatch(action: .search($0))
+            })
+        cancallables.append(cancellable)
     }
 }

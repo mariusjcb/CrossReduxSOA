@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A46607E235E8E8600EEE552 /* ReducerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46607D235E8E8500EEE552 /* ReducerError.swift */; };
 		7A566353235DD590002A93CB /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566352235DD590002A93CB /* Common.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7ACEB665235D4F8A00DEA88E /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB65B235D4F8A00DEA88E /* Redux.framework */; };
 		7ACEB66A235D4F8A00DEA88E /* ReduxModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB669235D4F8A00DEA88E /* ReduxModuleTests.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A46607D235E8E8500EEE552 /* ReducerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerError.swift; sourceTree = "<group>"; };
 		7A56633E235DD496002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A566352235DD590002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB65B235D4F8A00DEA88E /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7ACEB678235D4FD200DEA88E /* Reducer.swift */,
+				7A46607D235E8E8500EEE552 /* ReducerError.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				7ACEB687235D50F800DEA88E /* GenericArchiverLogger.swift in Sources */,
 				7ACEB688235D50F800DEA88E /* GenericReduxStoreLogger.swift in Sources */,
 				7ACEB689235D50F800DEA88E /* AnyReducible.swift in Sources */,
+				7A46607E235E8E8600EEE552 /* ReducerError.swift in Sources */,
 				7ACEB68A235D50F800DEA88E /* Array+AnyReducible.swift in Sources */,
 				7ACEB68B235D50F800DEA88E /* Reducer.swift in Sources */,
 				7ACEB68C235D50F800DEA88E /* RxReduceStoreProvider.swift in Sources */,

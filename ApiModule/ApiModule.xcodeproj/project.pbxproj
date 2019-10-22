@@ -27,6 +27,7 @@
 		7ACEB631235D4DA400DEA88E /* ApiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACEB623235D4DA400DEA88E /* ApiModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ACEB649235D4E1200DEA88E /* ApiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB648235D4E1200DEA88E /* ApiModule.swift */; };
 		7ACEB650235D4EE200DEA88E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB64F235D4EE200DEA88E /* DateFormatter.swift */; };
+		7AF51A8E235EA60A006411A3 /* RxAlamofire+URLPrintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF51A8D235EA60A006411A3 /* RxAlamofire+URLPrintProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		7ACEB630235D4DA400DEA88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACEB648235D4E1200DEA88E /* ApiModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModule.swift; sourceTree = "<group>"; };
 		7ACEB64F235D4EE200DEA88E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		7AF51A8D235EA60A006411A3 /* RxAlamofire+URLPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxAlamofire+URLPrintProtocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				7A297896235E34B300B9619F /* RxAlamofireDataRequest.swift */,
 				7A297899235E354400B9619F /* RxAlamofireResponse.swift */,
 				7A29789D235E36A000B9619F /* RxAlamofireSessionManager.swift */,
+				7AF51A8D235EA60A006411A3 /* RxAlamofire+URLPrintProtocol.swift */,
 			);
 			path = ReactiveExtensions;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				7A566370235DDF19002A93CB /* AuthorizationAdapterDelegate.swift in Sources */,
 				7ACEB650235D4EE200DEA88E /* DateFormatter.swift in Sources */,
 				7A297897235E34B300B9619F /* RxAlamofireDataRequest.swift in Sources */,
+				7AF51A8E235EA60A006411A3 /* RxAlamofire+URLPrintProtocol.swift in Sources */,
 				7A29789C235E363600B9619F /* ApiError.swift in Sources */,
 				7A566367235DDBB6002A93CB /* DateDecodingStrategy.swift in Sources */,
 				7A566379235DE516002A93CB /* URLRequestPrintProtocol.swift in Sources */,
