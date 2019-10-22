@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A18834A235F3254000972C4 /* CrossReduxSOA_Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A188349235F3254000972C4 /* CrossReduxSOA_Models.framework */; };
 		7A297883235DEB0600B9619F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7A297882235DEB0600B9619F /* RxTest */; };
 		7A297887235DEB0600B9619F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7A297886235DEB0600B9619F /* RxBlocking */; };
 		7A466066235E727900EEE552 /* GithubSearchWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A466065235E727900EEE552 /* GithubSearchWrapper.swift */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A188344235F31D7000972C4 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A188349235F3254000972C4 /* CrossReduxSOA_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A466065235E727900EEE552 /* GithubSearchWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchWrapper.swift; sourceTree = "<group>"; };
 		7A466071235E7F0100EEE552 /* GithubApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiEndpoints.swift; sourceTree = "<group>"; };
 		7A566386235DE846002A93CB /* CrossReduxSOA_ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CrossReduxSOA_ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A18834A235F3254000972C4 /* CrossReduxSOA_Models.framework in Frameworks */,
 				7A5663A4235DE885002A93CB /* ApiModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +126,8 @@
 		7A5663A2235DE885002A93CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A188349235F3254000972C4 /* CrossReduxSOA_Models.framework */,
+				7A188344235F31D7000972C4 /* Common.framework */,
 				7A5663A3235DE885002A93CB /* ApiModule.framework */,
 			);
 			name = Frameworks;

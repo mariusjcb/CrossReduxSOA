@@ -12,7 +12,7 @@ import CrossReduxSOA_Models
 import CrossReduxSOA_Services
 
 public enum GithubAction {
-    case search(String)
+    case search(criteria: String, page: Int)
     case clear
 }
 
@@ -32,13 +32,19 @@ public class GithubReducer: Reducer {
         var newState = oldState
         
         switch action {
-        case .search(let criteria):
+        case .search(let criteria, let page):
+            if page == 1 {
+                newState = GithubReducer.StateType()
+            }
+            
             githubService
-                .search(for: criteria, completion: completion)
+                .search(for: criteria, page: page, completion: { items, error in
+                    newState.append(contentsOf: items ?? [])
+                    completion?(newState, error)
+                })
         case .clear:
             newState = GithubReducer.StateType()
+            completion?(newState, nil)
         }
-        
-        completion?(newState, nil)
     }
 }

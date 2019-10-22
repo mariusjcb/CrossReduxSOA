@@ -14,9 +14,9 @@ protocol SharedHomeContent {
 }
 
 extension SharedHomeContent {
-    var searchTextFieldPlaceholder: String {
-        return "Search for details...".localized
-    }
+    var errorAlertTitle: String { "Error".localized }
+    var unknownError: String { "Unknown Error".localized }
+    var searchTextFieldPlaceholder: String { "Search for details...".localized }
     
     func textForSearchingCriteria(_ searchingCriteria: String?) -> String {
         if searchingCriteria?.isEmpty == false {

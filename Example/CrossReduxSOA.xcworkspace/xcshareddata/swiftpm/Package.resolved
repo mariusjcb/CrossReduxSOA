@@ -2,33 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-        "state": {
-          "branch": null,
-          "revision": "ce5be6fbc6f51414c49f56fc8e2b7c99253d9f8e",
-          "version": "4.9.0"
-        }
-      },
-      {
-        "package": "CrossReduxSOA",
-        "repositoryURL": "https://github.com/mariusjcb/CrossReduxSOA.git",
-        "state": {
-          "branch": "package",
-          "revision": "d1e2ad6b78bba307ce7818974e6429d6fc8e9360",
-          "version": null
-        }
-      },
-      {
-        "package": "RxAlamofire",
-        "repositoryURL": "https://github.com/RxSwiftCommunity/RxAlamofire.git",
-        "state": {
-          "branch": null,
-          "revision": "64812f3aa1f7cc1ca1670ab890702c5dc6b9ff64",
-          "version": "5.1.0"
-        }
-      },
-      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {

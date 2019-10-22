@@ -23,13 +23,24 @@ struct HomeView: View, SharedHomeContent {
             
             if store.currentState.count > 0 {
                 List(store.currentState, id: \.id) { item in
-                    Text(item.name)
+                    Text(item.name).onAppear(perform: {
+                        let index = self.store.state.firstIndex(where: { $0.id == item.id })!
+                        let count = self.store.state.count
+                        
+                        if index == count - 5 {
+                            self.store.currentPage += 1
+                        }
+                    })
                 }
             } else {
                 Spacer()
             }
         }.padding(.horizontal)
         .padding(.top)
+        .alert(isPresented: $store.isErrorAlertPresented, content: {
+            Alert(title: Text(errorAlertTitle),
+                message: Text(store.error?.message ?? unknownError))
+        })
     }
 }
 

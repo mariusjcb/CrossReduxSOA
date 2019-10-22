@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ApiModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7ACEB69F235D513B00DEA88E"
+               BuildableName = "Common.framework"
+               BlueprintName = "Common"
+               ReferencedContainer = "container:../Common/Common.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -22,3 +22,27 @@ public enum ApiError: Error {
         }
     }
 }
+
+public extension ApiError {
+    var message: String? {
+        switch self {
+        case .custom(code: _, message: let message):
+            return message
+        case .unhandled(let error):
+            return error.localizedDescription
+        case .unknown:
+            return "Unknown Error".localized
+        }
+    }
+}
+
+public extension Error {
+    var message: String {
+        switch self {
+        case is ApiError:
+            return (self as? ApiError)?.message ?? ApiError.unknown.message
+        default:
+            return self.localizedDescription
+        }
+    }
+}

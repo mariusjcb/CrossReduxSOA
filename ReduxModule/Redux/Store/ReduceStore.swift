@@ -18,6 +18,7 @@ public protocol ReduceStore: class, ReduceStoreInitializable {
     var currentState: ReducerType.StateType! { get set }
     var state: ReducerType.StateType { get }
     var reducer: ReducerType! { get set }
+    var error: ReducerType.ErrorType? { get set }
     
     var isWaitingForReducer: Bool { get set }
     var outputDelegates: MulticastDelegate<ReduceStoreOutputDelegate> { get set }
@@ -33,6 +34,7 @@ public extension ReduceStore {
     
     func dispatch(action: ReducerType.ActionType) {
         isWaitingForReducer = true
+        error = nil
         
         outputDelegates.invoke {
             $0.reduceStore(self, willDispatch: action)
@@ -40,7 +42,8 @@ public extension ReduceStore {
         
         reducer
             .reduce(currentState, action: action) { newState, error in
-                guard let newState = newState else {
+                guard let newState = newState, error == nil else {
+                    self.error = error
                     self.outputDelegates.invoke {
                         $0.reduceStore(self, didFailedWith: error)
                     }

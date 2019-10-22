@@ -15,6 +15,7 @@ public class GithubRxStore<ReducerType: GithubReducer>: BaseGithubStore {
     public var currentState: ReducerType.StateType!
     public var state: ReducerType.StateType { return currentState }
     public var reducer: ReducerType!
+    public var error: ReducerType.ErrorType?
     
     public var isWaitingForReducer: Bool = false
     public var outputDelegates = MulticastDelegate<ReduceStoreOutputDelegate>()

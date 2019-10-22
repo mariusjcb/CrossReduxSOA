@@ -37,12 +37,12 @@ public extension ObservableType where Self.Element == Alamofire.DataRequest {
         }
     }
     
-    func validateResponse<CustomErrorType: CustomApiError>(orPassError errorType: CustomErrorType,
+    func validateResponse<CustomErrorType: GenericApiError>(orPassError errorType: CustomErrorType,
                                                            using decoder: JSONDecoder)
         -> Observable<(AlamofireResponse)> {
         return self.responseData().flatMap { response -> Observable<(AlamofireResponse)> in
             guard 200...300 ~= response.0.statusCode else {
-                return .error(response.1.extractApiError(errorType, with: decoder))
+                return .error(try response.1.extractApiError(errorType, with: decoder))
             }
             
             return .from(optional: response)
@@ -59,12 +59,8 @@ private extension Data {
         }
     }
     
-    func extractApiError<CustomErrorType: CustomApiError>(_ type: CustomErrorType,
-                                       with decoder: JSONDecoder) -> CustomErrorType {
-        do {
-            return try decoder.decode(CustomErrorType.self, from: self)
-        } catch {
-            return .unknown
-        }
+    func extractApiError<CustomErrorType: GenericApiError>(_ type: CustomErrorType,
+                                       with decoder: JSONDecoder) throws -> CustomErrorType {
+        return try decoder.decode(CustomErrorType.self, from: self)
     }
 }

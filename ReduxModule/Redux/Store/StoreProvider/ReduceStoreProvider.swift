@@ -10,22 +10,41 @@ import Foundation
 
 public protocol ReduceStoreProvider: ReduceStoreInitializable, RxReduceStoreProvider, CombineReduceStoreProvider, ReduceStoreOutputDelegate {
     func dispatch(action: ReducerType.ActionType)
+    
     func syncStore<T: ReduceStore>(_ store: T,
-                                   with currentState: T.ReducerType.StateType)
+                      with currentState: T.ReducerType.StateType?,
+                      error: T.ReducerType.ErrorType?)
+    func syncStore<T>(_ store: T,
+                      onDispatch action: T.ReducerType.ActionType?) where T : ReduceStore
     
     init()
     init(_ initialState: ReducerType.StateType, reducer: ReducerType, outputDelegates: [ReduceStoreOutputDelegate])
 }
 
 public extension ReduceStoreProvider {
-    func syncStore<T>(_ store: T, with currentState: T.ReducerType.StateType) where T : ReduceStore {
+    func syncStore<T>(_ store: T,
+                      with currentState: T.ReducerType.StateType?,
+                      error: T.ReducerType.ErrorType?) where T : ReduceStore {
         guard store.isWaitingForReducer else { return }
         
-        store.currentState = currentState
         store.isWaitingForReducer = false
-        store.outputDelegates.invoke { a in
-            a.reduceStore(store, didChange: currentState)
+        if let state = currentState {
+            store.currentState = state
+            store.outputDelegates.invoke { a in
+                a.reduceStore(store, didChange: state)
+            }
+        } else {
+            store.error = error
+            store.outputDelegates.invoke { a in
+                a.reduceStore(store, didFailedWith: error)
+            }
         }
+    }
+    
+    func syncStore<T>(_ store: T,
+                      onDispatch action: T.ReducerType.ActionType?) where T : ReduceStore {
+        store.isWaitingForReducer = true
+        store.error = nil
     }
     
     func dispatch(action: ReducerType.ActionType) {
@@ -62,22 +81,30 @@ public extension ReduceStoreProvider {
     func reduceStore<T: ReduceStore>(_ reduceStore: T, didChange currentState: T.ReducerType.StateType) {
         switch currentState {
         case let state as RxStore.ReducerType.StateType:
-            syncStore(rx, with: state)
+            syncStore(rx, with: state, error: nil)
         case let state as CombineStore.ReducerType.StateType:
-            syncStore(combine, with: state)
+            syncStore(combine, with: state, error: nil)
         default: break
         }
     }
     
     func reduceStore<T: ReduceStore>(_ reduceStore: T, willDispatch action: T.ReducerType.ActionType) {
-        switch reduceStore {
-        case _ as RxStore:
-            combine.isWaitingForReducer = true
-        case _ as CombineStore:
-            rx.isWaitingForReducer = true
+        switch action {
+        case let action as RxStore.ReducerType.ActionType:
+            syncStore(rx, onDispatch: action)
+        case let action as CombineStore.ReducerType.ActionType:
+            syncStore(combine, onDispatch: action)
         default: break
         }
     }
     
-    func reduceStore<T: ReduceStore>(_ reduceStore: T, didFailedWith error: T.ReducerType.ErrorType?) { }
+    func reduceStore<T: ReduceStore>(_ reduceStore: T, didFailedWith error: T.ReducerType.ErrorType?) {
+        switch error {
+        case let error as RxStore.ReducerType.ErrorType:
+            syncStore(rx, with: nil, error: error)
+        case let error as CombineStore.ReducerType.ErrorType:
+            syncStore(combine, with: nil, error: error)
+        default: break
+        }
+    }
 }
