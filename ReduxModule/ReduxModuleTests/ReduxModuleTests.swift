@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ReduxModule
+@testable import Redux
 
 class ReduxModuleTests: XCTestCase {
 

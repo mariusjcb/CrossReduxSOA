@@ -52,22 +52,20 @@ public extension ReduceStore {
         
         reducer
             .reduce(currentState, action: action) { newState, error in
+                self.isWaitingForReducer = false
+                
                 if let newState = newState, error == nil {
                     self.currentState = newState
                     self.outputDelegates.invoke {
                         $0.reduceStore(self, didChange: self.currentState)
                     }
-
-                    self.isWaitingForReducer = false
                 } else {
                     self.error = error
                     self.outputDelegates.invoke {
                         $0.reduceStore(self, didFailedWith: error)
                     }
-                    
-                    self.isWaitingForReducer = false
                 }
-                
+
                 if let action = self.actionsQueue.first {
                     self.actionsQueue = Array(self.actionsQueue.dropFirst())
                     self.dispatch(action: action, await: await)
