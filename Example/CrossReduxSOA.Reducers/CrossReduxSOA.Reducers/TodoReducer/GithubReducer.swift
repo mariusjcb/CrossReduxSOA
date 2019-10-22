@@ -12,14 +12,14 @@ import CrossReduxSOA_Models
 import CrossReduxSOA_Services
 
 public enum GithubAction {
-    case search(criteria: String, page: Int)
+    case load(criteria: String)
     case clear
 }
 
 public class GithubReducer: Reducer {
     public typealias ActionType = GithubAction
     public typealias ItemType = GithubItem
-    public typealias StateType = [ItemType]
+    public typealias StateType = GithubReducerState<ItemType>
     public typealias ErrorType = Error
     
     private let githubService: GithubService
@@ -32,19 +32,36 @@ public class GithubReducer: Reducer {
         var newState = oldState
         
         switch action {
-        case .search(let criteria, let page):
-            if page == 1 {
-                newState = GithubReducer.StateType()
+        case .load(let criteria):
+            guard !criteria.isEmpty else {
+                clear(completion)
+                return
+            }
+            
+            if criteria != oldState.criteria {
+                newState = StateType([], criteria: criteria, page: 0)
             }
             
             githubService
-                .search(for: criteria, page: page, completion: { items, error in
-                    newState.append(contentsOf: items ?? [])
+                .search(for: criteria, page: oldState.page + 1, completion: { items, error in
+                    var newItems = newState.items
+                    
+                    newItems.append(contentsOf: items ?? [])
+                    let newState = StateType(newItems,
+                                             criteria: criteria,
+                                             page: oldState.page + 1)
+                    
                     completion?(newState, error)
                 })
         case .clear:
-            newState = GithubReducer.StateType()
-            completion?(newState, nil)
+            clear(completion)
         }
+    }
+    
+    //MARK: - Helpers
+    
+    private func clear(_ completion: ((StateType?, ErrorType?)->())?) {
+        let newState = StateType([], criteria: "", page: 0)
+        completion?(newState, nil)
     }
 }

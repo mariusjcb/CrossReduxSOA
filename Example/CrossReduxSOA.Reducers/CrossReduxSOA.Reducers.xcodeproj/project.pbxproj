@@ -13,6 +13,7 @@
 		7A2DC157235D595E007444E7 /* GithubReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DC156235D595E007444E7 /* GithubReducer.swift */; };
 		7A466059235E6F1200EEE552 /* CrossReduxSOA_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A466058235E6F1200EEE552 /* CrossReduxSOA_Services.framework */; };
 		7A4E37A9235F4F81006A3A18 /* GithubReduceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E37A8235F4F81006A3A18 /* GithubReduceBuilder.swift */; };
+		7A4E37AE235F708B006A3A18 /* GithubReducerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E37AD235F708B006A3A18 /* GithubReducerState.swift */; };
 		7A56635E235DD5D2002A93CB /* CrossReduxSOA_Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A56635D235DD5D2002A93CB /* CrossReduxSOA_Models.framework */; };
 		7A566360235DD5D2002A93CB /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A56635F235DD5D2002A93CB /* Redux.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		7A2DC156235D595E007444E7 /* GithubReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReducer.swift; sourceTree = "<group>"; };
 		7A466058235E6F1200EEE552 /* CrossReduxSOA_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4E37A8235F4F81006A3A18 /* GithubReduceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReduceBuilder.swift; sourceTree = "<group>"; };
+		7A4E37AD235F708B006A3A18 /* GithubReducerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReducerState.swift; sourceTree = "<group>"; };
 		7A56635D235DD5D2002A93CB /* CrossReduxSOA_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A56635F235DD5D2002A93CB /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7A2DC156235D595E007444E7 /* GithubReducer.swift */,
+				7A4E37AD235F708B006A3A18 /* GithubReducerState.swift */,
 			);
 			path = TodoReducer;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4E37A9235F4F81006A3A18 /* GithubReduceBuilder.swift in Sources */,
+				7A4E37AE235F708B006A3A18 /* GithubReducerState.swift in Sources */,
 				7A2DC157235D595E007444E7 /* GithubReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,6 +24,7 @@ public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, Ob
         }
     }
     
+    @Published public var isErrorAlertPresented: Bool = false
     @Published public var isWaitingForReducer: Bool = false
     public var outputDelegates = MulticastDelegate<ReduceStoreOutputDelegate>()
     public var actionsQueue = [ReducerType.ActionType]()
@@ -31,16 +32,9 @@ public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, Ob
     //MARK: - Binding States
     
     private var cancallables = [AnyCancellable]()
-    public let fetchData = PassthroughSubject<(String, Int), Never>()
+    public let loadMore = PassthroughSubject<Void, Never>()
     
-    @Published public var isErrorAlertPresented: Bool = false
-    @Published public var currentPage: Int = 1 {
-        didSet { fetchData.send((searchingCriteria, currentPage)) }
-    }
-
-    @Published public var searchingCriteria: String = "" {
-        didSet { fetchData.send((searchingCriteria, currentPage)) }
-    }
+    @Published public var searchingCriteria: String = ""
     
     //MARK: - Methods
     
@@ -52,19 +46,22 @@ public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, Ob
     }
     
     private func setupFetchDataBinders() {
-        let pageCancellable = $currentPage
-            .sink(receiveValue: { [weak self] page in
-                guard let criteria = self?.searchingCriteria, !criteria.isEmpty else { return }
-                self?.dispatch(action: .search(criteria: criteria, page: page),
-                               await: (page == 1))
-            })
-        
-        let searchCancellable = $searchingCriteria
+        let search = $searchingCriteria
             .throttle(for: 3, scheduler: RunLoop.main, latest: true)
             .sink(receiveValue: { [weak self] criteria in
-                self?.currentPage = 1
+                self?.dispatch(action: .load(criteria: criteria))
             })
         
-        cancallables.append(contentsOf: [searchCancellable, pageCancellable])
+        let loader = loadMore
+            .sink(receiveValue: { [weak self] in
+                if let criteria = self?.searchingCriteria {
+                    self?.dispatch(action: .load(criteria: criteria),
+                                   await: self?.state.page == 0)
+                } else {
+                    self?.dispatch(action: .clear)
+                }
+            })
+            
+        cancallables.append(contentsOf: [search, loader])
     }
 }

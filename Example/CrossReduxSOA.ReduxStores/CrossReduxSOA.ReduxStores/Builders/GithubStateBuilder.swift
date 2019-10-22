@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import Redux
 import ApiModule
+import CrossReduxSOA_Models
 import CrossReduxSOA_Reducers
 import CrossReduxSOA_Services
 import CrossReduxSOA_ApiModule
@@ -25,7 +26,8 @@ public class GithubStateBuilder {
         listeners.append(contentsOf: archiveListeners)
         
         let reducer = GithubReduceBuilder.build(host: host)
-        return ReduxState<GithubStoreProvider<GithubReducer>>([],
+        let initialState = GithubReducerState<GithubItem>([], criteria: "", page: 0)
+        return ReduxState<GithubStoreProvider<GithubReducer>>(initialState,
                                                               reducedBy: reducer,
                                                               outputDelegates: listeners)
     }

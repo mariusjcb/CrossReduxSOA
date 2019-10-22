@@ -21,14 +21,14 @@ struct HomeView: View, SharedHomeContent {
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
             
-            if store.currentState.count > 0 {
-                List(store.currentState, id: \.id) { item in
+            if store.state.items.count > 0 {
+                List(store.state.items, id: \.id) { item in
                     Text(item.name).onAppear(perform: {
-                        let index = self.store.state.firstIndex(where: { $0.id == item.id })!
-                        let count = self.store.state.count
+                        let index = self.store.state.items.firstIndex(where: { $0.id == item.id })!
+                        let count = self.store.state.items.count
                         
-                        if index == count - 5 {
-                            self.store.currentPage += 1
+                        if index == count - 20 {
+                            self.store.loadMore.send()
                         }
                     })
                 }
