@@ -21,3 +21,9 @@ public class GenericReduxArchiverLogger: ReducerStoreArchiverOutputDelegate {
               "\n\t|  EVENT: didSave", archive.state)
     }
 }
+
+public extension GenericReduxArchiverLogger {
+    func reduceStore<T>(_ reduceStore: T, willDispatch action: T.ReducerType.ActionType) where T : ReduceStore { }
+    func reduceStore<T>(_ reduceStore: T, didChange currentState: T.ReducerType.StateType) where T : ReduceStore { }
+    func reduceStore<T>(_ reduceStore: T, didFailedWith error: T.ReducerType.ErrorType?) where T : ReduceStore { }
+}

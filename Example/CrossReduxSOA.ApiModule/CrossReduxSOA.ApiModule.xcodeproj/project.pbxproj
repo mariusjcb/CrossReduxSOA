@@ -12,6 +12,7 @@
 		7A297887235DEB0600B9619F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7A297886235DEB0600B9619F /* RxBlocking */; };
 		7A466066235E727900EEE552 /* GithubSearchWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A466065235E727900EEE552 /* GithubSearchWrapper.swift */; };
 		7A466072235E7F0100EEE552 /* GithubApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A466071235E7F0100EEE552 /* GithubApiEndpoints.swift */; };
+		7A4E37A6235F4E5C006A3A18 /* GithubApiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E37A5235F4E5C006A3A18 /* GithubApiBuilder.swift */; };
 		7A566390235DE846002A93CB /* CrossReduxSOA_ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566386235DE846002A93CB /* CrossReduxSOA_ApiModule.framework */; };
 		7A566395235DE846002A93CB /* CrossReduxSOA_ApiModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566394235DE846002A93CB /* CrossReduxSOA_ApiModuleTests.swift */; };
 		7A566397235DE846002A93CB /* CrossReduxSOA_ApiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A566389235DE846002A93CB /* CrossReduxSOA_ApiModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +35,7 @@
 		7A188349235F3254000972C4 /* CrossReduxSOA_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A466065235E727900EEE552 /* GithubSearchWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchWrapper.swift; sourceTree = "<group>"; };
 		7A466071235E7F0100EEE552 /* GithubApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiEndpoints.swift; sourceTree = "<group>"; };
+		7A4E37A5235F4E5C006A3A18 /* GithubApiBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiBuilder.swift; sourceTree = "<group>"; };
 		7A566386235DE846002A93CB /* CrossReduxSOA_ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CrossReduxSOA_ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A566389235DE846002A93CB /* CrossReduxSOA_ApiModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrossReduxSOA_ApiModule.h; sourceTree = "<group>"; };
 		7A56638A235DE846002A93CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = Wrappers;
 			sourceTree = "<group>";
 		};
+		7A4E37A4235F4E41006A3A18 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				7A4E37A5235F4E5C006A3A18 /* GithubApiBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
 		7A56637C235DE846002A93CB = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		7A566388235DE846002A93CB /* CrossReduxSOA.ApiModule */ = {
 			isa = PBXGroup;
 			children = (
+				7A4E37A4235F4E41006A3A18 /* Builders */,
 				7A466067235E727F00EEE552 /* Wrappers */,
 				7A466064235E726200EEE552 /* GithubApi */,
 				7A566389235DE846002A93CB /* CrossReduxSOA_ApiModule.h */,
@@ -253,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A466066235E727900EEE552 /* GithubSearchWrapper.swift in Sources */,
+				7A4E37A6235F4E5C006A3A18 /* GithubApiBuilder.swift in Sources */,
 				7A466072235E7F0100EEE552 /* GithubApiEndpoints.swift in Sources */,
 				7A5663A1235DE85B002A93CB /* GithubApi.swift in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A46607E235E8E8600EEE552 /* ReducerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46607D235E8E8500EEE552 /* ReducerError.swift */; };
+		7A4E3798235F4477006A3A18 /* ReduxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E3797235F4477006A3A18 /* ReduxState.swift */; };
 		7A566353235DD590002A93CB /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566352235DD590002A93CB /* Common.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7ACEB665235D4F8A00DEA88E /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB65B235D4F8A00DEA88E /* Redux.framework */; };
 		7ACEB66A235D4F8A00DEA88E /* ReduxModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB669235D4F8A00DEA88E /* ReduxModuleTests.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7A46607D235E8E8500EEE552 /* ReducerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerError.swift; sourceTree = "<group>"; };
+		7A4E3797235F4477006A3A18 /* ReduxState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxState.swift; sourceTree = "<group>"; };
 		7A56633E235DD496002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A566352235DD590002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB65B235D4F8A00DEA88E /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A4E3796235F4460006A3A18 /* ReduxState */ = {
+			isa = PBXGroup;
+			children = (
+				7A4E3797235F4477006A3A18 /* ReduxState.swift */,
+			);
+			path = ReduxState;
+			sourceTree = "<group>";
+		};
 		7A56633D235DD496002A93CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		7ACEB65D235D4F8A00DEA88E /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				7A4E3796235F4460006A3A18 /* ReduxState */,
 				7ACEB677235D4FD200DEA88E /* GenericLoggers */,
 				7ACEB683235D4FD200DEA88E /* AnyReducibleProtocol */,
 				7ACEB679235D4FD200DEA88E /* Reducer */,
@@ -305,6 +316,7 @@
 				7ACEB68B235D50F800DEA88E /* Reducer.swift in Sources */,
 				7ACEB68C235D50F800DEA88E /* RxReduceStoreProvider.swift in Sources */,
 				7ACEB68D235D50F800DEA88E /* CombineReduceStoreProvider.swift in Sources */,
+				7A4E3798235F4477006A3A18 /* ReduxState.swift in Sources */,
 				7ACEB68E235D50F800DEA88E /* ReduceStoreProvider.swift in Sources */,
 				7ACEB68F235D50F800DEA88E /* ReduceStore.swift in Sources */,
 				7ACEB690235D50F800DEA88E /* ReduceStoreOutputDelegate.swift in Sources */,
