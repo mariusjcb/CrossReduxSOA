@@ -14,6 +14,7 @@ import CrossReduxSOA_Reducers
 
 @available(iOS 13.0, *)
 public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, ObservableObject {
+    
     @Published public var currentState: ReducerType.StateType!
     public var state: ReducerType.StateType { return currentState }
     public var reducer: ReducerType!
@@ -25,8 +26,9 @@ public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, Ob
     
     @Published public var isWaitingForReducer: Bool = false
     public var outputDelegates = MulticastDelegate<ReduceStoreOutputDelegate>()
+    public var actionsQueue = [ReducerType.ActionType]()
     
-    //MARK: - UI States
+    //MARK: - Binding States
     
     private var cancallables = [AnyCancellable]()
     public let fetchData = PassthroughSubject<(String, Int), Never>()
@@ -50,22 +52,19 @@ public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, Ob
     }
     
     private func setupFetchDataBinders() {
+        let pageCancellable = $currentPage
+            .sink(receiveValue: { [weak self] page in
+                guard let criteria = self?.searchingCriteria, !criteria.isEmpty else { return }
+                self?.dispatch(action: .search(criteria: criteria, page: page),
+                               await: (page == 1))
+            })
+        
         let searchCancellable = $searchingCriteria
             .throttle(for: 3, scheduler: RunLoop.main, latest: true)
             .sink(receiveValue: { [weak self] criteria in
-                self?.fetchData.send((criteria, self!.currentPage))
+                self?.currentPage = 1
             })
         
-        let pageCancellable = $currentPage
-            .sink(receiveValue: { [weak self] page in
-                self?.fetchData.send((self!.searchingCriteria, page))
-            })
-        
-        let fetchCancellable = fetchData
-            .sink(receiveValue: { [weak self] item in
-                self?.dispatch(action: .search(criteria: item.0, page: item.1))
-            })
-        
-        cancallables.append(contentsOf: [searchCancellable, pageCancellable, fetchCancellable])
+        cancallables.append(contentsOf: [searchCancellable, pageCancellable])
     }
 }

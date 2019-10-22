@@ -27,6 +27,15 @@
           "revision": "b3e888b4972d9bc76495dd74d30a8c7fad4b9395",
           "version": "5.0.1"
         }
+      },
+      {
+        "package": "SwiftPriorityQueue",
+        "repositoryURL": "https://github.com/davecom/SwiftPriorityQueue.git",
+        "state": {
+          "branch": "master",
+          "revision": "58719bc40eb3c2f7e480139169df876e0531f62f",
+          "version": null
+        }
       }
     ]
   },

@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol ReduceStoreProvider: ReduceStoreInitializable, RxReduceStoreProvider, CombineReduceStoreProvider, ReduceStoreOutputDelegate {
-    func dispatch(action: ReducerType.ActionType)
+    func dispatch(action: ReducerType.ActionType, await: Bool)
     
     func syncStore<T: ReduceStore>(_ store: T,
                       with currentState: T.ReducerType.StateType?,
@@ -47,13 +47,13 @@ public extension ReduceStoreProvider {
         store.error = nil
     }
     
-    func dispatch(action: ReducerType.ActionType) {
+    func dispatch(action: ReducerType.ActionType, await: Bool = false) {
         if let action = action as? RxStore.ReducerType.ActionType {
-            rx?.dispatch(action: action)
+            rx?.dispatch(action: action, await: await)
         }
         
         if let action = action as? CombineStore.ReducerType.ActionType {
-            combine?.dispatch(action: action)
+            combine?.dispatch(action: action, await: await)
         }
     }
     

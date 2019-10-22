@@ -15,6 +15,7 @@ public protocol ReduceStoreInitializable {
 }
 
 public protocol ReduceStore: class, ReduceStoreInitializable {
+    
     var currentState: ReducerType.StateType! { get set }
     var state: ReducerType.StateType { get }
     var reducer: ReducerType! { get set }
@@ -22,9 +23,10 @@ public protocol ReduceStore: class, ReduceStoreInitializable {
     
     var isWaitingForReducer: Bool { get set }
     var outputDelegates: MulticastDelegate<ReduceStoreOutputDelegate> { get set }
+    var actionsQueue: [ReducerType.ActionType] { get set }
     
     func setup(initialState: ReducerType.StateType, reducer: ReducerType, outputDelegates: [ReduceStoreOutputDelegate])
-    func dispatch(action: ReducerType.ActionType)
+    func dispatch(action: ReducerType.ActionType, await: Bool)
 }
 
 public extension ReduceStore {
@@ -32,7 +34,15 @@ public extension ReduceStore {
         return currentState
     }
     
-    func dispatch(action: ReducerType.ActionType) {
+    func dispatch(action: ReducerType.ActionType, await: Bool = true) {
+        guard !isWaitingForReducer else {
+            if await {
+                actionsQueue.append(action)
+            }
+            
+            return
+        }
+        
         isWaitingForReducer = true
         error = nil
         
@@ -42,22 +52,26 @@ public extension ReduceStore {
         
         reducer
             .reduce(currentState, action: action) { newState, error in
-                guard let newState = newState, error == nil else {
+                if let newState = newState, error == nil {
+                    self.currentState = newState
+                    self.outputDelegates.invoke {
+                        $0.reduceStore(self, didChange: self.currentState)
+                    }
+
+                    self.isWaitingForReducer = false
+                } else {
                     self.error = error
                     self.outputDelegates.invoke {
                         $0.reduceStore(self, didFailedWith: error)
                     }
                     
                     self.isWaitingForReducer = false
-                    return
                 }
                 
-                self.currentState = newState
-                self.outputDelegates.invoke {
-                    $0.reduceStore(self, didChange: self.currentState)
+                if let action = self.actionsQueue.first {
+                    self.actionsQueue = Array(self.actionsQueue.dropFirst())
+                    self.dispatch(action: action, await: await)
                 }
-
-                self.isWaitingForReducer = false
         }
     }
     

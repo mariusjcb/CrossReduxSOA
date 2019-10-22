@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7A46607E235E8E8600EEE552 /* ReducerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46607D235E8E8500EEE552 /* ReducerError.swift */; };
 		7A4E3798235F4477006A3A18 /* ReduxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E3797235F4477006A3A18 /* ReduxState.swift */; };
+		7A4E37AC235F563D006A3A18 /* SwiftPriorityQueue in Frameworks */ = {isa = PBXBuildFile; productRef = 7A4E37AB235F563D006A3A18 /* SwiftPriorityQueue */; };
 		7A566353235DD590002A93CB /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566352235DD590002A93CB /* Common.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7ACEB665235D4F8A00DEA88E /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB65B235D4F8A00DEA88E /* Redux.framework */; };
 		7ACEB66A235D4F8A00DEA88E /* ReduxModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB669235D4F8A00DEA88E /* ReduxModuleTests.swift */; };
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4E37AC235F563D006A3A18 /* SwiftPriorityQueue in Frameworks */,
 				7A566353235DD590002A93CB /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +229,9 @@
 			dependencies = (
 			);
 			name = Redux;
+			packageProductDependencies = (
+				7A4E37AB235F563D006A3A18 /* SwiftPriorityQueue */,
+			);
 			productName = ReduxModule;
 			productReference = 7ACEB65B235D4F8A00DEA88E /* Redux.framework */;
 			productType = "com.apple.product-type.framework";
@@ -276,6 +281,9 @@
 				Base,
 			);
 			mainGroup = 7ACEB651235D4F8A00DEA88E;
+			packageReferences = (
+				7A4E37AA235F563D006A3A18 /* XCRemoteSwiftPackageReference "SwiftPriorityQueue" */,
+			);
 			productRefGroup = 7ACEB65C235D4F8A00DEA88E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -585,6 +593,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A4E37AA235F563D006A3A18 /* XCRemoteSwiftPackageReference "SwiftPriorityQueue" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davecom/SwiftPriorityQueue.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A4E37AB235F563D006A3A18 /* SwiftPriorityQueue */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A4E37AA235F563D006A3A18 /* XCRemoteSwiftPackageReference "SwiftPriorityQueue" */;
+			productName = SwiftPriorityQueue;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7ACEB652235D4F8A00DEA88E /* Project object */;
 }
