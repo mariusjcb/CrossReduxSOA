@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class MulticastDelegate<T> {
-    let delegates = NSHashTable<AnyObject>.weakObjects()
+open class MulticastDelegate<T> {
+    internal let delegates = NSHashTable<AnyObject>.weakObjects()
     
     public init() { }
     

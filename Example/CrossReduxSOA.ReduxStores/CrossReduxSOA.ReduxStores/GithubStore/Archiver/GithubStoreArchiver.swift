@@ -11,8 +11,10 @@ import Common
 import Redux
 import CrossReduxSOA_Reducers
 
-public class GithubStoreArchiver<ReducerType: GithubReducer>: ReducerStoreArchiver {
-    public var statesHistory = [ReduxArchiveElement<GithubReducer>]()
+open class GithubStoreArchiver<StoreType: ReduceStore>: ReducerStoreArchiver {
+    public var storeLocation: String { return "" }
+    
+    public var statesHistory = [ReduxArchiveElement<StoreType>]()
     public var outputDelegates = MulticastDelegate<ReducerStoreArchiverOutputDelegate>()
     
     required public init(outputDelegates: [ReducerStoreArchiverOutputDelegate] = []) {

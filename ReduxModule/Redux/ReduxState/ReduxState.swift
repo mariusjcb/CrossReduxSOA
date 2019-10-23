@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class ReduxState<StoreProvider: ReduceStoreProvider> {
-    public let outputDelegates: [ReduceStoreOutputDelegate]
+open class ReduxState<StoreProvider: ReduceStoreProvider> {
+    private let outputDelegates: [ReduceStoreOutputDelegate]
     public let store: StoreProvider
     
     public init(_ initialState: StoreProvider.ReducerType.StateType,

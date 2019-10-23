@@ -8,13 +8,13 @@
 
 import Foundation
 
-public class GenericReduxArchiverLogger: ReducerStoreArchiverOutputDelegate {
+open class GenericReduxArchiverLogger: ReducerStoreArchiverOutputDelegate {
     let name: String
     public init(_ name: String) {
         self.name = name
     }
     
-    public func reducerStoreArchiver<T>(_ archiver: T, didSave archive: ReduxArchiveElement<T.ReducerType>) where T : ReducerStoreArchiver {
+    open func reducerStoreArchiver<T>(_ archiver: T, didSave archive: ReduxArchiveElement<T.StoreType>) where T : ReducerStoreArchiver {
         print("🚩", name,
               "\n\t|  DATE:", archive.date,
               "\n\t|  CLASS: [\(type(of: archiver))->\(type(of: archive.target))]",

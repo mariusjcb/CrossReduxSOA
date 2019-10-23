@@ -10,7 +10,7 @@ import Foundation
 import Redux
 import CrossReduxSOA_Reducers
 
-public class GithubStoreProvider<ReducerType: GithubReducer>: ReduceStoreProvider {
+open class GithubStoreProvider<ReducerType: GithubReducer>: ReduceStoreProvider {
     @available(iOS 13.0, *)
     lazy public var combine: GithubCombineStore<ReducerType>! = nil
     public var rx: GithubRxStore<ReducerType>! = nil

@@ -13,7 +13,7 @@ import Redux
 import CrossReduxSOA_Reducers
 
 @available(iOS 13.0, *)
-public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, ObservableObject {
+open class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, ObservableObject {
     
     @Published public var currentState: ReducerType.StateType!
     public var state: ReducerType.StateType { return currentState }

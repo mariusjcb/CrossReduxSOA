@@ -21,7 +21,7 @@ public class GithubStateBuilder {
         let archiveListeners = [GenericReduxArchiverLogger("github_archiver")]
         var listeners: [ReduceStoreOutputDelegate] = [
             GenericReduxStoreLogger("github_logger"),
-            GithubStoreArchiver(outputDelegates: archiveListeners)
+            GithubStoreArchiver<GithubRxStore>(outputDelegates: archiveListeners)
         ]
         listeners.append(contentsOf: archiveListeners)
         

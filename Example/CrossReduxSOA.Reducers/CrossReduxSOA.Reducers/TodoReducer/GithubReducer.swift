@@ -16,18 +16,18 @@ public enum GithubAction {
     case clear
 }
 
-public class GithubReducer: Reducer {
+open class GithubReducer: Reducer {
     public typealias ActionType = GithubAction
     public typealias ItemType = GithubItem
     public typealias StateType = GithubReducerState<ItemType>
     public typealias ErrorType = Error
     
-    private let githubService: GithubService
+    public let githubService: GithubService
     public init(githubService: GithubService) {
         self.githubService = githubService
     }
     
-    public func reduce(_ oldState: GithubReducer.StateType, action: GithubReducer.ActionType,
+    open func reduce(_ oldState: GithubReducer.StateType, action: GithubReducer.ActionType,
                 completion: ((StateType?, ErrorType?)->())?) {
         var newState = oldState
         
@@ -60,7 +60,7 @@ public class GithubReducer: Reducer {
     
     //MARK: - Helpers
     
-    private func clear(_ completion: ((StateType?, ErrorType?)->())?) {
+    open func clear(_ completion: ((StateType?, ErrorType?)->())?) {
         let newState = StateType([], criteria: "", page: 0)
         completion?(newState, nil)
     }

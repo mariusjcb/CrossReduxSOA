@@ -15,7 +15,7 @@ public protocol GenericApiError: Codable, Error {
     init(code: Int, message: String)
 }
 
-public class DefaultApiError: GenericApiError {
+open class DefaultApiError: GenericApiError {
     public var code: Int
     public var message: String
     

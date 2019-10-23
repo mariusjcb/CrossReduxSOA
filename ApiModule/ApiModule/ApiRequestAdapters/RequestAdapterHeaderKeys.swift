@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ApiRequestAdapterHeaderKeys {
+open class ApiRequestAdapterHeaderKeys {
     public var auth: String { "Authorization" }
     public init() { }
 }

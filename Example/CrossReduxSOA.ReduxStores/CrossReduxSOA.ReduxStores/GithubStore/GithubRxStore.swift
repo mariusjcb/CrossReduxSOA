@@ -12,7 +12,7 @@ import Common
 import CrossReduxSOA_Reducers
 import RxSwift
 
-public class GithubRxStore<ReducerType: GithubReducer>: BaseGithubStore {
+open class GithubRxStore<ReducerType: GithubReducer>: BaseGithubStore {
     
     public var currentState: ReducerType.StateType! {
         didSet {

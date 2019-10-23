@@ -9,7 +9,7 @@
 import Foundation
 import Redux
 
-public class GithubItem: Decodable, AnyReducible {
+open class GithubItem: Decodable, AnyReducible {
     public let id: Int
     public let name: String
     

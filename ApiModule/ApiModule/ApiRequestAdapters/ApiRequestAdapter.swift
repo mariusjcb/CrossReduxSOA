@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 import RxAlamofire
 
-public class ApiRequestAdapter: Alamofire.RequestAdapter {
+open class ApiRequestAdapter: Alamofire.RequestAdapter {
     private let host: String
     private let headerKeys: ApiRequestAdapterHeaderKeys
     
-    public var delegate: AuthorizationAdapterDelegate?
+    open var delegate: AuthorizationAdapterDelegate?
     
     public init(host: String,
                 headerKeys: ApiRequestAdapterHeaderKeys = ApiRequestAdapterHeaderKeys(),
@@ -24,7 +24,7 @@ public class ApiRequestAdapter: Alamofire.RequestAdapter {
         self.delegate = delegate
     }
     
-    public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+    open func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         
         let url = urlRequest.url?.absoluteString ?? ""
@@ -40,7 +40,7 @@ public class ApiRequestAdapter: Alamofire.RequestAdapter {
 }
 
 extension ApiRequestAdapter: Alamofire.RequestRetrier {
-    public func should(_ manager: Alamofire.SessionManager, retry request: Alamofire.Request, with error: Error, completion: @escaping Alamofire.RequestRetryCompletion) {
+    open func should(_ manager: Alamofire.SessionManager, retry request: Alamofire.Request, with error: Error, completion: @escaping Alamofire.RequestRetryCompletion) {
         guard let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 else {
             completion(false, 0.0)
             return

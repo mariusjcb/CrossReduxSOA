@@ -10,7 +10,7 @@ import Foundation
 import ApiModule
 import RxSwift
 
-public class SingleApiService<T: ApiModule> {
+open class SingleApiService<T: ApiModule> {
     internal var disposeBag = DisposeBag()
     
     let api: T

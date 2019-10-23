@@ -16,13 +16,6 @@
 		7A10B275235C79B4004FF3B0 /* CrossReduxSOATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B274235C79B4004FF3B0 /* CrossReduxSOATests.swift */; };
 		7A10B280235C79B4004FF3B0 /* CrossReduxSOAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B27F235C79B4004FF3B0 /* CrossReduxSOAUITests.swift */; };
 		7A10B28E235C7AB3004FF3B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10B28D235C7AB3004FF3B0 /* HomeView.swift */; };
-		7A297889235DEC6700B9619F /* ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297888235DEC6700B9619F /* ApiModule.framework */; };
-		7A29788B235DEC6700B9619F /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788A235DEC6700B9619F /* Common.framework */; };
-		7A29788D235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788C235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework */; };
-		7A29788F235DEC6700B9619F /* CrossReduxSOA_Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788E235DEC6700B9619F /* CrossReduxSOA_Models.framework */; };
-		7A297891235DEC6700B9619F /* CrossReduxSOA_Reducers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297890235DEC6700B9619F /* CrossReduxSOA_Reducers.framework */; };
-		7A297893235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297892235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework */; };
-		7A297895235DEC6700B9619F /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297894235DEC6700B9619F /* Redux.framework */; };
 		7A36B1AE235C85280020B75F /* SharedHomeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A36B1AD235C85280020B75F /* SharedHomeContent.swift */; };
 		7A36B1B3235C86AB0020B75F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1B2235C86AB0020B75F /* RxBlocking */; };
 		7A36B1B5235C86AB0020B75F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1B4235C86AB0020B75F /* RxTest */; };
@@ -31,7 +24,22 @@
 		7A36B1BB235C86B60020B75F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BA235C86B60020B75F /* RxCocoa */; };
 		7A36B1BD235C86B60020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BC235C86B60020B75F /* RxSwift */; };
 		7A36B1BF235C86BB0020B75F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A36B1BE235C86BB0020B75F /* RxSwift */; };
-		7A46606D235E78C900EEE552 /* CrossReduxSOA_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46606C235E78C900EEE552 /* CrossReduxSOA_Services.framework */; };
+		7A4455802360E8F400E104DA /* ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297888235DEC6700B9619F /* ApiModule.framework */; };
+		7A4455812360E8F400E104DA /* ApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297888235DEC6700B9619F /* ApiModule.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4455832360E8F500E104DA /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788A235DEC6700B9619F /* Common.framework */; };
+		7A4455842360E8F500E104DA /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788A235DEC6700B9619F /* Common.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4455852360E8F700E104DA /* CrossReduxSOA_ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788C235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework */; };
+		7A4455862360E8F700E104DA /* CrossReduxSOA_ApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788C235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4455872360E8FB00E104DA /* CrossReduxSOA_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46606C235E78C900EEE552 /* CrossReduxSOA_Services.framework */; };
+		7A4455882360E8FB00E104DA /* CrossReduxSOA_Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46606C235E78C900EEE552 /* CrossReduxSOA_Services.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4455892360E8FC00E104DA /* CrossReduxSOA_ReduxStores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297892235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework */; };
+		7A44558A2360E8FC00E104DA /* CrossReduxSOA_ReduxStores.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297892235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A44558B2360E8FD00E104DA /* CrossReduxSOA_Reducers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297890235DEC6700B9619F /* CrossReduxSOA_Reducers.framework */; };
+		7A44558C2360E8FD00E104DA /* CrossReduxSOA_Reducers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297890235DEC6700B9619F /* CrossReduxSOA_Reducers.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A44558D2360E8FF00E104DA /* CrossReduxSOA_Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788E235DEC6700B9619F /* CrossReduxSOA_Models.framework */; };
+		7A44558E2360E8FF00E104DA /* CrossReduxSOA_Models.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29788E235DEC6700B9619F /* CrossReduxSOA_Models.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A44558F2360E90000E104DA /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297894235DEC6700B9619F /* Redux.framework */; };
+		7A4455902360E90000E104DA /* Redux.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A297894235DEC6700B9619F /* Redux.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7AE6C530235C8BB5009B2D78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AE6C532235C8BB5009B2D78 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +59,27 @@
 			remoteInfo = CrossReduxSOA;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A4455822360E8F400E104DA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7A4455882360E8FB00E104DA /* CrossReduxSOA_Services.framework in Embed Frameworks */,
+				7A44558A2360E8FC00E104DA /* CrossReduxSOA_ReduxStores.framework in Embed Frameworks */,
+				7A4455812360E8F400E104DA /* ApiModule.framework in Embed Frameworks */,
+				7A4455902360E90000E104DA /* Redux.framework in Embed Frameworks */,
+				7A4455842360E8F500E104DA /* Common.framework in Embed Frameworks */,
+				7A44558C2360E8FD00E104DA /* CrossReduxSOA_Reducers.framework in Embed Frameworks */,
+				7A4455862360E8F700E104DA /* CrossReduxSOA_ApiModule.framework in Embed Frameworks */,
+				7A44558E2360E8FF00E104DA /* CrossReduxSOA_Models.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7A10B25A235C79B1004FF3B0 /* CrossReduxSOA.UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossReduxSOA.UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,14 +117,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A46606D235E78C900EEE552 /* CrossReduxSOA_Services.framework in Frameworks */,
-				7A297889235DEC6700B9619F /* ApiModule.framework in Frameworks */,
-				7A29788B235DEC6700B9619F /* Common.framework in Frameworks */,
-				7A29788D235DEC6700B9619F /* CrossReduxSOA_ApiModule.framework in Frameworks */,
-				7A29788F235DEC6700B9619F /* CrossReduxSOA_Models.framework in Frameworks */,
-				7A297891235DEC6700B9619F /* CrossReduxSOA_Reducers.framework in Frameworks */,
-				7A297893235DEC6700B9619F /* CrossReduxSOA_ReduxStores.framework in Frameworks */,
-				7A297895235DEC6700B9619F /* Redux.framework in Frameworks */,
+				7A4455872360E8FB00E104DA /* CrossReduxSOA_Services.framework in Frameworks */,
+				7A44558B2360E8FD00E104DA /* CrossReduxSOA_Reducers.framework in Frameworks */,
+				7A44558D2360E8FF00E104DA /* CrossReduxSOA_Models.framework in Frameworks */,
+				7A44558F2360E90000E104DA /* Redux.framework in Frameworks */,
+				7A4455892360E8FC00E104DA /* CrossReduxSOA_ReduxStores.framework in Frameworks */,
+				7A4455852360E8F700E104DA /* CrossReduxSOA_ApiModule.framework in Frameworks */,
+				7A4455832360E8F500E104DA /* Common.framework in Frameworks */,
+				7A4455802360E8F400E104DA /* ApiModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +275,7 @@
 				7A10B256235C79B1004FF3B0 /* Sources */,
 				7A10B257235C79B1004FF3B0 /* Frameworks */,
 				7A10B258235C79B1004FF3B0 /* Resources */,
+				7A4455822360E8F400E104DA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

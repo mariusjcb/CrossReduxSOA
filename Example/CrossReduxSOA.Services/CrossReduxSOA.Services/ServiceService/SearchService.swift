@@ -12,8 +12,8 @@ import CrossReduxSOA_ApiModule
 import ApiModule
 import RxSwift
 
-public class GithubService: SingleApiService<GithubApi> {
-    public func search(for criteria: String, page: Int, completion: (([GithubItem]?, ApiError?)->())? = nil) {
+open class GithubService: SingleApiService<GithubApi> {
+    open func search(for criteria: String, page: Int, completion: (([GithubItem]?, ApiError?)->())? = nil) {
         api.requestRepositories(for: criteria, page: page)
             .toArray()
             .subscribe(onSuccess: {
