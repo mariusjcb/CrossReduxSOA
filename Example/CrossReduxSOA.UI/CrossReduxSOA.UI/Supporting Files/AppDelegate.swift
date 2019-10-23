@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Redux
+import CrossReduxSOA_ReduxStores
+import CrossReduxSOA_Reducers
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let state = GithubStateBuilder.build()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -37,3 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    class var shared: AppDelegate {
+        return (UIApplication.shared.delegate as! AppDelegate)
+    }
+}
+
+class AppState {
+    class var githubStore: GithubStoreProvider<GithubReducer> {
+        return AppDelegate.shared.state.store
+    }
+}

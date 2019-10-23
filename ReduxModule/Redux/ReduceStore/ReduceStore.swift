@@ -25,7 +25,9 @@ public protocol ReduceStore: class, ReduceStoreInitializable {
     var outputDelegates: MulticastDelegate<ReduceStoreOutputDelegate> { get set }
     var actionsQueue: [ReducerType.ActionType] { get set }
     
+    /** Plase do not dispatch actions on Initializers or Setup methods */
     func setup(initialState: ReducerType.StateType, reducer: ReducerType, outputDelegates: [ReduceStoreOutputDelegate])
+    
     func dispatch(action: ReducerType.ActionType, await: Bool)
 }
 

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, SharedHomeContent {
     
     @IBOutlet private weak var searchTextField: UITextField!
     @IBOutlet private weak var searchingCriteriaLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
     
     private let disposeBag = DisposeBag()
 
@@ -27,6 +28,12 @@ class HomeViewController: UIViewController, SharedHomeContent {
     private func setupBindings() {
         searchTextField.rx.text
             .map(textForSearchingCriteria)
+            .observeOn(MainScheduler.instance)
+            .bind(to: AppState.githubStore.rx.searchingCriteriaSubject)
+            .disposed(by: disposeBag)
+        
+        AppState.githubStore.rx
+            .searchingCriteriaSubject
             .bind(to: searchingCriteriaLabel.rx.text)
             .disposed(by: disposeBag)
     }

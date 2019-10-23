@@ -11,20 +11,23 @@ import Foundation
 public protocol ReduceStoreProvider: ReduceStoreInitializable, RxReduceStoreProvider, CombineReduceStoreProvider, ReduceStoreOutputDelegate {
     func dispatch(action: ReducerType.ActionType, await: Bool)
     
-    func syncStore<T: ReduceStore>(_ store: T,
+    func syncStore<T: ReduceStore>(_ store: T?,
                       with currentState: T.ReducerType.StateType?,
                       error: T.ReducerType.ErrorType?)
-    func syncStore<T>(_ store: T,
+    func syncStore<T>(_ store: T?,
                       onDispatch action: T.ReducerType.ActionType?) where T : ReduceStore
     
     init()
+    
+    /** Plase do not dispatch actions on Initializers or Setup methods it will desync Combine and Rx stores. */
     init(_ initialState: ReducerType.StateType, reducer: ReducerType, outputDelegates: [ReduceStoreOutputDelegate])
 }
 
 public extension ReduceStoreProvider {
-    func syncStore<T>(_ store: T,
+    func syncStore<T>(_ store: T?,
                       with currentState: T.ReducerType.StateType?,
                       error: T.ReducerType.ErrorType?) where T : ReduceStore {
+        guard let store = store else { return }
         guard store.isWaitingForReducer else { return }
         
         store.isWaitingForReducer = false
@@ -41,8 +44,9 @@ public extension ReduceStoreProvider {
         }
     }
     
-    func syncStore<T>(_ store: T,
+    func syncStore<T>(_ store: T?,
                       onDispatch action: T.ReducerType.ActionType?) where T : ReduceStore {
+        guard let store = store else { return }
         store.isWaitingForReducer = true
         store.error = nil
     }

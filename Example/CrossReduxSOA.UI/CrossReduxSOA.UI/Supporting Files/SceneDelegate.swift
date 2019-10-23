@@ -7,21 +7,17 @@
 //
 
 import UIKit
-import Redux
 import SwiftUI
-import CrossReduxSOA_ReduxStores
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    let state = GithubStateBuilder.build()
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         let contentView = HomeView()
-            .environmentObject(state.store.combine)
+            .environmentObject(AppState.githubStore.combine)
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

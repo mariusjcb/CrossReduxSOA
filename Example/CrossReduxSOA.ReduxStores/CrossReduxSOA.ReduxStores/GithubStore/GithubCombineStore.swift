@@ -54,12 +54,7 @@ public class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, Ob
         
         let loader = loadMore
             .sink(receiveValue: { [weak self] in
-                if let criteria = self?.searchingCriteria {
-                    self?.dispatch(action: .load(criteria: criteria),
-                                   await: self?.state.page == 0)
-                } else {
-                    self?.dispatch(action: .clear)
-                }
+                self?.dispatchLoadMore(for: self!.state)
             })
             
         cancallables.append(contentsOf: [search, loader])
