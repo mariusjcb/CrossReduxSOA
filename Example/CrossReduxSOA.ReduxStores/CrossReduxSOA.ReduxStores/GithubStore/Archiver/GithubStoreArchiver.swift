@@ -14,7 +14,7 @@ import CrossReduxSOA_Models
 import Redux
 
 open class GithubStoreArchiver<StoreType: ReduceStore>: ReducerStoreArchiver {
-    public var decisionDelegate: ReducerStoreArchiverDecisionDelegate? = nil
+    public var behaviorDelegate: ReducerStoreArchiverBehaviorDelegate? = nil
     
     public var statesHistory = [ReduxArchiveElement<StoreType.ReducerType.StateType>]()
     public var outputDelegates = MulticastDelegate<ReducerStoreArchiverOutputDelegate>()
