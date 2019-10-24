@@ -27,7 +27,7 @@
       location = "group:ApiModule/ApiModule.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/mariusjcb/Documents/Developer/CrossReduxSOA/ReduxModule/Redux.xcodeproj">
+      location = "group:ReduxModule/Redux.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Common/Common.xcodeproj">
