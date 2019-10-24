@@ -10,11 +10,11 @@ import Foundation
 import Common
 
 /** To change sync and persist functionality you can override sync() and persist() */
-public protocol ReducerStoreArchiver: ReducerStoreArchiverDecisionDelegate {
+public protocol ReducerStoreArchiver: ReducerStoreArchiverBehaviorDelegate {
     associatedtype StoreType: ReduceStore
     var statesHistory: [ReduxArchiveElement<StoreType.ReducerType.StateType>] { get set }
     
-    var decisionDelegate: ReducerStoreArchiverDecisionDelegate? { get set }
+    var behaviorDelegate: ReducerStoreArchiverBehaviorDelegate? { get set }
     var outputDelegates: MulticastDelegate<ReducerStoreArchiverOutputDelegate> { get set }
     
     var storeLocation: String { get set }
@@ -26,20 +26,20 @@ public extension ReducerStoreArchiver where Self: ReduceStoreOutputDelegate {
     func reduceStore<T: ReduceStore>(_ reduceStore: T, didChange currentState: T.ReducerType.StateType) {
         guard reduceStore is StoreType else { return }
         guard let currentState = currentState as? StoreType.ReducerType.StateType else { return }
-        guard (decisionDelegate ?? self).reducerStoreArchiver(self, shouldArchive: currentState) else { return }
+        guard (behaviorDelegate ?? self).reducerStoreArchiver(self, shouldArchive: currentState) else { return }
         
-        statesHistory.append((decisionDelegate ?? self).reducerStoreArchiver(self, archiveElementFor: currentState))
+        statesHistory.append((behaviorDelegate ?? self).reducerStoreArchiver(self, archiveElementFor: currentState))
         
-        guard (decisionDelegate ?? self).reducerStoreArchiver(self, shouldPersist: statesHistory) else { return }
+        guard (behaviorDelegate ?? self).reducerStoreArchiver(self, shouldPersist: statesHistory) else { return }
         persist()
     }
     
     func sync() {
         do {
             let tmpStatesHistory = try DiskUtility.read([ReduxArchiveElement<StoreType.ReducerType.StateType>].self, from: storeLocation)
-            let finalStatesHistory = (decisionDelegate ?? self).reducerStoreArchiver(self, syncDiskStatesHistory: tmpStatesHistory)
+            let finalStatesHistory = (behaviorDelegate ?? self).reducerStoreArchiver(self, syncDiskStatesHistory: tmpStatesHistory)
             
-            guard (decisionDelegate ?? self).reducerStoreArchiver(self, shouldSyncStatesHistory: finalStatesHistory) else { return }
+            guard (behaviorDelegate ?? self).reducerStoreArchiver(self, shouldSyncStatesHistory: finalStatesHistory) else { return }
             self.statesHistory = finalStatesHistory
             outputDelegates.invoke {
                 $0.reducerStoreArchiver(self, didSync: statesHistory)
@@ -75,7 +75,7 @@ public extension ReducerStoreArchiver where Self: ReduceStoreOutputDelegate {
     }
 }
 
-public extension ReducerStoreArchiver where Self: ReducerStoreArchiverDecisionDelegate {
+public extension ReducerStoreArchiver where Self: ReducerStoreArchiverBehaviorDelegate {
     func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
                                                        archiveElementFor state: T.StoreType.ReducerType.StateType)
         -> ReduxArchiveElement<T.StoreType.ReducerType.StateType> {

@@ -1,5 +1,5 @@
 //
-//  ReducerStoreArchiverDecisionDelegate.swift
+//  ReducerStoreArchiverBehaviorDelegate.swift
 //  Redux
 //
 //  Created by Marius Ilie on 24/10/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol ReducerStoreArchiverDecisionDelegate: ReduceStoreOutputDelegate {
+public protocol ReducerStoreArchiverBehaviorDelegate: ReduceStoreOutputDelegate {
     func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
                                                        archiveElementFor state: T.StoreType.ReducerType.StateType)
         -> ReduxArchiveElement<T.StoreType.ReducerType.StateType>
