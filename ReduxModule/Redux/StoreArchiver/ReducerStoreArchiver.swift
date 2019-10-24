@@ -9,15 +9,10 @@
 import Foundation
 import Common
 
-public struct ReduxArchiveElement<T: ReduceStore>: Codable {
-    public let date: Date
-    public let state: T.ReducerType.StateType
-}
-
 /** To change sync and persist functionality you can override sync() and persist() */
 public protocol ReducerStoreArchiver: ReducerStoreArchiverDecisionDelegate {
     associatedtype StoreType: ReduceStore
-    var statesHistory: [ReduxArchiveElement<StoreType>] { get set }
+    var statesHistory: [ReduxArchiveElement<StoreType.ReducerType.StateType>] { get set }
     
     var decisionDelegate: ReducerStoreArchiverDecisionDelegate? { get set }
     var outputDelegates: MulticastDelegate<ReducerStoreArchiverOutputDelegate> { get set }
@@ -33,18 +28,19 @@ public extension ReducerStoreArchiver where Self: ReduceStoreOutputDelegate {
         guard let currentState = currentState as? StoreType.ReducerType.StateType else { return }
         guard (decisionDelegate ?? self).reducerStoreArchiver(self, shouldArchive: currentState) else { return }
         
-        statesHistory.append(ReduxArchiveElement(date: Date(), state: currentState))
+        statesHistory.append((decisionDelegate ?? self).reducerStoreArchiver(self, archiveElementFor: currentState))
         
         guard (decisionDelegate ?? self).reducerStoreArchiver(self, shouldPersist: statesHistory) else { return }
         persist()
-        outputDelegates.invoke {
-            $0.reducerStoreArchiver(self, didSave: statesHistory.last!)
-        }
     }
     
     func sync() {
         do {
-            statesHistory = try DiskUtility.read([ReduxArchiveElement<StoreType>].self, from: storeLocation)
+            let tmpStatesHistory = try DiskUtility.read([ReduxArchiveElement<StoreType.ReducerType.StateType>].self, from: storeLocation)
+            let finalStatesHistory = (decisionDelegate ?? self).reducerStoreArchiver(self, syncDiskStatesHistory: tmpStatesHistory)
+            
+            guard (decisionDelegate ?? self).reducerStoreArchiver(self, shouldSyncStatesHistory: finalStatesHistory) else { return }
+            self.statesHistory = finalStatesHistory
             outputDelegates.invoke {
                 $0.reducerStoreArchiver(self, didSync: statesHistory)
             }
@@ -67,6 +63,10 @@ public extension ReducerStoreArchiver where Self: ReduceStoreOutputDelegate {
                 $0.reducerStoreArchiver(self, didReceiveError: error)
             }
         }
+        
+        outputDelegates.invoke {
+            $0.reducerStoreArchiver(self, didSave: statesHistory.last!)
+        }
     }
     
     private func getDocumentsDirectory() -> URL {
@@ -76,11 +76,31 @@ public extension ReducerStoreArchiver where Self: ReduceStoreOutputDelegate {
 }
 
 public extension ReducerStoreArchiver where Self: ReducerStoreArchiverDecisionDelegate {
-    func reducerStoreArchiver<T>(_ archiver: T, shouldArchive state: T.StoreType.ReducerType.StateType) -> Bool where T : ReducerStoreArchiver {
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       archiveElementFor state: T.StoreType.ReducerType.StateType)
+        -> ReduxArchiveElement<T.StoreType.ReducerType.StateType> {
+        return ReduxArchiveElement(date: Date(), state: state)
+    }
+    
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       shouldArchive state: T.StoreType.ReducerType.StateType) -> Bool {
         return true
     }
     
-    func reducerStoreArchiver<T>(_ archiver: T, shouldPersist state: [ReduxArchiveElement<T.StoreType>]) -> Bool where T : ReducerStoreArchiver {
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       shouldPersist state: [ReduxArchiveElement<T.StoreType.ReducerType.StateType>]) -> Bool {
+        return true
+    }
+    
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                   syncDiskStatesHistory statesHistory: [ReduxArchiveElement<T.StoreType.ReducerType.StateType>])
+        -> [ReduxArchiveElement<T.StoreType.ReducerType.StateType>] {
+        return statesHistory
+    }
+    
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                   shouldSyncStatesHistory statesHistory: [ReduxArchiveElement<T.StoreType.ReducerType.StateType>])
+        -> Bool {
         return true
     }
 }

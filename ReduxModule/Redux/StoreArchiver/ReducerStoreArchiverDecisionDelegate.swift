@@ -10,7 +10,19 @@ import Foundation
 
 public protocol ReducerStoreArchiverDecisionDelegate: ReduceStoreOutputDelegate {
     func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
-                                                       shouldArchive state: T.StoreType.ReducerType.StateType) -> Bool
+                                                       archiveElementFor state: T.StoreType.ReducerType.StateType)
+        -> ReduxArchiveElement<T.StoreType.ReducerType.StateType>
     func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
-                                                       shouldPersist state: [ReduxArchiveElement<T.StoreType>]) -> Bool
+                                                       syncDiskStatesHistory statesHistory: [ReduxArchiveElement<T.StoreType.ReducerType.StateType>])
+        -> [ReduxArchiveElement<T.StoreType.ReducerType.StateType>]
+    
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       shouldArchive state: T.StoreType.ReducerType.StateType)
+        -> Bool
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       shouldPersist state: [ReduxArchiveElement<T.StoreType.ReducerType.StateType>])
+        -> Bool
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       shouldSyncStatesHistory statesHistory: [ReduxArchiveElement<T.StoreType.ReducerType.StateType>])
+        -> Bool
 }

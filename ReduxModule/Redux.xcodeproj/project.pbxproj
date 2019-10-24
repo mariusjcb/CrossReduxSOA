@@ -15,6 +15,7 @@
 		7A4E37B9235FA3D0006A3A18 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E37B7235FA338006A3A18 /* StoreTests.swift */; };
 		7A566353235DD590002A93CB /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A566352235DD590002A93CB /* Common.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7AACD8CC23613FA70042F9B7 /* ReducerStoreArchiverDecisionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD8CB23613FA70042F9B7 /* ReducerStoreArchiverDecisionDelegate.swift */; };
+		7AACD8D0236148040042F9B7 /* ReduxArchiveElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD8CF236148040042F9B7 /* ReduxArchiveElement.swift */; };
 		7ACEB665235D4F8A00DEA88E /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB65B235D4F8A00DEA88E /* Redux.framework */; };
 		7ACEB66A235D4F8A00DEA88E /* ReduxModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB669235D4F8A00DEA88E /* ReduxModuleTests.swift */; };
 		7ACEB66C235D4F8A00DEA88E /* Redux.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACEB65E235D4F8A00DEA88E /* Redux.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +53,7 @@
 		7A56633E235DD496002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A566352235DD590002A93CB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AACD8CB23613FA70042F9B7 /* ReducerStoreArchiverDecisionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerStoreArchiverDecisionDelegate.swift; sourceTree = "<group>"; };
+		7AACD8CF236148040042F9B7 /* ReduxArchiveElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxArchiveElement.swift; sourceTree = "<group>"; };
 		7ACEB65B235D4F8A00DEA88E /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB65E235D4F8A00DEA88E /* Redux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Redux.h; sourceTree = "<group>"; };
 		7ACEB65F235D4F8A00DEA88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		7ACEB686235D4FE200DEA88E /* StoreArchiver */ = {
 			isa = PBXGroup;
 			children = (
+				7AACD8CF236148040042F9B7 /* ReduxArchiveElement.swift */,
 				7ACEB684235D4FE200DEA88E /* ReducerStoreArchiver.swift */,
 				7ACEB685235D4FE200DEA88E /* ReducerStoreArchiverOutputDelegate.swift */,
 				7AACD8CB23613FA70042F9B7 /* ReducerStoreArchiverDecisionDelegate.swift */,
@@ -344,6 +347,7 @@
 				7ACEB691235D50F800DEA88E /* ReducerStoreArchiver.swift in Sources */,
 				7ACEB692235D50F800DEA88E /* ReducerStoreArchiverOutputDelegate.swift in Sources */,
 				7ACEB693235D50F800DEA88E /* Redux.h in Sources */,
+				7AACD8D0236148040042F9B7 /* ReduxArchiveElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
