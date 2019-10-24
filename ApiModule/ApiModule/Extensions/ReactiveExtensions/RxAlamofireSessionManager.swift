@@ -12,6 +12,8 @@ import Alamofire
 import RxAlamofire
 
 public extension Reactive where Base == Alamofire.SessionManager {
+    private var protocols: [AnyClass]? { return base.session.configuration.protocolClasses }
+    
     /** Request with validation response. To implement CustomError type instead of using standard ApiError enum please use requestWithoutValidation method. */
     func request(_ method: Alamofire.HTTPMethod,
                         _ url: URLConvertible,
@@ -20,8 +22,9 @@ public extension Reactive where Base == Alamofire.SessionManager {
                         headers: [String: String]? = nil) -> Observable<AlamofireResponse> {
         return self
             .requestWithoutValidation(method, url, parameters: parameters, encoding: encoding, headers: headers)
-            .do(onNext: URLRequestPrintProtocol.print)
+            .callUrlDebugProtocols(protocols)
             .validateResponse()
+            .callUrlDebugProtocols(protocols)
     }
     
     /** Request without validation response. It allows you to implement CustomError type instead of using standard ApiError enum. */
@@ -31,6 +34,5 @@ public extension Reactive where Base == Alamofire.SessionManager {
                         encoding: ParameterEncoding = URLEncoding.default,
                         headers: [String: String]? = nil) -> Observable<DataRequest> {
         return self.request(method, url, parameters: parameters, encoding: encoding, headers: headers)
-                    .do(onNext: URLRequestPrintProtocol.print)
     }
 }

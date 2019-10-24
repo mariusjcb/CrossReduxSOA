@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class GenericReduxStoreLogger: ReduceStoreOutputDelegate {
+open class GenericReduxStoreLogger: ReduceStoreOutputDelegate {
     let name: String
     public init(_ name: String) {
         self.name = name

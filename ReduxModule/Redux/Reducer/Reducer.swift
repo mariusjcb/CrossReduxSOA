@@ -10,11 +10,10 @@ import Foundation
 
 public protocol Reducer: class {
     associatedtype ActionType
-    associatedtype ItemType: AnyReducible
-    associatedtype StateType
+    associatedtype ItemType: ReducibleObject
+    associatedtype StateType: ReducerState
     associatedtype ErrorType: Error
     
-    init()
     func reduce(_ oldState: StateType, action: ActionType,
                 completion: ((StateType?, ErrorType?)->())?)
 }

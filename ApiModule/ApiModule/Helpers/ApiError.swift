@@ -9,22 +9,40 @@
 import Foundation
 import Common
 
-public protocol CustomApiError: Error, Decodable, Identifiable {
-    static var unknown: Self { get set }
-    
-    var code: Int { get set }
-    var message: String { get set }
-    
-    init(code: Int, message: String)
-}
-
-public extension CustomApiError {
-    static var unknwon: Self {
-        return Self.init(code: -1, message: "Unknown Error".localized)
-    }
-}
-
 public enum ApiError: Error {
     case unknown
     case custom(code: Int = -1, message: String)
+    case unhandled(Error)
+    
+    public static func from(_ error: Error) -> ApiError {
+        if let error = error as? ApiError {
+            return error
+        } else {
+            return ApiError.unhandled(error)
+        }
+    }
+}
+
+public extension ApiError {
+    var message: String? {
+        switch self {
+        case .custom(code: _, message: let message):
+            return message
+        case .unhandled(let error):
+            return error.localizedDescription
+        case .unknown:
+            return "Unknown Error".localized
+        }
+    }
+}
+
+public extension Error {
+    var message: String {
+        switch self {
+        case is ApiError:
+            return (self as? ApiError)?.message ?? ApiError.unknown.message
+        default:
+            return self.localizedDescription
+        }
+    }
 }

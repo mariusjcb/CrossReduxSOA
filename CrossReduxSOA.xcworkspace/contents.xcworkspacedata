@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Example">
+      <FileRef
+         location = "group:Example/CrossReduxSOA.UI/CrossReduxSOA.UI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Example/CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Example/CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Example/CrossReduxSOA.Services/CrossReduxSOA.Services.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Example/CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Example/CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
-      location = "group:CrossReduxSOA.Models/CrossReduxSOA.Models.xcodeproj">
+      location = "group:ApiModule/ApiModule.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CrossReduxSOA.ApiModule/CrossReduxSOA.ApiModule.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:CrossReduxSOA.Reducers/CrossReduxSOA.Reducers.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:CrossReduxSOA.ReduxStores/CrossReduxSOA.ReduxStores.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "container:CrossReduxSOA.xcodeproj">
+      location = "group:ReduxModule/Redux.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Common/Common.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/mariusjcb/Documents/Developer/CrossReduxSOA/ReduxModule/Redux.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ApiModule/ApiModule.xcodeproj">
+      location = "group:/Users/mariusjcb/Documents/Developer/CrossReduxSOA/CrossReduxSOAPackage.xcodeproj">
    </FileRef>
 </Workspace>

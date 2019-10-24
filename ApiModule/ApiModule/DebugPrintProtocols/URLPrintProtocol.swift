@@ -9,14 +9,15 @@
 import Foundation
 import Alamofire
 
-protocol URLPrintProtocol: class {
+public protocol URLPrintProtocol: class {
     static func print(_ response: (HTTPURLResponse, Data))
     static func print(_ request: Alamofire.DataRequest)
     static func print(_ request: URLRequest)
     static func print(_ error: Error)
 }
 
-extension URLPrintProtocol {
+#if DEBUG
+public extension URLPrintProtocol {
     static func print(_ request: URLRequest) {
         Swift.print(
             "\n\n🌏 Requesting... [\(request.httpMethod ?? "")]",
@@ -57,3 +58,11 @@ extension URLPrintProtocol {
         Swift.print("\n\n⚠️ ERROR: \(error.localizedDescription)")
     }
 }
+#else
+public extension URLPrintProtocol {
+    static func print(_ response: (HTTPURLResponse, Data)) { }
+    static func print(_ request: Alamofire.DataRequest) { }
+    static func print(_ request: URLRequest) { }
+    static func print(_ error: Error) { }
+}
+#endif

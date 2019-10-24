@@ -8,7 +8,11 @@
 
 import Foundation
 
-public protocol ReducerStoreArchiverOutputDelegate: class {
+public protocol ReducerStoreArchiverOutputDelegate: ReduceStoreOutputDelegate {
     func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
-                                                       didSave archive: ReduxArchiveElement<T.ReducerType>)
+                                                       didSave archive: ReduxArchiveElement<T.StoreType.ReducerType.StateType>)
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       didSync states: [ReduxArchiveElement<T.StoreType.ReducerType.StateType>])
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       didReceiveError error: Error)
 }
