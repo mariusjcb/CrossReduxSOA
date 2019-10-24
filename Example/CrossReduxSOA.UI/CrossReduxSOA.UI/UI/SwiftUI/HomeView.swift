@@ -27,7 +27,7 @@ struct HomeView: View, SharedHomeContent {
                         let index = self.store.state.items.firstIndex(where: { $0.id == item.id })!
                         let count = self.store.state.items.count
                         
-                        if index == count - 20 {
+                        if index >= count - 20 {
                             self.store.loadMore.send()
                         }
                     })

@@ -10,6 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+private enum TableViewCells: String {
+    case searchItem = "SearchItemCell"
+}
+
 class HomeViewController: UIViewController, SharedHomeContent {
     
     @IBOutlet private weak var searchTextField: UITextField!
@@ -36,6 +40,14 @@ class HomeViewController: UIViewController, SharedHomeContent {
             .searchingCriteriaSubject
             .bind(to: searchingCriteriaLabel.rx.text)
             .disposed(by: disposeBag)
+        
+        AppState.githubStore.rx
+            .stateObservable
+            .map { $0.items }
+            .bind(to: tableView.rx.items(cellIdentifier: TableViewCells.searchItem.rawValue,
+                                         cellType: UITableViewCell.self)) { (i, model, cell) in
+                cell.textLabel?.text = model.name
+            }.disposed(by: disposeBag)
     }
     
     private func setupViews() {
