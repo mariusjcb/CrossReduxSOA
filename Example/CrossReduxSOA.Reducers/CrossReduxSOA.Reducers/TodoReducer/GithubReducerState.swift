@@ -9,7 +9,7 @@
 import Foundation
 import Redux
 
-public struct GithubReducerState<T: AnyReducible> {
+public struct GithubReducerState<T: ReducibleObject>: ReducerState {
     public let items: [T]
     public let criteria: String
     public let page: Int
@@ -18,5 +18,11 @@ public struct GithubReducerState<T: AnyReducible> {
         self.items = items
         self.criteria = criteria
         self.page = page
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case items
+        case criteria
+        case page
     }
 }

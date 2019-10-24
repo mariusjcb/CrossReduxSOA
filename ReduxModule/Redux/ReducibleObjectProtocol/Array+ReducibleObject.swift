@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Array where Element: AnyReducible {
+public extension Array where Element: ReducibleObject {
     func item(at offset: IndexSet) -> Element? {
         guard let offset = offset.first else {
             return nil

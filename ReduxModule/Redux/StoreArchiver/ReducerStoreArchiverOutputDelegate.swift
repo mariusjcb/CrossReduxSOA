@@ -11,4 +11,8 @@ import Foundation
 public protocol ReducerStoreArchiverOutputDelegate: ReduceStoreOutputDelegate {
     func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
                                                        didSave archive: ReduxArchiveElement<T.StoreType>)
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       didSync states: [ReduxArchiveElement<T.StoreType>])
+    func reducerStoreArchiver<T: ReducerStoreArchiver>(_ archiver: T,
+                                                       didReceiveError error: Error)
 }

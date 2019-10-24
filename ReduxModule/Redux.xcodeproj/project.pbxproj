@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A445598236126EC00E104DA /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A445597236126EC00E104DA /* State.swift */; };
 		7A4E3798235F4477006A3A18 /* ReduxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E3797235F4477006A3A18 /* ReduxState.swift */; };
 		7A4E37AC235F563D006A3A18 /* SwiftPriorityQueue in Frameworks */ = {isa = PBXBuildFile; productRef = 7A4E37AB235F563D006A3A18 /* SwiftPriorityQueue */; };
 		7A4E37B3235F9164006A3A18 /* AnyReducibleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E37B1235F90F4006A3A18 /* AnyReducibleArrayTests.swift */; };
@@ -18,8 +19,8 @@
 		7ACEB66C235D4F8A00DEA88E /* Redux.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACEB65E235D4F8A00DEA88E /* Redux.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ACEB687235D50F800DEA88E /* GenericArchiverLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB675235D4FD200DEA88E /* GenericArchiverLogger.swift */; };
 		7ACEB688235D50F800DEA88E /* GenericReduxStoreLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB676235D4FD200DEA88E /* GenericReduxStoreLogger.swift */; };
-		7ACEB689235D50F800DEA88E /* AnyReducible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB681235D4FD200DEA88E /* AnyReducible.swift */; };
-		7ACEB68A235D50F800DEA88E /* Array+AnyReducible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB682235D4FD200DEA88E /* Array+AnyReducible.swift */; };
+		7ACEB689235D50F800DEA88E /* ReducibleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB681235D4FD200DEA88E /* ReducibleObject.swift */; };
+		7ACEB68A235D50F800DEA88E /* Array+ReducibleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB682235D4FD200DEA88E /* Array+ReducibleObject.swift */; };
 		7ACEB68B235D50F800DEA88E /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB678235D4FD200DEA88E /* Reducer.swift */; };
 		7ACEB68C235D50F800DEA88E /* RxReduceStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB67A235D4FD200DEA88E /* RxReduceStoreProvider.swift */; };
 		7ACEB68D235D50F800DEA88E /* CombineReduceStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB67B235D4FD200DEA88E /* CombineReduceStoreProvider.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A445597236126EC00E104DA /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		7A4E3797235F4477006A3A18 /* ReduxState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxState.swift; sourceTree = "<group>"; };
 		7A4E37B1235F90F4006A3A18 /* AnyReducibleArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReducibleArrayTests.swift; sourceTree = "<group>"; };
 		7A4E37B4235F957F006A3A18 /* ReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerTests.swift; sourceTree = "<group>"; };
@@ -62,8 +64,8 @@
 		7ACEB67C235D4FD200DEA88E /* ReduceStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStoreProvider.swift; sourceTree = "<group>"; };
 		7ACEB67E235D4FD200DEA88E /* ReduceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStore.swift; sourceTree = "<group>"; };
 		7ACEB67F235D4FD200DEA88E /* ReduceStoreOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStoreOutputDelegate.swift; sourceTree = "<group>"; };
-		7ACEB681235D4FD200DEA88E /* AnyReducible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReducible.swift; sourceTree = "<group>"; };
-		7ACEB682235D4FD200DEA88E /* Array+AnyReducible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+AnyReducible.swift"; sourceTree = "<group>"; };
+		7ACEB681235D4FD200DEA88E /* ReducibleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducibleObject.swift; sourceTree = "<group>"; };
+		7ACEB682235D4FD200DEA88E /* Array+ReducibleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ReducibleObject.swift"; sourceTree = "<group>"; };
 		7ACEB684235D4FE200DEA88E /* ReducerStoreArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerStoreArchiver.swift; sourceTree = "<group>"; };
 		7ACEB685235D4FE200DEA88E /* ReducerStoreArchiverOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerStoreArchiverOutputDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +132,7 @@
 			children = (
 				7A4E3796235F4460006A3A18 /* ReduxState */,
 				7ACEB677235D4FD200DEA88E /* GenericLoggers */,
-				7ACEB683235D4FD200DEA88E /* AnyReducibleProtocol */,
+				7ACEB683235D4FD200DEA88E /* ReducibleObjectProtocol */,
 				7ACEB679235D4FD200DEA88E /* Reducer */,
 				7ACEB680235D4FD200DEA88E /* ReduceStore */,
 				7ACEB686235D4FE200DEA88E /* StoreArchiver */,
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				7ACEB678235D4FD200DEA88E /* Reducer.swift */,
+				7A445597236126EC00E104DA /* State.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -189,13 +192,13 @@
 			path = ReduceStore;
 			sourceTree = "<group>";
 		};
-		7ACEB683235D4FD200DEA88E /* AnyReducibleProtocol */ = {
+		7ACEB683235D4FD200DEA88E /* ReducibleObjectProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				7ACEB681235D4FD200DEA88E /* AnyReducible.swift */,
-				7ACEB682235D4FD200DEA88E /* Array+AnyReducible.swift */,
+				7ACEB681235D4FD200DEA88E /* ReducibleObject.swift */,
+				7ACEB682235D4FD200DEA88E /* Array+ReducibleObject.swift */,
 			);
-			path = AnyReducibleProtocol;
+			path = ReducibleObjectProtocol;
 			sourceTree = "<group>";
 		};
 		7ACEB686235D4FE200DEA88E /* StoreArchiver */ = {
@@ -324,12 +327,13 @@
 			files = (
 				7ACEB687235D50F800DEA88E /* GenericArchiverLogger.swift in Sources */,
 				7ACEB688235D50F800DEA88E /* GenericReduxStoreLogger.swift in Sources */,
-				7ACEB689235D50F800DEA88E /* AnyReducible.swift in Sources */,
-				7ACEB68A235D50F800DEA88E /* Array+AnyReducible.swift in Sources */,
+				7ACEB689235D50F800DEA88E /* ReducibleObject.swift in Sources */,
+				7ACEB68A235D50F800DEA88E /* Array+ReducibleObject.swift in Sources */,
 				7ACEB68B235D50F800DEA88E /* Reducer.swift in Sources */,
 				7ACEB68C235D50F800DEA88E /* RxReduceStoreProvider.swift in Sources */,
 				7ACEB68D235D50F800DEA88E /* CombineReduceStoreProvider.swift in Sources */,
 				7A4E3798235F4477006A3A18 /* ReduxState.swift in Sources */,
+				7A445598236126EC00E104DA /* State.swift in Sources */,
 				7ACEB68E235D50F800DEA88E /* ReduceStoreProvider.swift in Sources */,
 				7ACEB68F235D50F800DEA88E /* ReduceStore.swift in Sources */,
 				7ACEB690235D50F800DEA88E /* ReduceStoreOutputDelegate.swift in Sources */,

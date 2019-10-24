@@ -15,7 +15,7 @@ public protocol BaseGithubStore: ReduceStore {
 }
 
 extension BaseGithubStore where ReducerType: GithubReducer {
-    public func dispatchLoadMore(for state: ReducerType.StateType){
+    public func dispatchLoadMore(for state: GithubReducer.StateType){
         if !state.criteria.isEmpty {
             dispatch(action: .load(criteria: state.criteria),
                      await: state.page == 0)

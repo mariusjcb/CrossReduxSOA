@@ -17,8 +17,18 @@ open class GenericReduxArchiverLogger: ReducerStoreArchiverOutputDelegate {
     open func reducerStoreArchiver<T>(_ archiver: T, didSave archive: ReduxArchiveElement<T.StoreType>) where T : ReducerStoreArchiver {
         print("🚩", name,
               "\n\t|  DATE:", archive.date,
-              "\n\t|  CLASS: [\(type(of: archiver))->\(type(of: archive.target))]",
+              "\n\t|  CLASS: [\(type(of: archiver))->\(T.StoreType.self)]",
               "\n\t|  EVENT: didSave", archive.state)
+    }
+    
+    public func reducerStoreArchiver<T>(_ archiver: T, didSync states: [ReduxArchiveElement<T.StoreType>]) where T : ReducerStoreArchiver {
+        print("📀 SYNCED - ", name,
+              "\n\t|  LAST EVENT:", states.last?.date ?? "No events")
+    }
+    
+    public func reducerStoreArchiver<T>(_ archiver: T, didReceiveError error: Error) where T : ReducerStoreArchiver {
+        print("⚠️", name,
+              "\n\t|  ERROR:", error.localizedDescription)
     }
 }
 

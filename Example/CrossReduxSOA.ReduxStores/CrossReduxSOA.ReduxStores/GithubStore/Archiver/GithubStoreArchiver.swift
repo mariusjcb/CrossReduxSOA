@@ -12,14 +12,17 @@ import Redux
 import CrossReduxSOA_Reducers
 
 open class GithubStoreArchiver<StoreType: ReduceStore>: ReducerStoreArchiver {
-    public var storeLocation: String { return "" }
-    
+
     public var statesHistory = [ReduxArchiveElement<StoreType>]()
     public var outputDelegates = MulticastDelegate<ReducerStoreArchiverOutputDelegate>()
+    public var storeLocation: String
     
-    required public init(outputDelegates: [ReducerStoreArchiverOutputDelegate] = []) {
+    required public init(storeLocation: String? = nil, outputDelegates: [ReducerStoreArchiverOutputDelegate] = []) {
+        self.storeLocation = storeLocation ?? String(describing: StoreType.self)
         outputDelegates.forEach {
             self.outputDelegates.add($0)
         }
+        
+        self.sync()
     }
 }
