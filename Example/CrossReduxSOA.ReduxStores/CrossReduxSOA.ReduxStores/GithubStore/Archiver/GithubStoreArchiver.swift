@@ -12,7 +12,8 @@ import Redux
 import CrossReduxSOA_Reducers
 
 open class GithubStoreArchiver<StoreType: ReduceStore>: ReducerStoreArchiver {
-
+    public var decisionDelegate: ReducerStoreArchiverDecisionDelegate? = nil
+    
     public var statesHistory = [ReduxArchiveElement<StoreType>]()
     public var outputDelegates = MulticastDelegate<ReducerStoreArchiverOutputDelegate>()
     public var storeLocation: String
@@ -24,5 +25,10 @@ open class GithubStoreArchiver<StoreType: ReduceStore>: ReducerStoreArchiver {
         }
         
         self.sync()
+    }
+    
+    public func reducerStoreArchiver<T>(_ archiver: T, shouldArchive state: T.StoreType.ReducerType.StateType) -> Bool where T : ReducerStoreArchiver {
+        let state = state as? GithubReducerState<StoreType.ReducerType.ItemType>
+        return state?.criteria.isEmpty == false
     }
 }
