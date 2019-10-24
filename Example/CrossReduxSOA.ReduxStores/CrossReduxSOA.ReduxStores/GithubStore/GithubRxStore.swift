@@ -33,7 +33,7 @@ open class GithubRxStore<ReducerType: GithubReducer>: BaseGithubStore {
     private var disposeBag = DisposeBag()
     public let loadMore = PublishSubject<Void>()
     
-    lazy private(set) var stateObservable = PublishSubject<ReducerType.StateType>()
+    public private(set) lazy var stateObservable = PublishSubject<ReducerType.StateType>()
     public let searchingCriteriaSubject = PublishSubject<String>()
     
     //MARK: - Methods

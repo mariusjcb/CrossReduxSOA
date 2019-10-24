@@ -39,8 +39,8 @@ open class GithubStoreArchiver<StoreType: ReduceStore>: ReducerStoreArchiver {
             return ReduxArchiveElement(date: Date(), state: state)
         }
         
-        let newItems = githubState.items.map { GithubItem(id: $0.id, name: "📀 OFFLINE: \($0.name)") }
-        let newState = GithubReducerState(newItems, criteria: "📀 OFFLINE: \(githubState.criteria)", page: githubState.page)
+        let newItems = githubState.items.map { GithubItem(id: $0.id, name: "[🔍 \(githubState.criteria)] \($0.name)") }
+        let newState = GithubReducerState(newItems, criteria: "🔍 \(githubState.criteria)", page: githubState.page)
         
         if let state = newState as? T.StoreType.ReducerType.StateType {
             return .init(date: Date(), state: state)
