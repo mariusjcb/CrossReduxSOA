@@ -38,18 +38,20 @@ open class GithubReducer: Reducer {
                 return
             }
             
+            var page = oldState.page
             if criteria != oldState.criteria {
                 newState = StateType([], criteria: criteria, page: 0)
+                page = 0
             }
             
             githubService
-                .search(for: criteria, page: oldState.page + 1, completion: { items, error in
+                .search(for: criteria, page: page + 1, completion: { items, error in
                     var newItems = newState.items
                     
                     newItems.append(contentsOf: items ?? [])
                     let newState = StateType(newItems,
                                              criteria: criteria,
-                                             page: oldState.page + 1)
+                                             page: page + 1)
                     
                     completion?(newState, error)
                 })
