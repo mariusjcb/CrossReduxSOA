@@ -47,12 +47,14 @@ open class GithubCombineStore<ReducerType: GithubReducer>: BaseGithubStore, Obse
     
     private func setupFetchDataBinders() {
         let search = $searchingCriteria
+            .dropFirst()
             .throttle(for: 3, scheduler: RunLoop.main, latest: true)
             .sink(receiveValue: { [weak self] criteria in
                 self?.dispatch(action: .load(criteria: criteria))
             })
         
         let loader = loadMore
+            .dropFirst()
             .sink(receiveValue: { [weak self] in
                 self?.dispatchLoadMore(for: self!.state)
             })
