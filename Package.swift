@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "CrossReduxSOA",
+    platforms: [
+        .macOS(.v10_15), .iOS(.v12), .tvOS(.v10), .watchOS(.v4)
+    ],
     products: [
         .library(name: "Common", targets: ["Common"]),
         .library(name: "Redux", targets: ["Redux"]),
