@@ -12,17 +12,7 @@ import RxSwift
 import Alamofire
 import CrossReduxSOA_Models
 
-public class GithubApi: ApiModule {
-    private let endpoints: GithubApiEndpoints
-    public init(requestAdapter: ApiRequestAdapter,
-                httpClient: Alamofire.SessionManager? = nil,
-                endpoints: GithubApiEndpoints = GithubApiEndpoints()) {
-        self.endpoints = endpoints
-        super.init(requestAdapter: requestAdapter, httpClient: httpClient)
-    }
-    
-    //MARK: - Search Request
-
+public class GithubApi: ApiModule<GithubApiEndpoints> {
     public func requestRepositories(for query: String, page: Int) -> Observable<GithubItem> {
         let params = ["q": query,
                       "page": page] as [String : Any]

@@ -23,6 +23,7 @@
 		7A566374235DE0BF002A93CB /* URLPrintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566373235DE0BF002A93CB /* URLPrintProtocol.swift */; };
 		7A566376235DE11E002A93CB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566375235DE11E002A93CB /* Data.swift */; };
 		7A566379235DE516002A93CB /* URLRequestPrintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */; };
+		7AA78B6023630E6300E385D0 /* ApiModuleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA78B5F23630E6300E385D0 /* ApiModuleRepresentable.swift */; };
 		7ACEB62A235D4DA400DEA88E /* ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB620235D4DA400DEA88E /* ApiModule.framework */; };
 		7ACEB62F235D4DA400DEA88E /* ApiModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB62E235D4DA400DEA88E /* ApiModuleTests.swift */; };
 		7ACEB631235D4DA400DEA88E /* ApiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACEB623235D4DA400DEA88E /* ApiModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +58,7 @@
 		7A566373235DE0BF002A93CB /* URLPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPrintProtocol.swift; sourceTree = "<group>"; };
 		7A566375235DE11E002A93CB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestPrintProtocol.swift; sourceTree = "<group>"; };
+		7AA78B5F23630E6300E385D0 /* ApiModuleRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModuleRepresentable.swift; sourceTree = "<group>"; };
 		7ACEB620235D4DA400DEA88E /* ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB623235D4DA400DEA88E /* ApiModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiModule.h; sourceTree = "<group>"; };
 		7ACEB624235D4DA400DEA88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 			path = DebugPrintProtocols;
 			sourceTree = "<group>";
 		};
+		7AA78B5E23630E5300E385D0 /* ApiModuleRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				7AA78B5F23630E6300E385D0 /* ApiModuleRepresentable.swift */,
+			);
+			path = ApiModuleRepresentable;
+			sourceTree = "<group>";
+		};
 		7ACEB616235D4DA400DEA88E = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				7ACEB648235D4E1200DEA88E /* ApiModule.swift */,
+				7AA78B5E23630E5300E385D0 /* ApiModuleRepresentable */,
 				7A56637A235DE54B002A93CB /* ApiRequestAdapters */,
 				7A56637B235DE555002A93CB /* DebugPrintProtocols */,
 				7ACEB64E235D4ED600DEA88E /* Extensions */,
@@ -310,6 +321,7 @@
 				7A29789E235E36A000B9619F /* RxAlamofireSessionManager.swift in Sources */,
 				7A56636B235DDD92002A93CB /* ApiRequestAdapter.swift in Sources */,
 				7A46606F235E7AD900EEE552 /* RequestAdapterHeaderKeys.swift in Sources */,
+				7AA78B6023630E6300E385D0 /* ApiModuleRepresentable.swift in Sources */,
 				7A566376235DE11E002A93CB /* Data.swift in Sources */,
 				7A566370235DDF19002A93CB /* AuthorizationAdapterDelegate.swift in Sources */,
 				7ACEB650235D4EE200DEA88E /* DateFormatter.swift in Sources */,

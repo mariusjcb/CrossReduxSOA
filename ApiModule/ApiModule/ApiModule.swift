@@ -9,15 +9,18 @@
 import Foundation
 import Alamofire
 
-open class ApiModule {
+open class ApiModule<EndpointsType: ApiEndpoints>: ApiModuleRepresentable {
     private let requestAdapter: ApiRequestAdapter
     public let httpClient: Alamofire.SessionManager
+    public let endpoints: EndpointsType
     
     public var encoder: JSONEncoder { return JSONEncoder() }
     public var decoder: JSONDecoder { return JSONDecoder() }
     
-    public init(requestAdapter: ApiRequestAdapter,
-                httpClient: Alamofire.SessionManager? = nil) {
+    required public init(requestAdapter: ApiRequestAdapter,
+                httpClient: Alamofire.SessionManager? = nil,
+                endpoints: EndpointsType = EndpointsType()) {
+        self.endpoints = endpoints
         self.httpClient = httpClient ?? .makeDefaultSession(with: requestAdapter)
         self.requestAdapter = requestAdapter
     }
