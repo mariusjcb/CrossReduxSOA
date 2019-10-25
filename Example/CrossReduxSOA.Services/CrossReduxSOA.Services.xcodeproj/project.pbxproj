@@ -14,7 +14,6 @@
 		7A46605C235E703100EEE552 /* CrossReduxSOA_ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46605B235E703100EEE552 /* CrossReduxSOA_ApiModule.framework */; };
 		7A46605E235E709800EEE552 /* ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46605D235E709800EEE552 /* ApiModule.framework */; };
 		7A466060235E709F00EEE552 /* CrossReduxSOA_Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A46605F235E709F00EEE552 /* CrossReduxSOA_Models.framework */; };
-		7A46606A235E74C500EEE552 /* SingleApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A466069235E74C500EEE552 /* SingleApiService.swift */; };
 		7A4E37A3235F4DDC006A3A18 /* GithubServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E37A2235F4DDC006A3A18 /* GithubServiceBuilder.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 		7A46605B235E703100EEE552 /* CrossReduxSOA_ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A46605D235E709800EEE552 /* ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A46605F235E709F00EEE552 /* CrossReduxSOA_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CrossReduxSOA_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A466069235E74C500EEE552 /* SingleApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleApiService.swift; sourceTree = "<group>"; };
 		7A4E37A2235F4DDC006A3A18 /* GithubServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubServiceBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				7A4E37A1235F4DC2006A3A18 /* Builders */,
-				7A466068235E74B100EEE552 /* BaseClasses */,
 				7A466055235E6AF200EEE552 /* ServiceService */,
 				7A46603E235E6A0D00EEE552 /* CrossReduxSOA_Services.h */,
 				7A46603F235E6A0D00EEE552 /* Info.plist */,
@@ -121,14 +118,6 @@
 				7A46605B235E703100EEE552 /* CrossReduxSOA_ApiModule.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7A466068235E74B100EEE552 /* BaseClasses */ = {
-			isa = PBXGroup;
-			children = (
-				7A466069235E74C500EEE552 /* SingleApiService.swift */,
-			);
-			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 		7A4E37A1235F4DC2006A3A18 /* Builders */ = {
@@ -249,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A46606A235E74C500EEE552 /* SingleApiService.swift in Sources */,
 				7A466057235E6B0900EEE552 /* SearchService.swift in Sources */,
 				7A4E37A3235F4DDC006A3A18 /* GithubServiceBuilder.swift in Sources */,
 			);

@@ -24,6 +24,7 @@
 		7A566376235DE11E002A93CB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566375235DE11E002A93CB /* Data.swift */; };
 		7A566379235DE516002A93CB /* URLRequestPrintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */; };
 		7AA78B6023630E6300E385D0 /* ApiModuleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA78B5F23630E6300E385D0 /* ApiModuleRepresentable.swift */; };
+		7AA78B6223630EF400E385D0 /* SingleApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA78B6123630EF400E385D0 /* SingleApiService.swift */; };
 		7ACEB62A235D4DA400DEA88E /* ApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACEB620235D4DA400DEA88E /* ApiModule.framework */; };
 		7ACEB62F235D4DA400DEA88E /* ApiModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEB62E235D4DA400DEA88E /* ApiModuleTests.swift */; };
 		7ACEB631235D4DA400DEA88E /* ApiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACEB623235D4DA400DEA88E /* ApiModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +60,7 @@
 		7A566375235DE11E002A93CB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestPrintProtocol.swift; sourceTree = "<group>"; };
 		7AA78B5F23630E6300E385D0 /* ApiModuleRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModuleRepresentable.swift; sourceTree = "<group>"; };
+		7AA78B6123630EF400E385D0 /* SingleApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleApiService.swift; sourceTree = "<group>"; };
 		7ACEB620235D4DA400DEA88E /* ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACEB623235D4DA400DEA88E /* ApiModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiModule.h; sourceTree = "<group>"; };
 		7ACEB624235D4DA400DEA88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				7A29789B235E363600B9619F /* ApiError.swift */,
 				7A18834B235F390E000972C4 /* GenericApiError.swift */,
 				7A46607B235E811600EEE552 /* ApiEndpoints.swift */,
+				7AA78B6123630EF400E385D0 /* SingleApiService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				7A46607C235E811600EEE552 /* ApiEndpoints.swift in Sources */,
 				7A29789A235E354400B9619F /* RxAlamofireResponse.swift in Sources */,
 				7A566374235DE0BF002A93CB /* URLPrintProtocol.swift in Sources */,
+				7AA78B6223630EF400E385D0 /* SingleApiService.swift in Sources */,
 				7A18834C235F390E000972C4 /* GenericApiError.swift in Sources */,
 				7ACEB649235D4E1200DEA88E /* ApiModule.swift in Sources */,
 			);
