@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A188348235F3230000972C4 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A188347235F3230000972C4 /* Common.framework */; };
 		7A18834C235F390E000972C4 /* GenericApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18834B235F390E000972C4 /* GenericApiError.swift */; };
 		7A297897235E34B300B9619F /* RxAlamofireDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A297896235E34B300B9619F /* RxAlamofireDataRequest.swift */; };
 		7A29789A235E354400B9619F /* RxAlamofireResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A297899235E354400B9619F /* RxAlamofireResponse.swift */; };
@@ -59,6 +58,7 @@
 		7A566373235DE0BF002A93CB /* URLPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPrintProtocol.swift; sourceTree = "<group>"; };
 		7A566375235DE11E002A93CB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		7A566378235DE516002A93CB /* URLRequestPrintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestPrintProtocol.swift; sourceTree = "<group>"; };
+		7A83C2AD236505F90096B735 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA78B5F23630E6300E385D0 /* ApiModuleRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModuleRepresentable.swift; sourceTree = "<group>"; };
 		7AA78B6123630EF400E385D0 /* SingleApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleApiService.swift; sourceTree = "<group>"; };
 		7ACEB620235D4DA400DEA88E /* ApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A188348235F3230000972C4 /* Common.framework in Frameworks */,
 				7A56636E235DDDCE002A93CB /* RxAlamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +95,7 @@
 		7A188346235F3230000972C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A83C2AD236505F90096B735 /* Common.framework */,
 				7A188347235F3230000972C4 /* Common.framework */,
 			);
 			name = Frameworks;
