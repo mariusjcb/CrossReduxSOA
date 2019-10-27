@@ -80,12 +80,12 @@ enum ReducerTestAction: Equatable {
     case remove(String, comment: String)
 }
 
-struct ReducerTestItem: AnyReducible, Equatable {
+struct ReducerTestItem: ReducibleObject, Equatable {
     let id = UUID()
     let name: String
 }
 
-struct ReducerTestState {
+struct ReducerTestState: ReducerState {
     let items: [ReducerTestItem]
     let comment: String
     
@@ -105,9 +105,10 @@ enum ReducerTestError: Error {
 }
 
 class ReducerTest: Reducer {
+    typealias StateType = ReducerTestState
+    
     typealias ActionType = ReducerTestAction
     typealias ItemType = ReducerTestItem
-    typealias StateType = ReducerTestState
     typealias ErrorType = ReducerTestError
     
     func reduce(_ oldState: ReducerTestState, action: ReducerTestAction, completion: ((ReducerTestState?, ReducerTestError?) -> ())?) {

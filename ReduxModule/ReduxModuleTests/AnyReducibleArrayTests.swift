@@ -11,12 +11,12 @@ import XCTest
 
 class AnyReducibleArrayTests: XCTestCase {
     
-    var array: [ReducibleObject]!
+    var array: [TestReducibleObject]!
     
     override func setUp() {
-        array = [ReducibleObject]()
+        array = [TestReducibleObject]()
         (0...10).forEach {
-            array.append(ReducibleObject(name: "\($0)"))
+            array.append(TestReducibleObject(name: "\($0)"))
         }
     }
     
@@ -41,17 +41,17 @@ class AnyReducibleArrayTests: XCTestCase {
     }
     
     func testAnyReducibleArrayShouldReplaceItemAtInt() {
-        array = array.replacingItem(at: 3, with: ReducibleObject(name: "-100"))
+        array = array.replacingItem(at: 3, with: TestReducibleObject(name: "-100"))
         XCTAssertEqual(array.item(at: 3)?.name, "-100")
     }
     
     func testAnyReducibleArrayShouldReplaceItemAtIndexSet() {
-        array = array.replacingItem(at: IndexSet(integer: 3), with: ReducibleObject(name: "-100"))
+        array = array.replacingItem(at: IndexSet(integer: 3), with: TestReducibleObject(name: "-100"))
         XCTAssertEqual(array.item(at: IndexSet(integer: 3))?.name, "-100")
     }
 
     //MARK: - Helpers
-    struct ReducibleObject: AnyReducible {
+    struct TestReducibleObject: ReducibleObject {
         let id = UUID()
         let name: String
     }
