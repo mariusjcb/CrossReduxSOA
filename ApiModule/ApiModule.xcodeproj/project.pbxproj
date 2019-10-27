@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7A18834C235F390E000972C4 /* GenericApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18834B235F390E000972C4 /* GenericApiError.swift */; };
-		7A265FC82365721500BE1920 /* RxReachability in Frameworks */ = {isa = PBXBuildFile; productRef = 7A265FC72365721500BE1920 /* RxReachability */; };
 		7A297897235E34B300B9619F /* RxAlamofireDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A297896235E34B300B9619F /* RxAlamofireDataRequest.swift */; };
 		7A29789A235E354400B9619F /* RxAlamofireResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A297899235E354400B9619F /* RxAlamofireResponse.swift */; };
 		7A29789C235E363600B9619F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29789B235E363600B9619F /* ApiError.swift */; };
@@ -79,7 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A56636E235DDDCE002A93CB /* RxAlamofire in Frameworks */,
-				7A265FC82365721500BE1920 /* RxReachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +235,6 @@
 			name = ApiModule;
 			packageProductDependencies = (
 				7A56636D235DDDCE002A93CB /* RxAlamofire */,
-				7A265FC72365721500BE1920 /* RxReachability */,
 			);
 			productName = ApiModule;
 			productReference = 7ACEB620235D4DA400DEA88E /* ApiModule.framework */;
@@ -291,7 +288,6 @@
 			mainGroup = 7ACEB616235D4DA400DEA88E;
 			packageReferences = (
 				7A56636C235DDDCE002A93CB /* XCRemoteSwiftPackageReference "RxAlamofire" */,
-				7A265FC62365721500BE1920 /* XCRemoteSwiftPackageReference "RxReachability" */,
 			);
 			productRefGroup = 7ACEB621235D4DA400DEA88E /* Products */;
 			projectDirPath = "";
@@ -610,14 +606,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7A265FC62365721500BE1920 /* XCRemoteSwiftPackageReference "RxReachability" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mariusjcb/RxReachability.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.5;
-			};
-		};
 		7A56636C235DDDCE002A93CB /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
@@ -629,11 +617,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7A265FC72365721500BE1920 /* RxReachability */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A265FC62365721500BE1920 /* XCRemoteSwiftPackageReference "RxReachability" */;
-			productName = RxReachability;
-		};
 		7A56636D235DDDCE002A93CB /* RxAlamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7A56636C235DDDCE002A93CB /* XCRemoteSwiftPackageReference "RxAlamofire" */;

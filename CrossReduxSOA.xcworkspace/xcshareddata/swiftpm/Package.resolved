@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "Reachability",
-        "repositoryURL": "https://github.com/ashleymills/Reachability.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "98e968e7b6c1318fb61df23e347bc319761e8acb",
-          "version": "5.0.0"
-        }
-      },
-      {
         "package": "RxAlamofire",
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxAlamofire.git",
         "state": {
@@ -29,21 +20,21 @@
         }
       },
       {
-        "package": "RxReachability",
-        "repositoryURL": "https://github.com/mariusjcb/RxReachability.git",
-        "state": {
-          "branch": null,
-          "revision": "f42091c0bb9fe46e98ca5fbe6ba9ea5790f17d2d",
-          "version": "1.0.5"
-        }
-      },
-      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
           "branch": null,
           "revision": "b3e888b4972d9bc76495dd74d30a8c7fad4b9395",
           "version": "5.0.1"
+        }
+      },
+      {
+        "package": "SwiftPriorityQueue",
+        "repositoryURL": "https://github.com/davecom/SwiftPriorityQueue.git",
+        "state": {
+          "branch": "master",
+          "revision": "58719bc40eb3c2f7e480139169df876e0531f62f",
+          "version": null
         }
       }
     ]
