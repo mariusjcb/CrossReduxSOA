@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -292,7 +292,6 @@
 			);
 			mainGroup = 7ACEB651235D4F8A00DEA88E;
 			packageReferences = (
-				7A4E37AA235F563D006A3A18 /* XCRemoteSwiftPackageReference "SwiftPriorityQueue" */,
 			);
 			productRefGroup = 7ACEB65C235D4F8A00DEA88E /* Products */;
 			projectDirPath = "";
@@ -616,17 +615,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		7A4E37AA235F563D006A3A18 /* XCRemoteSwiftPackageReference "SwiftPriorityQueue" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/davecom/SwiftPriorityQueue.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 7ACEB652235D4F8A00DEA88E /* Project object */;
 }
