@@ -23,12 +23,11 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "5.0.0"),
         .package(url: "https://github.com/RxSwiftCommunity/RxAlamofire.git", from: "5.0.0")
-        .package(url: "https://github.com/mariusjcb/RxReachability.git", from: "1.0.5")
     ],
     targets: [
         .target(name: "Common", dependencies: [], path: "./Common/Common/"),
         .target(name: "Redux", dependencies: ["Common"], path: "./ReduxModule/Redux/"),
-        .target(name: "ApiModule", dependencies: ["Redux", "RxAlamofire", "RxReachability"], path: "./ApiModule/ApiModule/"),
+        .target(name: "ApiModule", dependencies: ["Redux", "RxAlamofire"], path: "./ApiModule/ApiModule/"),
         
         /*.target(name: "CrossReduxSOA.Models", dependencies: ["Common", "Redux"],
                 path: "./Example/CrossReduxSOA.Models/CrossReduxSOA.Models/"),
