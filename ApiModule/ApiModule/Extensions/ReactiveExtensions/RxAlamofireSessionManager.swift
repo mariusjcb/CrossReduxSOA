@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import Alamofire
 import RxAlamofire
+import RxReachability
 
 public extension Reactive where Base == Alamofire.SessionManager {
     private var protocols: [AnyClass]? { return base.session.configuration.protocolClasses }
@@ -33,6 +34,8 @@ public extension Reactive where Base == Alamofire.SessionManager {
                         parameters: [String: Any]? = nil,
                         encoding: ParameterEncoding = URLEncoding.default,
                         headers: [String: String]? = nil) -> Observable<DataRequest> {
+        let timeOutInterval = Int(self.base.session.configuration.timeoutIntervalForRequest)
         return self.request(method, url, parameters: parameters, encoding: encoding, headers: headers)
+            .retryOnConnect(timeout: DispatchTimeInterval.seconds(timeOutInterval))
     }
 }
