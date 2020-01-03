@@ -13,4 +13,4 @@ import Foundation
  - Protocol requires at least one identifiable variable in your model.
  - Int, UUID are also identifiable so you can simply store an id: Int or id: UUID to make your model Identifiable. */
 
-public protocol ReducibleObject: Codable, Identifiable { }
+public protocol ReducibleObject: Codable { }

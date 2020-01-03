@@ -56,7 +56,8 @@ public extension ReduceStoreProvider {
             rx?.dispatch(action: action, await: await)
         }
         
-        if let action = action as? CombineStore.ReducerType.ActionType {
+        if #available(iOS 13.0, *),
+            let action = action as? CombineStore.ReducerType.ActionType {
             combine?.dispatch(action: action, await: await)
         }
     }
@@ -87,6 +88,7 @@ public extension ReduceStoreProvider {
         case let state as RxStore.ReducerType.StateType:
             syncStore(rx, with: state, error: nil)
         case let state as CombineStore.ReducerType.StateType:
+            guard #available(iOS 13.0, *) else { return }
             syncStore(combine, with: state, error: nil)
         default: break
         }
@@ -97,6 +99,7 @@ public extension ReduceStoreProvider {
         case let action as RxStore.ReducerType.ActionType:
             syncStore(rx, onDispatch: action)
         case let action as CombineStore.ReducerType.ActionType:
+            guard #available(iOS 13.0, *) else { return }
             syncStore(combine, onDispatch: action)
         default: break
         }
@@ -107,6 +110,7 @@ public extension ReduceStoreProvider {
         case let error as RxStore.ReducerType.ErrorType:
             syncStore(rx, with: nil, error: error)
         case let error as CombineStore.ReducerType.ErrorType:
+            guard #available(iOS 13.0, *) else { return }
             syncStore(combine, with: nil, error: error)
         default: break
         }

@@ -12,5 +12,6 @@ import Combine
 @available(iOS 13.0, *)
 public protocol CombineReduceStoreProvider: class {
     associatedtype CombineStore: ReduceStore & ObservableObject
+    @available(iOS 13.0, *)
     var combine: CombineStore! { get set }
 }
