@@ -2,8 +2,7 @@
 
 ## Use CrossReduxSOA.UI Target to run the project on simulator
 
-🚫 Don't run the project on iOS 12 (i'm debugging... i think we are facing a Simulator or Swift bug). 
-✅ Please use iOS 13.
+✅ Bugs with xcode compiler seems to be related to Identifiable protocol. Just remove it and try to implement a custom "Identifiable" protocol instead.
 
 ⎻
 
